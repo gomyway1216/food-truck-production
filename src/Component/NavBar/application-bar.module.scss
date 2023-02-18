@@ -1,9 +1,102 @@
 .root {
+  padding-left: 5%;
+  padding-right: 5%;
+  
   .bar {
-    background-color: rgba(28,27,26,255);
+    background-color: #272526;
 
     .logo {
       max-width: 250px;
+    }
+  }
+  
+  .drawer {
+    background-color: rgba(28,27,26,255);
+    color: white;
+    width: 240px;
+
+    .drawerHeader {
+      display: flex;
+      flex-direction: row;
+      padding-left: 5%;
+      padding-right: 5%;
+      min-height: 56px;
+
+      .clearIcon {
+        color: white;
+      }
+
+      .logoWrapper {
+        display: flex;
+
+        .logo {
+          margin-top: auto;
+          max-width: 80%;
+          max-height: 100%;
+          margin: auto;
+          background-color: black;
+        }
+      }
+    }
+
+    .drawerBody {
+      padding-left: 5%;
+      padding-right: 5%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      margin-top: 5%;
+      margin-bottom: 5%;
+
+      .items {
+        .item {
+          font-size: xxx-large;
+        }
+
+        .menuItem {
+          font-size: xx-large;
+          font-family: "DINCond-Medium-Regular";
+        }
+
+        .menuRow {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          .expandIcon {
+            color: white;
+          }
+        }
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5%;
+
+        .imageContainer {
+          display: flex;
+          height: 20px;
+          width: 20px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+  
+          .image {
+            margin-top: auto;
+            max-width: 100%;
+            max-height: 100%;
+            margin: auto;
+            background-color: black;
+          }
+        }
+      }
+
+      .footer {
+        display: flex;
+        flex-direction: column;
+        font-size: small;
+      }
     }
   }
 }

@@ -3,7 +3,7 @@ body {
   font-family: "DINCond-BoldRegular";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgba(28,27,26,255);
+  background-color: #272526;
 }
 
 code {
@@ -14,4 +14,19 @@ code {
 @font-face {
   font-family: 'DINCond-BoldRegular';
   src: local('DINCond-BoldRegular'), url(./asset/font/DINCond-BoldRegular.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'din-medium';
+  src: local('din-medium'), url(./asset/font/din-medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'DINCond-Medium-Regular';
+  src: local('DINCond-Medium-Regular'), url(./asset/font/DINCond-Medium-Regular.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'HelveticaNeue-Light';
+  src: local('HelveticaNeue-Light'), url(./asset/font/HelveticaNeue-Light.ttf) format('truetype');
 }

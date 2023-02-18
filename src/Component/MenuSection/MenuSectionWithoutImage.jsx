@@ -1,21 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SectionTitle from '../SectionTitle/SectionTitle';
+import SubTitle from '../SubTitle/SubTitle';
 import styles from './menu-section-without-image.module.scss';
 
 const MenuSectionWithoutImage = (props) => {
-  const { title, menuList } = props;
+
+  const { title, menuList, sectionRef} = props;
   return (
-    <div className={styles.root}>
+    <div className={styles.root} ref={sectionRef}>
       <SectionTitle title={title} />
       <div className={styles.gridContainer}>
         {menuList.map((menu) => 
           <div key={menu.id} className={styles.menu}>
-
             <div className={styles.main}>
               <div className={styles.titles}>
-                <div>{menu.title}</div>
-                <div>{menu.subTitle}</div>
+                <div className={styles.title}>{menu.title}</div>
+                <SubTitle subTitle={menu.subTitle} />
               </div>
               <div>$ {menu.price.toFixed(2)}</div>
             </div>
@@ -40,7 +41,8 @@ const MenuSectionWithoutImage = (props) => {
 
 MenuSectionWithoutImage.propTypes = {
   title: PropTypes.string.isRequired,
-  menuList: PropTypes.array.isRequired
+  menuList: PropTypes.array.isRequired,
+  sectionRef: PropTypes.object
 };
 
 export default MenuSectionWithoutImage;

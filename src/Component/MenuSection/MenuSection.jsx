@@ -4,9 +4,9 @@ import SectionTitle from '../SectionTitle/SectionTitle';
 import styles from './menu-section.module.scss';
 
 const MenuSection = (props) => {
-  const { title, menuList } = props;
+  const { title, menuList, sectionRef } = props;
   return (
-    <div className={styles.root}>
+    <div className={styles.root} ref={sectionRef}>
       <SectionTitle title={title} />
       <div className={styles.gridContainer}>
         {menuList.map((menu) => 
@@ -16,11 +16,10 @@ const MenuSection = (props) => {
             <div className={styles.main}>
               <div className={styles.titles}>
                 <div>{menu.title}</div>
-                <div>{menu.subTitle}</div>
+                <div className={styles.subTitle}>{menu.subTitle}</div>
               </div>
-              <div>$ {menu.price.toFixed(2)}</div>
+              <div className={styles.price}>$ {menu.price.toFixed(2)}</div>
             </div>
-            <hr className="solid" />
             <div className={styles.subSection}>
               <div className={styles.description}>{menu.description}</div>
               <div className={styles.ingredients}>
@@ -32,7 +31,6 @@ const MenuSection = (props) => {
                 )}
               </div>
             </div>
-            <hr className="solid" />
           </div>
         )}
       </div>
@@ -42,7 +40,8 @@ const MenuSection = (props) => {
 
 MenuSection.propTypes = {
   title: PropTypes.string.isRequired,
-  menuList: PropTypes.array.isRequired
+  menuList: PropTypes.array.isRequired,
+  sectionRef: PropTypes.object
 };
 
 export default MenuSection;

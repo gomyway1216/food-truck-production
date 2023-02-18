@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 import HomePage from './Page/Home/HomePage';
 
 
-
 const RouteList = () => {
   return (
     <div className="page-container">

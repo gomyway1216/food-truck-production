@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
 
@@ -34,23 +34,3 @@ export const exportStorageAccess = () => {
 };
 
 export { auth };
-
-export const signInWithEmail = (email, password) => {
-  return signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      const user = userCredential.user;
-      return user;
-    }).catch((error) => {
-      console.log('errorCode: ', error.code);
-      console.log('errorMessage: ', error.message);
-      throw new Error('Sign in failed!');
-    });
-};
-
-export const signOutUser = () => {
-  signOut(auth).then(() => {
-    console.log('sign out successful!');
-  }).catch((error) => {
-    console.log('sign out has some error', error);
-  });
-};

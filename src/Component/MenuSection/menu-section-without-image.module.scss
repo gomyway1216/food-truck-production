@@ -1,44 +1,42 @@
 .root {
-
     .gridContainer {
       margin-top: 30px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-column-gap: 5vw;
-      grid-auto-rows: minmax(120px, auto);
+      grid-auto-rows: minmax(100px, auto);
 
-      .main {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-        .titles {
-          height: 30px;
-        }
-      }
-
-      .subSection {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 50px;
-        
-        .description {
-          font-size: x-small;
-        }
-
-        .ingredients {
-          // align-self: flex-start;
+      .menu {
+        .main {
           display: flex;
           flex-direction: row;
-
-          .ingredient {
-            font-size: x-small;
-            border: 1px solid;
-            margin-right: 2%;
-            padding-left: 1%;
-            padding-right: 1%;
-            padding-bottom: 0;
+          justify-content: space-between;
+        }
+  
+        .subSection {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 48px;
+          
+          .description {
+            font-size: xx-small;
+            font-family: "HelveticaNeue-Light";
+          }
+  
+          .ingredients {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+  
+            .ingredient {
+              font-size: x-small;
+              border: 1px solid;
+              padding-left: 1%;
+              padding-right: 1%;
+              margin-right: 4px;
+              padding-bottom: 0;
+            }
           }
         }
       }

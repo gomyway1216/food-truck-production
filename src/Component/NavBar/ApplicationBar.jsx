@@ -1,14 +1,53 @@
 import React, { useState } from 'react';
-import {AppBar, Box, Toolbar, IconButton } from '@mui/material';
+import { useRefContext } from '../../Provider/RefProvider';
+import {AppBar, Box, Drawer, Toolbar, IconButton } from '@mui/material';
+import ClearIcon from '@mui/icons-material/Clear';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MenuIcon from '@mui/icons-material/Menu';
-import styles from './application-bar.module.scss';
 import TokachiLogo from '../../asset/logo/Tokachi-Musubi-Logo.png';
+import twitterIcon from '../../asset/icon/twitter.png';
+import facebookIcon from '../../asset/icon/facebook.png';
+import instagramIcon from '../../asset/icon/instagram.png';
+import styles from './application-bar.module.scss';
 
+const scrollOffset = 80;
 
 const ApplicationBar = () => {
+  const [open, setOpen] = useState(false);
+  const [menuExpanded, setMenuExpanded] = useState(false);
+  const { refs } = useRefContext();
+
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
+
+  const handleMenuClick = () => {
+    setMenuExpanded(!menuExpanded);
+  };
+
+  const scrollToDiv = (refName, offset) => {
+    handleDrawerClose();
+    if(refs.length === 0) {
+      return;
+    }
+
+    const ref = refs.find(elm => elm.key === refName).ref;
+    // offset for the appBar;
+    const top = ref.current.offsetTop - offset;
+    window.scrollTo({
+      top: top,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <Box sx={{ flexGrow: 1 }} className={styles.root}>
-      <AppBar position="static" className={styles.bar}>
+      <AppBar position="fixed" className={styles.bar}>
         <Toolbar>
           <IconButton
             size="large"
@@ -16,12 +55,95 @@ const ApplicationBar = () => {
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
+            onClick={handleDrawerOpen}
           >
             <MenuIcon />
           </IconButton>
           <img src={TokachiLogo} className={styles.logo}/>
         </Toolbar>
       </AppBar>
+      <Drawer
+        sx={{
+          width: 240,
+          flexShrink: 0,
+          '& .MuiDrawer-paper': {
+            width: '100%',
+            boxSizing: 'border-box',
+            color: 'white',
+            background: 'rgba(28,27,26,255)'
+          },
+        }}
+        variant="persistent"
+        anchor="left"
+        open={open}
+        className={styles.drawer}
+      >
+        <div className={styles.drawerHeader}>
+          <IconButton onClick={handleDrawerClose}>
+            <ClearIcon className={styles.clearIcon}/>
+          </IconButton>
+          <div className={styles.logoWrapper}>
+            <img src={TokachiLogo} className={styles.logo}/>
+          </div>
+        </div>
+        <div className={styles.drawerBody}>
+          <div className={styles.main}>
+            <div className={styles.items}>
+              <div className={`${styles.item} ${styles.menuRow}`}>
+                <div onClick={handleMenuClick} className={styles.item}>MENU</div>
+                <IconButton onClick={handleMenuClick}>
+                  {menuExpanded ? 
+                    <ExpandMoreIcon className={styles.expandIcon}/> :
+                    <ChevronRightIcon className={styles.expandIcon}/>
+                  }
+                </IconButton>
+              </div>
+              {menuExpanded && 
+              <div>
+                <div className={styles.menuItem} 
+                  onClick={() => scrollToDiv('bento', scrollOffset)}>BENTO</div>
+                <div className={styles.menuItem}
+                  onClick={() => scrollToDiv('musubi', scrollOffset)}>MUSUBI</div>
+                <div className={styles.menuItem}
+                  onClick={() => scrollToDiv('udon', scrollOffset)}>UDON</div>
+                <div className={styles.menuItem}
+                  onClick={() => scrollToDiv('sideMenu', scrollOffset)}>SIDE MENU</div>
+                <div className={styles.menuItem}
+                  onClick={() => scrollToDiv('dessert', scrollOffset)}>DESSERT</div>
+              </div>
+              }
+              <div className={styles.item}
+                onClick={() => scrollToDiv('location', scrollOffset)}>LOCATION</div>
+              <div className={styles.item} 
+                onClick={() => scrollToDiv('aboutUs', scrollOffset)}>ABOUT US</div>
+            </div>
+            <div className={styles.container}>
+              <a href="https://twitter.com/erikatokachi" >
+                <div className={styles.imageContainer}>
+                  <img className={styles.image} src={twitterIcon} alt="Twitter" />
+      
+                </div>
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=100087156172865" >
+                <div className={styles.imageContainer}>
+                  <img className={styles.image} src={facebookIcon} 
+                    alt="Facebook" />
+                </div>
+              </a>
+              <a href="https://www.instagram.com/tokachi_musubi/" >
+                <div className={styles.imageContainer}>
+                  <img className={styles.image} src={instagramIcon} 
+                    alt="Instagram"/>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div className={styles.footer}>
+            <span>FOOD TRUCK FOR</span>
+            <span>SAN FRANCISCO / BAY AREA</span>
+          </div>
+        </div>
+      </Drawer>
     </Box>
   );
 };
