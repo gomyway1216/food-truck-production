@@ -1,12 +1,4 @@
-hr {
-    border: none;
-    height: 1px;
-    color: white; /* old IE */
-    background-color: white; /* Modern Browsers */
-}
-
 .root {
-  color: white;
   padding-left: 5%;
   padding-right: 5%;
   margin-top: 80px;
@@ -79,7 +71,7 @@ hr {
           display: flex;
           flex-direction: row;
           justify-content: center;
-          margin-bottom: 50px;
+          margin-bottom: 40px;
 
           .cracker {
             border: 1px solid;
@@ -102,20 +94,37 @@ hr {
       .subSection {
         display: flex;
         flex-direction: row;
+        margin-top: 16px;
 
         .verticalLine {
           border-left: 1px solid;
-          height: 100px;
+          height: auto;
         }
+        
 
         .subSectionItem {
-          border-right: 1px solid white;
+          // border-right: 1px solid white;
           padding: 4px;
-          margin: 0 1px;
+          margin: 0 auto;
+          /* width: 100%; */
           position: relative;
+          /* text-align: right; */
+          padding: 0 3vw;
+
+          .subSectionItemContent {
+            margin: 0 auto;
+          }
       
+          &:first-child {
+            margin-left: 0;
+            padding-left: 0;
+          }
+
           &:last-child {
             border: none;
+            // this is to remove the space on right side
+            // margin-right: 0;
+            // padding-right: 0;
           }
           .itemTitle {
             font-size: large;
@@ -150,6 +159,94 @@ hr {
 
         .soup {
           min-width: 68px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 768px) {
+  .root {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  
+    .bento {
+      .bentoInfo {
+        .menuImage {
+          width: 100%;
+          object-fit: contain;
+        }
+        
+        .main {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          border-bottom: 1px solid;
+          margin-bottom: 16px;
+  
+          .title {
+            height: 40px;
+            font-size: xx-large;
+          }
+  
+          .price {
+            min-width: 80px;
+            font-size: xx-large;
+          }
+        }
+  
+        .contents {
+          font-size: x-large;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+  
+          .plus {
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            font-size: 40px;
+            font-size: 1.25em;
+            padding: 0 8px;
+          }
+
+          .musubi {
+            border: 1px solid;
+            padding: 4px;
+            width: 33%;
+            text-align:center;
+            height: fit-content;
+            
+            font-family: "DINCond-Medium-Regular";
+          }
+
+          .side {
+            border: 1px solid;
+            padding: 4px;
+            width: 57%;
+            text-align:center;
+            height: fit-content;
+          }
+        
+          .cracker {
+            border: 1px solid;
+            padding: 4px;
+            width: 65%;
+            text-align:center;
+            height: fit-content;
+          }
+
+          .soup {
+            border: 1px solid;
+            padding: 4px;
+            width: 30%;
+            text-align:center;
+            height: fit-content;
+          }
         }
       }
     }

@@ -8,6 +8,7 @@ import MenuSectionWithoutImage
   from '../../Component/MenuSection/MenuSectionWithoutImage';
 import LocationSection from '../../Component/LocationSection/LocationSection';
 import AboutUsSection from '../../Component/AboutUsSection/AboutUsSection';
+import useWindowSize from '../../Hook/useWindowSize';
 import styles from './home-page.module.scss';
 
 
@@ -18,6 +19,9 @@ const HomePage = () => {
   const [dessertList, setDessertList] = useState([]);
   const [bentoInfo, setBentoInfo] = useState(null);
   const [scheduleList, setScheduleList] = useState([]);
+  const screenSize = useWindowSize();
+
+  console.log(screenSize);
 
   const bentoRef= useRef();
   const musubiRef = useRef();
@@ -126,64 +130,89 @@ const HomePage = () => {
             <div className={styles.price}>$ {bentoInfo.BENTO.price.toFixed(2)}</div>
           </div>
           <div className={styles.contents}>
-            <div className={styles.firstRow}> 
-              <div className={styles.musubi}>CHOOSE 2&nbsp;MUSUBI</div>
-              <div className={styles.plus}>+</div>
-              <div className={styles.side}>CHOOSE KARAAGE&nbsp;or&nbsp;EDAMAME</div>
-            </div>
-            <div className={styles.secondRow}> 
-              <div className={styles.cracker}>FRIED PRAWN CRACKER</div>
-              <div className={styles.plus}>+</div>
-              <div className={styles.soup}>MISO SOUP</div>
-            </div>
+            {screenSize.width >= 768 ?   
+              <>
+                <div className={styles.musubi}>CHOOSE 2&nbsp;MUSUBI</div>
+                <div className={styles.plus}>+</div>
+                <div className={styles.side}>CHOOSE KARAAGE&nbsp;or&nbsp;EDAMAME</div>
+                <div className={styles.plus}>+</div>
+                <div className={styles.cracker}>FRIED PRAWN CRACKER</div>
+                <div className={styles.plus}>+</div>
+                <div className={styles.soup}>MISO SOUP</div>
+              </>
+              :
+              <>
+                <div className={styles.firstRow}> 
+                  <div className={styles.musubi}>CHOOSE 2&nbsp;MUSUBI</div>
+                  <div className={styles.plus}>+</div>
+                  <div className={styles.side}>CHOOSE KARAAGE&nbsp;or&nbsp;EDAMAME</div>
+                </div>
+                <div className={styles.secondRow}> 
+                  <div className={styles.cracker}>FRIED PRAWN CRACKER</div>
+                  <div className={styles.plus}>+</div>
+                  <div className={styles.soup}>MISO SOUP</div>
+                </div>
+              </>
+            }
           </div>
           <div className={styles.subSection}>
             <div className={styles.subSectionItem}>
-              <div className={styles.itemTitle}>KARAAGE</div>
-              <div className={styles.description}>{bentoInfo.KARAAGE.description}</div>
-              <div className={styles.ingredients}>
-                {bentoInfo.KARAAGE.ingredients.map((ingredient) => 
-                  <div key={'BENTO-KARAAGE-' + ingredient}
-                    className={styles.ingredient}> 
-                    {ingredient.toUpperCase()}
-                  </div>
-                )}
+              <div className={styles.subSectionItemContent}>
+                <div className={styles.itemTitle}>KARAAGE</div>
+                <div className={styles.description}>{bentoInfo.KARAAGE.description}</div>
+                <div className={styles.ingredients}>
+                  {bentoInfo.KARAAGE.ingredients.map((ingredient) => 
+                    <div key={'BENTO-KARAAGE-' + ingredient}
+                      className={styles.ingredient}> 
+                      {ingredient.toUpperCase()}
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
+            <div className={styles.verticalLine}/>
             <div className={styles.subSectionItem}>
-              <div className={styles.itemTitle}>EADAMAME</div>
-              <div className={styles.description}>{bentoInfo.EADAMAME.description}</div>
-              <div className={styles.ingredients}>
-                {bentoInfo.EADAMAME.ingredients.map((ingredient) => 
-                  <div key={'BENTO-EADAMAME-' + ingredient}
-                    className={styles.ingredient}> 
-                    {ingredient.toUpperCase()}
-                  </div>
-                )}
+              <div className={styles.subSectionItemContent}>
+                <div className={styles.itemTitle}>EADAMAME</div>
+                <div className={styles.description}>{bentoInfo.EADAMAME.description}</div>
+                <div className={styles.ingredients}>
+                  {bentoInfo.EADAMAME.ingredients.map((ingredient) => 
+                    <div key={'BENTO-EADAMAME-' + ingredient}
+                      className={styles.ingredient}> 
+                      {ingredient.toUpperCase()}
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
+            <div className={styles.verticalLine}/>
             <div className={`${styles.subSectionItem} ${styles.cracker}`}>
-              <div className={styles.itemTitle}>FRIED PRAWN CRACKER</div>
-              <div className={styles.description}>{bentoInfo.CRACKER.description}</div>
-              <div className={styles.ingredients}>
-                {bentoInfo.CRACKER.ingredients.map((ingredient) => 
-                  <div key={'BENTO-CRACKER-' + ingredient}
-                    className={styles.ingredient}> 
-                    {ingredient.toUpperCase()}
-                  </div>
-                )}
+              <div className={styles.subSectionItemContent}>
+                <div className={styles.itemTitle}>FRIED PRAWN CRACKER</div>
+                <div className={styles.description}>{bentoInfo.CRACKER.description}</div>
+                <div className={styles.ingredients}>
+                  {bentoInfo.CRACKER.ingredients.map((ingredient) => 
+                    <div key={'BENTO-CRACKER-' + ingredient}
+                      className={styles.ingredient}> 
+                      {ingredient.toUpperCase()}
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
+            <div className={styles.verticalLine}/>
             <div className={`${styles.subSectionItem} ${styles.soup}`}>
-              <div className={styles.itemTitle}>MISO SOUP</div>
-              <div className={styles.description}>{bentoInfo.SOUP.description}</div>
-              <div className={styles.ingredients}>
-                {bentoInfo.SOUP.ingredients.map((ingredient) => 
-                  <div key={'BENTO-SOUP-' + ingredient}
-                    className={styles.ingredient}> 
-                    {ingredient.toUpperCase()}
-                  </div>
-                )}
+              <div className={styles.subSectionItemContent}>
+                <div className={styles.itemTitle}>MISO SOUP</div>
+                <div className={styles.description}>{bentoInfo.SOUP.description}</div>
+                <div className={styles.ingredients}>
+                  {bentoInfo.SOUP.ingredients.map((ingredient) => 
+                    <div key={'BENTO-SOUP-' + ingredient}
+                      className={styles.ingredient}> 
+                      {ingredient.toUpperCase()}
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>

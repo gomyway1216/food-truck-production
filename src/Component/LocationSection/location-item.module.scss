@@ -49,3 +49,57 @@
     }
   }
 }
+
+@media (min-width: 768px) {
+  .root {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  
+    .date {
+      width: 40px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid;
+      padding-bottom: 4px;
+  
+      .dayOfWeek {
+        font-size: small;
+        font-family: "DINCond-Medium-Regular";
+      }
+    }
+  
+    .titles {
+      width: 150px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid;
+      padding-bottom: 4px;
+  
+      .title {
+        font-size: large;
+      }
+    }
+  
+    .details {
+      width: 120px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid;
+      padding-bottom: 4px;
+  
+      .time {
+        font-size: small;
+        font-family: "DINCond-Medium-Regular";
+      }
+      
+      .location {
+        font-size: x-small;
+        display: flex;
+        flex-direction: row;
+  
+        .locationIcon {
+          padding-top: 1px;
+        }
+      }
+    }
+  }
+}

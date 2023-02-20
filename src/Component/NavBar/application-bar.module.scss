@@ -1,6 +1,7 @@
 .root {
   padding-left: 5%;
   padding-right: 5%;
+  overflow-x: hidden;
   
   .bar {
     background-color: #272526;
@@ -12,7 +13,6 @@
   
   .drawer {
     background-color: rgba(28,27,26,255);
-    color: white;
     width: 240px;
 
     .drawerHeader {
@@ -51,7 +51,7 @@
 
       .items {
         .item {
-          font-size: xxx-large;
+          font-size: 48px;
         }
 
         .menuItem {
