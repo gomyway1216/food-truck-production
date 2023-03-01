@@ -1,12 +1,12 @@
 .root {
     .gridContainer {
-      margin-top: 30px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-column-gap: 5vw;
       grid-auto-rows: minmax(100px, auto);
 
       .menu {
+        margin-bottom: 20px;
         .main {
           display: flex;
           flex-direction: row;
@@ -97,6 +97,6 @@
           }
         }
       }
+    }
   }
-}
 }

@@ -12,7 +12,7 @@
       margin-top: 16px;
 
       .description {
-        font-family: "DINCond-Medium-Regular";
+        font-family: "din-medium";
         font-size: small;
         margin: 0;
         padding-right: 2%;
@@ -34,7 +34,7 @@
     }
 
     .description {
-      font-family: "DINCond-Medium-Regular";
+      font-family: "din-medium";
       font-size: small;
     }
   }
@@ -56,7 +56,7 @@
 
       .description {
         margin-right: 10%;
-        font-family: "DINCond-Medium-Regular";
+        font-family: "din-medium";
         font-size: small;
       }
     }
@@ -116,8 +116,8 @@
       width: 50%;
       background-position: center;
       background-repeat: no-repeat;
-      padding-top: 16px;
-      padding-bottom: 16px;
+      padding-top: 20px;
+      padding-bottom: 20px;
       height: 180px;
       display: flex;
       flex-direction: column;
@@ -155,7 +155,7 @@
       }
 
       .description {
-        font-family: "DINCond-Medium-Regular";
+        font-family: "din-medium";
         font-size: small;
       }
     }
@@ -189,7 +189,7 @@
       width: calc(75% - 25px);
       padding-left: 25px;
 
-      font-family: "DINCond-Medium-Regular";
+      font-family: "din-medium";
       font-size: small;
     }
   }
@@ -197,8 +197,6 @@
   .truckDescription {
     margin-top: 50px;
     margin-bottom: 50px;
-    overflow: visible;
-    max-width: 1000%!important;
 
     .truckImage {
       width: 100vw;
@@ -207,58 +205,56 @@
   }
 
   .missionDescription {
-    display: flex;
-    flex-direction: row;
     margin-bottom: 30px;
     border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    padding-top: 20px;
 
-    .left {
-      width: 70%;
-      padding-top: 8px;
-      padding-right: 4px;
-
-      .title {
-        font-size: x-large;
-      }
-
-      .description1 {
-        font-family: "DINCond-Medium-Regular";
-        font-size: small;
-      }
-
-      .description2 {
-        font-family: "DINCond-Medium-Regular";
-        font-size: small;
-      }
-      .description3 {
-        font-family: "DINCond-Medium-Regular";
-        font-size: small;
-        margin-top: 0;
-        margin-bottom: 0;
-      }
-      .description4 {
-        font-family: "DINCond-Medium-Regular";
-        font-size: small;
-        margin-top: 0;
-      }
+    .title {
+      font-size: x-large;
     }
 
-    .right {
-      width: 30%;
-      border-left: 1px solid white;
+    .description1 {
+      font-family: "din-medium";
+      font-size: small;
+    }
 
-      .chefImage {
-        width: 100%;
-        height: 100%;
-      }
+    .description2 {
+      font-family: "din-medium";
+      font-size: small;
     }
   }
 
-  .footer {
+  .founderIntroduction {
+    display: flex;
+    flex-direction: row;
     border-top: 1px solid;
-    padding-top: 8px;
-    padding-bottom: 24px;
+    border-bottom: 1px solid;
+    height: 100px;
+    justify-content: space-between;
+    font-family: "din-medium";
     font-size: small;
+
+    .description {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .title {
+        margin: 4px;
+      }
+
+      .name {
+        margin: 4px;
+      }
+    }
+
+    .imageContainer {
+      border-left: 1px solid;
+      display: flex;
+
+      .image {
+        width: 100%;
+      }
+    }
   }
 }

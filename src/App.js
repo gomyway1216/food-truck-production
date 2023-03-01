@@ -10,7 +10,7 @@ const App = () => {
   return (
     <BrowserRouter >
       <RefProvider>
-        <ScrollToTop />
+        {/* <ScrollToTop /> */}
         <ApplicationBar />
         <RouteList />
         <Footer />

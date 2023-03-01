@@ -5,6 +5,7 @@ import styles from './menu-section.module.scss';
 
 const MenuSection = (props) => {
   const { title, menuList, sectionRef } = props;
+
   return (
     <div className={styles.root} ref={sectionRef}>
       <SectionTitle title={title} />

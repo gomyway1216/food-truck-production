@@ -1,18 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import ButaAboutUsImage from '../../asset/image/Buta_AboutUs.jpeg';
 import JapanMapImage from '../../asset/image/Japan_Map.png';
 import LaCocinaIcon from '../../asset/icon/LaCocina.png';
 import TruckAboutUsImage from '../../asset/image/Truck_AboutUs.jpg';
-import ChefImage from '../../asset/image/Chef.jpg';
+import ErikaImage from '../../asset/image/Erika_Web_Hori.jpg';
 import MusubiIcon from '../../asset/icon/Musubi_icon_Small.png';
 import FlagIcons from '../../asset/icon/flags.png';
 import TokachiKanjiIcon from '../../asset/icon/Tokachi_Kanji.png';
-import PropTypes from 'prop-types';
 import styles from './about-us-section.module.scss';
 
 export const AboutUsSection = (props) => {
   const { sectionRef } = props;
+
   return (
     <div className={styles.root} ref={sectionRef}>
       <SectionTitle title="ABOUT US" />
@@ -93,9 +94,8 @@ export const AboutUsSection = (props) => {
           className={styles.truckImage}/>
       </div>
       <div className={styles.missionDescription}>
-        <div className={styles.left}>
-          <div className={styles.title}>OUR MISSION</div>
-          <p className={styles.description1}>Erika was born in Tokachi, Japan, 
+        <div className={styles.title}>OUR STORY</div>
+        <p className={styles.description1}>Erika was born in Tokachi, Japan, 
             where she grew up eating omusubi 
             (rice- balls) made by her mother. In 2013, Erika moved to the US with 
             her daughter despite not speaking any English. Luckily, she quickly 
@@ -103,14 +103,17 @@ export const AboutUsSection = (props) => {
             back with TOKACHI MUSUBI by creating a space that celebrates the food 
             of her childhood, honoring the traditions that her mother passed down, 
             while also paying tribute to her new home, San Francisco and Bay Area.</p>
-          <p className={styles.description2}>Enjoy our Japanese musubi ! 
+        <p className={styles.description2}>Enjoy our Japanese musubi ! 
             Let&apos;s Omusubi (connect!)</p>
-          <p className={styles.description3}>Founder CEO & Chief Connector</p>
-          <p className={styles.description4}>Erika Yokoyama Sanchez</p>
+      </div>
+      <div className={styles.founderIntroduction}>
+        <div className={styles.description}>
+          <p className={styles.title}>Founder CEO & Chief Connector</p>
+          <p className={styles.name}>Erika Yokoyama Sanchez</p>
         </div>
-        <div className={styles.right}> 
-          <img src={ChefImage} alt="Chef Image"
-            className={styles.chefImage}/>
+        <div className={styles.imageContainer}>
+          <img src={ErikaImage} alt="Erika Image"
+            className={styles.image}/>
         </div>
       </div>
     </div>
