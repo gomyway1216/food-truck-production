@@ -137,10 +137,6 @@ const ApplicationBar = () => {
               </a>
             </div>
           </div>
-          <div className={styles.footer}>
-            <span>FOOD TRUCK FOR</span>
-            <span>SAN FRANCISCO / BAY AREA</span>
-          </div>
         </div>
       </Drawer>
     </Box>
