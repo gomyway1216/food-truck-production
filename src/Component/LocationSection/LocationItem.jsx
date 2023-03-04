@@ -19,8 +19,8 @@ const LocationItem = (props) => {
         <div className={styles.dayOfWeek}>{dayOfWeek}</div>
         <div className={styles.monthAndDate}>{formattedDate}</div>
       </div>
-      <div className={styles.titles}>
-        <div className={styles.title}>{title.toUpperCase()}</div>
+      <div className={styles.title}>
+        {title.toUpperCase()}
       </div>
       <div className={styles.details}>
         <div className={styles.time}>{startTime} - {endTime}</div>

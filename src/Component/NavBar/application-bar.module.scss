@@ -1,41 +1,41 @@
 .root {
-  padding-left: 5%;
-  padding-right: 5%;
   overflow-x: hidden;
   
   .bar {
-    background-color: #272526;
+    background-color: #222021;
+    position: relative;
 
     .logo {
-      max-width: 250px;
+      width: 72%;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
     }
   }
   
   .drawer {
-    background-color: rgba(28,27,26,255);
+    background-color: #222021;
     width: 240px;
 
     .drawerHeader {
       display: flex;
       flex-direction: row;
-      padding-left: 5%;
-      padding-right: 5%;
       min-height: 56px;
+      background-color: #222021;
+      position: relative;
+      padding-left: 4px;
 
-      .clearIcon {
+      .clearButton {
         color: white;
+        padding: 12px;
       }
 
-      .logoWrapper {
-        display: flex;
-
-        .logo {
-          margin-top: auto;
-          max-width: 80%;
-          max-height: 100%;
-          margin: auto;
-          background-color: black;
-        }
+      .logo {
+        width: 72%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
       }
     }
 
@@ -48,15 +48,26 @@
       height: 100%;
       margin-top: 5%;
       margin-bottom: 5%;
+      background-color: #222021;
 
       .items {
         .item {
           font-size: 48px;
+          margin-bottom: 8px;
+
+          &:first-child {
+            margin-bottom: 4px;
+          }
         }
 
         .menuItem {
           font-size: xx-large;
           font-family: "DINCond-Medium-Regular";
+          margin-top: 8px;
+
+          &:last-child {
+            margin-bottom: 8px;
+          }  
         }
 
         .menuRow {
@@ -79,7 +90,7 @@
           display: flex;
           height: 32px;
           width: 32px;
-          margin-top: 10px;
+          margin-top: 20px;
           margin-bottom: 10px;
   
           .image {

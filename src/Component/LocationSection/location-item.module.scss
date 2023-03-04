@@ -5,7 +5,7 @@
   align-items: flex-end;
 
   .date {
-    width: 40px;
+    width: 48px;
     margin-bottom: 30px;
     border-bottom: 1px solid;
     padding-bottom: 4px;
@@ -16,19 +16,16 @@
     }
   }
 
-  .titles {
-    width: 150px;
+  .title {
+    width: 40%;
     margin-bottom: 30px;
     border-bottom: 1px solid;
     padding-bottom: 4px;
-
-    .title {
-      font-size: large;
-    }
+    font-size: large;
   }
 
   .details {
-    width: 120px;
+    width: 40%;
     margin-bottom: 30px;
     border-bottom: 1px solid;
     padding-bottom: 4px;
@@ -69,7 +66,7 @@
       }
     }
   
-    .titles {
+    .titleWrapper {
       width: 150px;
       margin-bottom: 30px;
       border-bottom: 1px solid;

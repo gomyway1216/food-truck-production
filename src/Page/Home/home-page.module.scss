@@ -31,6 +31,7 @@
 
       .contents {
         font-size: x-large;
+        font-family: "DINCond-Medium-Regular";
 
         .plus {
           display:flex;
@@ -128,8 +129,9 @@
           }
 
           .description {
-            font-size: x-small;
+            font-size: xx-small;
             margin-bottom: 20px;
+            font-family: "HelveticaNeue-Light";
           }
 
           .ingredients {
@@ -142,8 +144,8 @@
             .ingredient {
               font-size: x-small;
               border: 1px solid;
-              padding-left: 1%;
-              padding-right: 1%;
+              padding-left: 2px;
+              padding-right: 2px;
               margin-right: 4px;
               padding-bottom: 0;
             }

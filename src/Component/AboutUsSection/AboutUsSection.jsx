@@ -62,7 +62,10 @@ export const AboutUsSection = (props) => {
       </div>
       <div className={styles.tokachiDescription}>
         <div className={styles.left} style={{ backgroundImage: `url(${JapanMapImage})`}}>
-          <div className={styles.title}>WHERE IS TOKACHI?</div>
+          <div className={styles.title}>
+            <p className={styles.line1}>WHERE</p>
+            <p className={styles.line2}>IS TOKACHI?</p>
+          </div>
           <div className={styles.imageContainer}>
             <img src={TokachiKanjiIcon} alt="Kanji Icon"
               className={styles.kanjiIcon}/>

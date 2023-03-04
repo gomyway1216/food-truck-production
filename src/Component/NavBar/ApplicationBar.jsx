@@ -48,10 +48,9 @@ const ApplicationBar = () => {
   return (
     <Box sx={{ flexGrow: 1 }} className={styles.root}>
       <AppBar position="fixed" className={styles.bar}>
-        <Toolbar>
+        <Toolbar sx={{ paddingLeft: '4px'}}>
           <IconButton
             size="large"
-            edge="start"
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
@@ -70,7 +69,7 @@ const ApplicationBar = () => {
             width: '100%',
             boxSizing: 'border-box',
             color: 'white',
-            background: 'rgba(28,27,26,255)'
+            background: '#222021'
           },
         }}
         variant="persistent"
@@ -79,12 +78,13 @@ const ApplicationBar = () => {
         className={styles.drawer}
       >
         <div className={styles.drawerHeader}>
-          <IconButton onClick={handleDrawerClose}>
-            <ClearIcon className={styles.clearIcon}/>
+          <IconButton onClick={handleDrawerClose} className={styles.clearButton}>
+            <ClearIcon />
           </IconButton>
-          <div className={styles.logoWrapper}>
+          {/* <div className={styles.logoWrapper}>
             <img src={TokachiLogo} className={styles.logo}/>
-          </div>
+          </div> */}
+          <img src={TokachiLogo} className={styles.logo}/>
         </div>
         <div className={styles.drawerBody}>
           <div className={styles.main}>
@@ -121,7 +121,6 @@ const ApplicationBar = () => {
               <a href="https://twitter.com/erikatokachi" >
                 <div className={styles.imageContainer}>
                   <img className={styles.image} src={twitterIcon} alt="Twitter" />
-      
                 </div>
               </a>
               <a href="https://www.facebook.com/profile.php?id=100087156172865" >

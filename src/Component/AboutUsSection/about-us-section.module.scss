@@ -3,7 +3,7 @@
     border-bottom: 1px solid white;
 
     .titles {
-      font-size: xx-large;
+      font-size: 36px;
     }
     
     .main {
@@ -13,6 +13,7 @@
 
       .description {
         font-family: "din-medium";
+        line-height: 1.6;
         font-size: small;
         margin: 0;
         padding-right: 2%;
@@ -27,7 +28,7 @@
   .musubiDescription {
 
     .title {
-      font-size: xx-large;
+      font-size: 36px;
       border-bottom: 1px solid white;
       padding-top: 10px;
       padding-bottom: 10px;
@@ -35,6 +36,7 @@
 
     .description {
       font-family: "din-medium";
+      line-height: 1.6;
       font-size: small;
     }
   }
@@ -51,11 +53,12 @@
       padding-top: 20px;
 
       .title {
-        font-size: x-large;
+        font-size: 28px;
       }
 
       .description {
         margin-right: 10%;
+        line-height: 1.6;
         font-family: "din-medium";
         font-size: small;
       }
@@ -126,8 +129,16 @@
       background-size: contain;
 
       .title {
-        font-size: x-large;
-        width: 50%;
+        font-size: 20px;
+        width: 60%;
+
+        .line1 {
+          margin: 0;
+        }
+
+        .line2 {
+          margin: 0;
+        }
       }
       
       .imageContainer {
@@ -155,6 +166,7 @@
       }
 
       .description {
+        line-height: 1.6;
         font-family: "din-medium";
         font-size: small;
       }
@@ -188,7 +200,7 @@
       border-left: 1px solid white;
       width: calc(75% - 25px);
       padding-left: 25px;
-
+      line-height: 1.6;
       font-family: "din-medium";
       font-size: small;
     }
@@ -214,6 +226,7 @@
     }
 
     .description1 {
+      line-height: 1.6;
       font-family: "din-medium";
       font-size: small;
     }
@@ -251,6 +264,7 @@
     .imageContainer {
       border-left: 1px solid;
       display: flex;
+      width: 160px;
 
       .image {
         width: 100%;
