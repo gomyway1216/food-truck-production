@@ -49,53 +49,29 @@
 
 @media (min-width: 768px) {
   .root {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-  
     .date {
-      width: 40px;
-      margin-bottom: 30px;
-      border-bottom: 1px solid;
-      padding-bottom: 4px;
-  
+      width: 92px;
+
       .dayOfWeek {
-        font-size: small;
-        font-family: "DINCond-Medium-Regular";
+        font-size: x-large;
+      }
+
+      .monthAndDate {
+        font-size: xx-large;
       }
     }
-  
-    .titleWrapper {
-      width: 150px;
-      margin-bottom: 30px;
-      border-bottom: 1px solid;
-      padding-bottom: 4px;
-  
-      .title {
+
+    .title {
+      font-size: x-large;
+    }
+
+    .details {
+      .time {
         font-size: large;
       }
-    }
-  
-    .details {
-      width: 120px;
-      margin-bottom: 30px;
-      border-bottom: 1px solid;
-      padding-bottom: 4px;
-  
-      .time {
-        font-size: small;
-        font-family: "DINCond-Medium-Regular";
-      }
-      
+
       .location {
-        font-size: x-small;
-        display: flex;
-        flex-direction: row;
-  
-        .locationIcon {
-          padding-top: 1px;
-        }
+        font-size: medium;
       }
     }
   }

@@ -86,10 +86,13 @@ export const AboutUsSection = (props) => {
           </div>
         </div>
         <div className={styles.right}>
-          <p>In 2022, we participated in La cocina&apos;s incubator program to start 
-            a food truck business. We share their spirit of helping minorities 
-            start businesses and are proud of being a La Cocina member. 
-            Please visit for more details of La Cocina, https://lacocinasf.org/</p>
+          <p className={styles.description}>
+            In 2022, we joined the La Cocina incubator program to start a food truck business. 
+            We share their spirit of helping minorities start businesses 
+            and are proud of being a La Cocina member. 
+            Please visit for more details of La Cocina,  
+            &nbsp;<a href="https://lacocinasf.org/">https://lacocinasf.org/</a>
+          </p>
         </div>
       </div>
       <div className={styles.truckDescription}>

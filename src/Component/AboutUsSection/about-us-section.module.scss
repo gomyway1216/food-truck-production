@@ -200,9 +200,12 @@
       border-left: 1px solid white;
       width: calc(75% - 25px);
       padding-left: 25px;
-      line-height: 1.6;
-      font-family: "din-medium";
-      font-size: small;
+
+      .description {
+        line-height: 1.6;
+        font-family: "din-medium";
+        font-size: small;
+      }
     }
   }
 
@@ -268,6 +271,64 @@
 
       .image {
         width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .root {
+    .riceBallExplanation {
+      .main {
+        .description {
+          font-size: medium;
+        }
+      }
+    }
+
+    .musubiDescription {
+      .description {
+        font-size: medium;
+      }
+    }
+
+    .connector {
+      .left {
+        .description {
+          font-size: medium;
+        }
+      }
+    }
+
+    .tokachiDescription {
+      .right {
+        .description {
+          font-size: medium;
+        }
+      }
+    }
+
+    .laCocinaDescription {
+      .right {
+        .description {
+          font-size: medium;
+        }
+      }
+    }
+
+    .missionDescription {
+      .description1 {
+        font-size: medium;
+      }
+
+      .description2 {
+        font-size: medium;
+      }
+    }
+
+    .founderIntroduction {
+      .description {
+        font-size: medium;
       }
     }
   }
