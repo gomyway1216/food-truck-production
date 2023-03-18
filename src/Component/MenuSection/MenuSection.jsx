@@ -16,8 +16,8 @@ const MenuSection = (props) => {
               className={styles.menuImage}/>
             <div className={styles.main}>
               <div className={styles.titles}>
-                <div>{menu.title}</div>
-                <div className={styles.subTitle}>{menu.subTitle}</div>
+                <p className={styles.title}>{menu.title}</p>
+                <p className={styles.subTitle}>{menu.subTitle}</p>
               </div>
               <div className={styles.price}>$ {menu.price.toFixed(2)}</div>
             </div>

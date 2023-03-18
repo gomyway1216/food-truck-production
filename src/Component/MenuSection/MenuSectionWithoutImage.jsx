@@ -15,10 +15,10 @@ const MenuSectionWithoutImage = (props) => {
           <div key={menu.id} className={styles.menu}>
             <div className={styles.main}>
               <div className={styles.titles}>
-                <div className={styles.title}>{menu.title}</div>
+                <p className={styles.title}>{menu.title}</p>
                 <SubTitle subTitle={menu.subTitle} />
               </div>
-              <div>$ {menu.price.toFixed(2)}</div>
+              <div className={styles.price}>$ {menu.price.toFixed(2)}</div>
             </div>
             <hr className="solid" />
             <div className={styles.subSection}>

@@ -9,7 +9,6 @@
       margin-bottom: 20px;
       display: flex;
       flex-direction: column;
-      // height: 100%;
       .menuImage {
         width: 100%;
         object-fit: contain;
@@ -23,9 +22,16 @@
   
         .titles {
           height: 36px;
+
+          .title {
+            font-size: medium;
+            margin: 0;
+            line-height: 1;
+          }
   
           .subTitle {
             font-size: small;
+            margin: 0;
             font-family: "DINCond-Medium-Regular";
           }
         }
@@ -70,75 +76,42 @@
   }
 }
 
-// @media (min-width: 768px) {
-//   .root {
-//     .gridContainer {
-//       display: grid;
-//       grid-template-columns: 1fr 1fr;
-//       grid-column-gap: 5vw;
-//       grid-auto-rows: minmax(250px, auto);
-  
-//       .menu {
-//         .menuImage {
-//           width: 100%;
-//           object-fit: contain;
-//         }
+@media (min-width: 768px) {
+  .root {
+    .gridContainer {
+      .menu {
+        .main {
+          .titles {
+            height: 68px;
+            
+            .title {
+              font-size: xx-large;
+            }
     
-//         .main {
-//           display: flex;
-//           flex-direction: row;
-//           justify-content: space-between;
-//           border-bottom: 1px solid;
+            .subTitle {
+              font-size: x-large;
+            }
+          }
     
-//           .titles {
-//             height: 72px;
-//             font-size: xx-large;
+          .price {
+            font-size: xx-large;
+            min-width: 80px;
+          }
+        }
     
-//             .subTitle {
-//               font-size: large;
-//               font-family: "DINCond-Medium-Regular";
-//               font-size: x-large;
-//             }
-//           }
+        .subSection {          
+          .description {
+            font-size: small;
+          }
     
-//           .price {
-//             min-width: 35px;
-//             text-align: right;
-//             font-size: xx-large;
-//           }
-//         }
-    
-//         .subSection {
-//           display: flex;
-//           flex-direction: column;
-//           justify-content: space-between;
-//           height: 64px;
-//           margin-top: 8px;
-//           padding-bottom: 8px;
-//           border-bottom: 1px solid;
-          
-//           .description {
-//             font-size: small;
-//             font-family: "HelveticaNeue-Light";
-//           }
-    
-//           .ingredients {
-//             display: flex;
-//             flex-direction: row;
-//             flex-wrap: wrap;
-    
-//             .ingredient {
-//               font-size: medium;
-//               border: 1px solid;
-//               padding-left: 1%;
-//               padding-right: 1%;
-//               margin-right: 4px;
-//               padding-bottom: 0;
-//               margin-top: 4px;
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
+          .ingredients {
+            .ingredient {
+              margin-top: 8px;
+              font-size: medium;
+            }
+          }
+        }
+      }
+    }
+  }
+}

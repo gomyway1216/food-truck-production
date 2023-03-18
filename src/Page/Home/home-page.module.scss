@@ -76,7 +76,7 @@
             border: 1px solid;
             padding: 4px;
             width: 65%;
-            text-align:center;
+            text-align: center;
             height: fit-content;
           }
 
@@ -84,7 +84,7 @@
             border: 1px solid;
             padding: 4px;
             width: 30%;
-            text-align:center;
+            text-align: center;
             height: fit-content;
           }
         }
@@ -124,8 +124,9 @@
             // margin-right: 0;
             // padding-right: 0;
           }
+
           .itemTitle {
-            font-size: large;
+            font-size: medium;
           }
 
           .description {
@@ -167,50 +168,31 @@
 
 @media (min-width: 768px) {
   .root {
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-top: 80px;
-    margin-bottom: 80px;
   
     .bento {
       .bentoInfo {
         .menuImage {
-          width: 100%;
-          object-fit: contain;
         }
         
         .main {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          border-bottom: 1px solid;
-          margin-bottom: 16px;
   
           .title {
-            height: 40px;
-            font-size: xx-large;
+            height: 64px;
+            font-size: 52px;
           }
   
           .price {
-            min-width: 80px;
-            font-size: xx-large;
+            font-size: 52px;
           }
         }
   
         .contents {
-          font-size: x-large;
+          font-size: 28px;
           display: flex;
           flex-direction: row;
           justify-content: space-between;
   
           .plus {
-            display:flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-            font-size: 40px;
-            font-size: 1.25em;
-            padding: 0 8px;
           }
 
           .musubi {
@@ -235,6 +217,7 @@
             width: 65%;
             text-align:center;
             height: fit-content;
+            margin: auto;
           }
 
           .soup {
@@ -243,6 +226,34 @@
             width: 30%;
             text-align:center;
             height: fit-content;
+            margin: auto;
+          }
+        }
+
+        .subSection {
+          margin-top: 32px;   
+  
+          .subSectionItem {
+            .itemTitle {
+              font-size: large;
+            }
+
+            .cracker {
+              white-space: nowrap;
+            }
+  
+            .description {
+              font-size: small;
+              margin-bottom: 24px;
+            }
+  
+            .ingredients {
+              margin-top: 18px;
+              .ingredient {
+               
+                font-size: medium;
+              }
+            }
           }
         }
       }

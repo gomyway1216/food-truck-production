@@ -201,7 +201,9 @@ const HomePage = () => {
               <div className={styles.verticalLine}/>
               <div className={`${styles.subSectionItem} ${styles.cracker}`}>
                 <div className={styles.subSectionItemContent}>
-                  <div className={styles.itemTitle}>FRIED PRAWN CRACKER</div>
+                  <div className={`${styles.itemTitle} ${styles.cracker}`}>
+                    FRIED PRAWN CRACKER
+                  </div>
                   <div className={styles.description}>{bentoInfo?.CRACKER.description}</div>
                   <div className={styles.ingredients}>
                     {bentoInfo?.CRACKER.ingredients.map((ingredient) => 

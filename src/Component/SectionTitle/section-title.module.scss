@@ -67,3 +67,11 @@
     }
   }
 }
+
+@media (min-width: 768px) {
+  .root {
+    .sectionTitle {
+      font-size: large;
+    }
+  }
+}

@@ -3,10 +3,10 @@
   
   .bar {
     background-color: #222021;
-    position: relative;
 
     .logo {
-      width: 60%;
+      max-width: 60%;
+      max-height: 100%;
       position: absolute;
       left: 50%;
       transform: translate(-50%);
@@ -103,4 +103,8 @@
       }
     }
   }
+}
+
+@media (min-width: 768px) {
+
 }

@@ -11,6 +11,11 @@
           display: flex;
           flex-direction: row;
           justify-content: space-between;
+
+          .title {
+            font-size: medium;
+            margin: 0;
+          }
         }
   
         .subSection {
@@ -47,52 +52,34 @@
   .root {
     .gridContainer {
       margin-top: 30px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-column-gap: 5vw;
-      grid-auto-rows: minmax(100px, auto);
 
       .menu {
         .main {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
           margin-top: 24px;
 
           .titles {
-            font-size: xx-large;
-    
-            .subTitle {
-              font-size: large;
-              font-family: "DINCond-Medium-Regular";
-              font-size: x-large;
+
+            .title {
+              font-size: xx-large;
             }
+          }
+
+          .price {
+            font-size: xx-large;
           }
         }
   
         .subSection {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
           height: 64px;
           
           .description {
             font-size: small;
-            font-family: "HelveticaNeue-Light";
           }
   
           .ingredients {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
   
             .ingredient {
               font-size: medium;
-              border: 1px solid;
-              padding-left: 1%;
-              padding-right: 1%;
-              margin-right: 4px;
-              padding-bottom: 0;
             }
           }
         }

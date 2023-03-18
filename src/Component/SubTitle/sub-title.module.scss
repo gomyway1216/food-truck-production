@@ -2,3 +2,9 @@
   font-size: large;
   font-family: "DINCond-Medium-Regular";
 }
+
+@media (min-width: 768px) {
+  .subTitle {
+    font-size: x-large;
+  }
+}
