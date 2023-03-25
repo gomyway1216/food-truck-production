@@ -168,14 +168,9 @@
 
 @media (min-width: 768px) {
   .root {
-  
     .bento {
-      .bentoInfo {
-        .menuImage {
-        }
-        
+      .bentoInfo {  
         .main {
-  
           .title {
             height: 64px;
             font-size: 52px;
@@ -191,9 +186,6 @@
           display: flex;
           flex-direction: row;
           justify-content: space-between;
-  
-          .plus {
-          }
 
           .musubi {
             border: 1px solid;
@@ -250,9 +242,75 @@
             .ingredients {
               margin-top: 18px;
               .ingredient {
-               
                 font-size: medium;
               }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-aspect-ratio: 4 / 3) and (min-width: 1024px) {
+  .root {
+    .bento {
+      .bentoInfo {
+        display: flex;
+        flex-direction: row;
+
+        .menuImage {
+          width: 40%;
+          object-fit: contain;
+        }
+
+        .right {
+          margin: auto;
+
+          .main {
+            .title {
+              height: 64px;
+            }
+          }
+
+          .contents {
+            font-size: x-large;
+          }
+
+          .subSection {
+            .subSectionItem {
+              margin: 1%;
+              padding: 0 1%;
+  
+              &:first-child {
+                margin-left: 0;
+                padding-left: 0;
+              }
+  
+              &:last-child {
+                border: none;
+                // this is to remove the space on right side
+                margin-right: 0;
+                padding-right: 0;
+              }
+
+              .itemTitle {
+                font-size: large;
+              }
+
+              .description {
+                font-size: small;
+              }
+
+              .ingredients {
+                .ingredient {
+                  font-size: small;
+                }
+              }
+            }
+
+            .cracker {
+              min-width: 148px;
             }
           }
         }

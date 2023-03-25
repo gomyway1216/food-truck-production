@@ -1,5 +1,4 @@
 .root {
-
   .gridContainer {
     display: grid;
     grid-template-columns: repeat(2, minmax(100px, 1fr));
@@ -108,6 +107,103 @@
             .ingredient {
               margin-top: 8px;
               font-size: medium;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-aspect-ratio: 4 / 3) and (min-width: 1024px) {
+  .root {
+    .gridContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      grid-column-gap: 0;
+
+      .menu {
+        width: 27%;
+        margin: 3%;
+
+        .main {
+          .titles {
+            height: 48px;
+            
+            .title {
+              font-size: 1.28em;
+            }
+    
+            .subTitle {
+              font-size: 1.28em;
+              white-space: nowrap;
+            }
+          }
+
+          .price {
+            font-size: 1.28em;
+          }
+        }
+
+        .subSection {          
+          .description {
+            font-size: small;
+          }
+    
+          .ingredients {
+            .ingredient {
+              margin-top: 8px;
+              font-size: small;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-aspect-ratio: 4 / 3) and (min-width: 1200px) {
+  .root {
+    .gridContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      grid-column-gap: 0;
+
+      .menu {
+        width: 21%;
+        margin: 2%;
+
+        .main {
+          .titles {
+            height: 48px;
+            
+            .title {
+              font-size: 1.28em;
+            }
+    
+            .subTitle {
+              font-size: 1.28em;
+              white-space: nowrap;
+            }
+          }
+
+          .price {
+            font-size: 1.28em;
+          }
+        }
+
+        .subSection {          
+          .description {
+            font-size: small;
+          }
+    
+          .ingredients {
+            .ingredient {
+              margin-top: 8px;
+              font-size: small;
             }
           }
         }

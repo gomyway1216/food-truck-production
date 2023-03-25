@@ -8,3 +8,9 @@
     font-size: x-large;
   }
 }
+
+@media (min-aspect-ratio: 4 / 3) {
+  .subTitle {
+    font-size: medium;
+  }
+}

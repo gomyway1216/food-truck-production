@@ -5,7 +5,9 @@ import ClearIcon from '@mui/icons-material/Clear';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MenuIcon from '@mui/icons-material/Menu';
+import useWindowSize from '../../Hook/useWindowSize';
 import TokachiLogo from '../../asset/logo/Tokachi-Musubi-Logo.png';
+import TokachiLogoWide from '../../asset/logo/Tokachi-Musubi-Logo-wide.png';
 import twitterIcon from '../../asset/icon/twitter.png';
 import facebookIcon from '../../asset/icon/facebook.png';
 import instagramIcon from '../../asset/icon/instagram.png';
@@ -17,6 +19,7 @@ const ApplicationBar = () => {
   const [open, setOpen] = useState(false);
   const [menuExpanded, setMenuExpanded] = useState(false);
   const { refs } = useRefContext();
+  const { width, height } = useWindowSize();
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -48,19 +51,74 @@ const ApplicationBar = () => {
   return (
     <Box sx={{ flexGrow: 1 }} className={styles.root}>
       <AppBar position="fixed" className={styles.bar}>
-        <Toolbar sx={{ paddingLeft: '4px'}}>
-          <IconButton
-            size="large"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-            onClick={handleDrawerOpen}
-          >
-            <MenuIcon />
-          </IconButton>
-          <img src={TokachiLogo} className={styles.logo}/>
-        </Toolbar>
+        {width / height < 4/3 && 
+          <Toolbar sx={{ paddingLeft: '4px'}}>
+            <IconButton
+              size="large"
+              color="inherit"
+              aria-label="menu"
+              sx={{ mr: 2 }}
+              onClick={handleDrawerOpen}
+            >
+              <MenuIcon />
+            </IconButton>
+            <img src={TokachiLogo} className={styles.logo}/>
+          </Toolbar>
+        }
       </AppBar>
+      {width / height >= 4/3 &&
+        <div className={styles.fixedNavigation}>
+          <div className={styles.wideToolBar}>
+            <img src={TokachiLogoWide} className={styles.wideLogo}/>
+            <div className={styles.right}>
+              <div className={styles.topRow}>
+                <div className={styles.title}>JAPANESE RICE BALL — STICKY, CRUNCHY, AND NICE!</div>
+                <div className={styles.icons}>
+                  <a href="https://twitter.com/erikatokachi" >
+                    <div className={styles.imageContainer}>
+                      <img className={styles.image} src={twitterIcon} alt="Twitter" />
+                    </div>
+                  </a>
+                  <a href="https://www.facebook.com/profile.php?id=100087156172865" >
+                    <div className={styles.imageContainer}>
+                      <img className={styles.image} src={facebookIcon} 
+                        alt="Facebook" />
+                    </div>
+                  </a>
+                  <a href="https://www.instagram.com/tokachi_musubi/" >
+                    <div className={styles.imageContainer}>
+                      <img className={styles.image} src={instagramIcon} 
+                        alt="Instagram"/>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div className={styles.bottomRow}>
+                <div className={styles.description}>FOOD TRUCK FOR SAN FRANCISCO / BAY AREA</div>
+                <div className={styles.verticalLine}/>
+                <div className={styles.sections}>
+                  <div className={styles.location}
+                    onClick={() => scrollToDiv('location', scrollOffset)}>LOCATION</div>
+                  <div className={styles.aboutUs} 
+                    onClick={() => scrollToDiv('aboutUs', scrollOffset)}>ABOUT US</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.menus}>
+            <div className={styles.menuItem} 
+              onClick={() => scrollToDiv('bento', scrollOffset)}>BENTO</div>
+            <div className={styles.menuItem}
+              onClick={() => scrollToDiv('musubi', scrollOffset)}>MUSUBI</div>
+            <div className={styles.menuItem}
+              onClick={() => scrollToDiv('udon', scrollOffset)}>UDON</div>
+            <div className={styles.menuItem}
+              onClick={() => scrollToDiv('sideMenu', scrollOffset)}>SIDE MENU</div>
+            <div className={styles.menuItem}
+              onClick={() => scrollToDiv('dessert', scrollOffset)}>DESSERT</div>
+          </div>
+        </div>
+      }
       <Drawer
         sx={{
           width: 240,

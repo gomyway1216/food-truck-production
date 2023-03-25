@@ -87,3 +87,52 @@
     }
   }
 }
+
+@media (min-aspect-ratio: 4 / 3) {
+  .root {
+    .gridContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      grid-column-gap: 0;
+      width: 60%;
+      align-items: center;
+      margin: auto;
+
+      .menu {
+        width: 32%;
+        margin: 3%;
+
+        .main {
+          .titles {
+            .title {
+              font-size: 1.28em;
+            }
+    
+            .subTitle {
+              font-size: 1.28em;
+              white-space: nowrap;
+            }
+
+            .price {
+              font-size: 1.28em;
+            }
+          }
+        }
+
+        .subSection {          
+          .description {
+            font-size: small;
+          }
+    
+          .ingredients {
+            .ingredient {
+              margin-top: 8px;
+              font-size: small;
+            }
+          }
+        }
+      }
+    }
+  }
+}
