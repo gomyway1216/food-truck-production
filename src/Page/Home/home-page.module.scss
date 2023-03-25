@@ -254,6 +254,8 @@
 
 @media (min-aspect-ratio: 4 / 3) and (min-width: 1024px) {
   .root {
+    margin-bottom: 40px;
+    
     .bento {
       .bentoInfo {
         display: flex;

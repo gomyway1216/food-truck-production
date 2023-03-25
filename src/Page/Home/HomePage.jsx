@@ -8,6 +8,7 @@ import MenuSectionWithoutImage
   from '../../Component/MenuSection/MenuSectionWithoutImage';
 import LocationSection from '../../Component/LocationSection/LocationSection';
 import AboutUsSection from '../../Component/AboutUsSection/AboutUsSection';
+import FooterWide from '../../Component/Footer/FooterWide';
 import useWindowSize from '../../Hook/useWindowSize';
 import { Backdrop, CircularProgress } from '@mui/material';
 import styles from './home-page.module.scss';
@@ -242,6 +243,7 @@ const HomePage = () => {
         <MenuSectionWithoutImage title="DESSERT" menuList={dessertList} sectionRef={dessertRef}/>
         <LocationSection scheduleList={scheduleList} sectionRef={locationRef}/>
         <AboutUsSection sectionRef={aboutUsRef} />
+        <FooterWide />
       </div>
     </>
   );
