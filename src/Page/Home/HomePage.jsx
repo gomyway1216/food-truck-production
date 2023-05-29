@@ -22,7 +22,7 @@ const HomePage = () => {
   const [dessertList, setDessertList] = useState([]);
   const [bentoInfo, setBentoInfo] = useState(null);
   const [scheduleList, setScheduleList] = useState([]);
-  const screenSize = useWindowSize();
+  const { width, height } = useWindowSize();
 
   const bentoRef= useRef();
   const musubiRef = useRef();
@@ -144,7 +144,7 @@ const HomePage = () => {
                 <div className={styles.price}>$ {bentoInfo?.BENTO.price.toFixed(2)}</div>
               </div>
               <div className={styles.contents}>
-                {screenSize.width >= 768 ?   
+                {width >= 768 ?   
                   <>
                     <div className={styles.musubi}>CHOOSE 2&nbsp;MUSUBI</div>
                     <div className={styles.plus}>+</div>
@@ -243,7 +243,9 @@ const HomePage = () => {
         <MenuSectionWithoutImage title="DESSERT" menuList={dessertList} sectionRef={dessertRef}/>
         <LocationSection scheduleList={scheduleList} sectionRef={locationRef}/>
         <AboutUsSection sectionRef={aboutUsRef} />
-        <FooterWide />
+        { width / height >= 4/3 &&
+          <FooterWide />
+        }    
       </div>
     </>
   );
