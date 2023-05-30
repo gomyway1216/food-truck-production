@@ -176,6 +176,12 @@ const ApplicationBar = () => {
                 onClick={() => scrollToDiv('aboutUs', scrollOffset)}>ABOUT US</div>
             </div>
             <div className={styles.container}>
+              <a href="https://www.instagram.com/tokachi_musubi/" >
+                <div className={styles.imageContainer}>
+                  <img className={styles.image} src={instagramIcon} 
+                    alt="Instagram"/>
+                </div>
+              </a>
               <a href="https://twitter.com/erikatokachi" >
                 <div className={styles.imageContainer}>
                   <img className={styles.image} src={twitterIcon} alt="Twitter" />
@@ -185,12 +191,6 @@ const ApplicationBar = () => {
                 <div className={styles.imageContainer}>
                   <img className={styles.image} src={facebookIcon} 
                     alt="Facebook" />
-                </div>
-              </a>
-              <a href="https://www.instagram.com/tokachi_musubi/" >
-                <div className={styles.imageContainer}>
-                  <img className={styles.image} src={instagramIcon} 
-                    alt="Instagram"/>
                 </div>
               </a>
             </div>

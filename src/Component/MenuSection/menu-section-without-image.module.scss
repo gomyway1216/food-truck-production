@@ -1,16 +1,27 @@
+@import "src/variables";
+
 .root {
     .gridContainer {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-column-gap: 5vw;
-      grid-auto-rows: minmax(100px, auto);
+      // grid-auto-rows: minmax(100px, auto);
 
       .menu {
-        margin-bottom: 20px;
+        // margin-bottom: 2 * $commonMargin;
+        // margin-bottom: 33px;
+        &:not(:last-child) {
+          margin-bottom: 33px;
+        }
+
+        // border-bottom: 1px solid;
+
         .main {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
+          border-bottom: 1px solid;
+          
 
           .title {
             font-size: medium;
@@ -21,7 +32,8 @@
         .subSection {
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
+          justify-content: space-evenly;
+          border-bottom: 1px solid;
           height: 48px;
           
           .description {
@@ -52,10 +64,13 @@
   .root {
     .gridContainer {
       margin-top: 30px;
+      margin-top: $commonMarginIpad;
 
       .menu {
+        margin-bottom: $commonMarginIpad;
+
         .main {
-          margin-top: 24px;
+          // margin-top: 24px;
 
           .titles {
 

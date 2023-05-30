@@ -1,6 +1,6 @@
 const days = ['SUN', 'MON', 'TUE', 'WED','THU', 'FRI','SAT'];
-const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUNE', 
-  'JULY', 'AUG', 'SEPT', 'OCT', 'NOV', 'DEC'];
+const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 
+  'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
 
 export const getFormattedTime = (date) => {
   let hours = date.getHours();

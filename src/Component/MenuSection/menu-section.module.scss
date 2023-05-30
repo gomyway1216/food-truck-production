@@ -1,11 +1,14 @@
 .root {
   .gridContainer {
+    // margin-top: 17px;
     display: grid;
     grid-template-columns: repeat(2, minmax(100px, 1fr));
     grid-column-gap: 5vw;
 
     .menu {
-      margin-bottom: 20px;
+      // margin-bottom: 17px;
+      // margin-bottom: 67px;
+
       display: flex;
       flex-direction: column;
       .menuImage {
@@ -26,6 +29,11 @@
             font-size: medium;
             margin: 0;
             line-height: 1;
+            // word-wrap: break-word;
+            // overflow-wrap: break-word;
+            // word-break: break-all 4;
+            max-width: 100%;
+            display: inline-block;
           }
   
           .subTitle {

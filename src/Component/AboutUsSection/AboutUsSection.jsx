@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import useWindowSize from '../../Hook/useWindowSize';
@@ -6,7 +6,9 @@ import ButaAboutUsImage from '../../asset/image/Buta_AboutUs.jpeg';
 import JapanMapImage from '../../asset/image/Japan_Map.png';
 import LaCocinaIcon from '../../asset/icon/LaCocina.png';
 import TruckAboutUsImage from '../../asset/image/Truck_AboutUs.jpg';
+import TruckAboutUsMobileImage from '../../asset/image/Truck_iPhone.jpg';
 import ErikaImage from '../../asset/image/Erika_Web_Hori.jpg';
+import ErikaMobileImage from '../../asset/image/Erika_Web_Square_iPhone.jpg';
 import MusubiIcon from '../../asset/icon/Musubi_icon_Small.png';
 import FlagIcons from '../../asset/icon/flags.png';
 import TokachiKanjiIcon from '../../asset/icon/Tokachi_Kanji.png';
@@ -15,11 +17,23 @@ import styles from './about-us-section.module.scss';
 export const AboutUsSection = (props) => {
   const { sectionRef } = props;
   const { width, height } = useWindowSize();
+  // const [sectionTitleHeight, setSectionTitleHeight] = useState(0);
+  const sectionTitleHeight = 15.5;
+
+  // useEffect(() => {
+  //   const sectionTitleElement = document.getElementById('sectionTitle');
+  //   if (sectionTitleElement) {
+  //     setSectionTitleHeight(sectionTitleElement.offsetHeight);
+  //   }
+  // }, []);
+
+  console.log('sectionTitleHeight', sectionTitleHeight);
 
   return (
     <div className={styles.root} ref={sectionRef}>
       <SectionTitle title="ABOUT US" />
-      <div className={styles.riceBallExplanation}>
+      <div className={styles.riceBallExplanation} 
+        style={{ marginTop: `calc(33px - ${sectionTitleHeight / 2}px)` }}>
         { width / height < 4/3 &&
         <>
           <div className={styles.titles}>
@@ -32,7 +46,9 @@ export const AboutUsSection = (props) => {
               inspired by Hokkaido style cuisine. We hope you enjoy our musubi that will 
               satisfy both your stomach and your soul!</p>
             <img src={ButaAboutUsImage} alt="Musubi Image"
-              className={styles.musubiImage}/>
+              className={styles.musubiImage}
+              style={{ marginRight: `calc(25px - ${width * 0.05}px)` }}
+            />
           </div>
         </>
         }
@@ -192,13 +208,14 @@ export const AboutUsSection = (props) => {
             We share their spirit of helping minorities start businesses 
             and are proud of being a La Cocina member. 
             Please visit for more details of La Cocina,  
-            &nbsp;<a href="https://lacocinasf.org/">https://lacocinasf.org/</a>
+            &nbsp;<a href="https://lacocinasf.org/" style={{ color: '#965d96' }}>
+              https://lacocinasf.org/</a>
             </p>
           </div>
         </div>
       }
       <div className={styles.truckDescription}>
-        <img src={TruckAboutUsImage} alt="Truck Image"
+        <img src={width < 768? TruckAboutUsMobileImage : TruckAboutUsImage} alt="Truck Image"
           className={styles.truckImage}/>
       </div>
       { width / height < 4/3 &&
@@ -222,7 +239,7 @@ export const AboutUsSection = (props) => {
               <p className={styles.name}>Erika Yokoyama Sanchez</p>
             </div>
             <div className={styles.imageContainer}>
-              <img src={ErikaImage} alt="Erika Image"
+              <img src={ErikaMobileImage} alt="Erika Image"
                 className={styles.image}/>
             </div>
           </div>

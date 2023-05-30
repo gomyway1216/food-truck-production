@@ -1,6 +1,11 @@
+@import "src/variables";
+
 .root {
+  margin-bottom: 64px;
+
   .riceBallExplanation {
     border-bottom: 1px solid white;
+    padding-bottom: 13px;
 
     .titles {
       font-size: 36px;
@@ -9,7 +14,8 @@
     .main {
       display: flex;
       flex-direction: row;
-      margin-top: 16px;
+      // margin-top: 16px;
+      margin-top: 22px;
 
       .description {
         font-family: "din-medium";
@@ -20,7 +26,7 @@
       }
 
       .musubiImage {
-        width: 200px;
+        width: 50%;
       }
     }
   }
@@ -119,8 +125,10 @@
       width: 50%;
       background-position: center;
       background-repeat: no-repeat;
-      padding-top: 20px;
-      padding-bottom: 20px;
+      // padding-top: 20px;
+      padding-top: $commonInternalMargin;
+      padding-bottom: $commonInternalMargin;
+      padding-right: $commonInternalMargin - 12px;
       height: 180px;
       display: flex;
       flex-direction: column;
@@ -144,6 +152,7 @@
       .imageContainer {
         height: 30%;
         position: relative;
+        padding-right: 0;
 
         .kanjiIcon {
           margin-top: auto;
@@ -158,17 +167,19 @@
 
     .right {
       width: calc(50% - 15px);
-      padding-left: 15px;
-      padding-top: 16px;
+      padding-left: $commonInternalMargin;
+      padding-top: $commonInternalMargin;
 
       .title {
-        font-size: x-large;
+        font-size: 20px;
+        padding-bottom: $commonInternalMargin - 12px;
       }
 
       .description {
         line-height: 1.6;
         font-family: "din-medium";
         font-size: small;
+        margin: 0;
       }
     }
   }
@@ -183,6 +194,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      padding-right: $commonInternalMargin;
 
       .imageContainer {
         display: flex;
@@ -199,7 +211,7 @@
     .right {
       border-left: 1px solid white;
       width: calc(75% - 25px);
-      padding-left: 25px;
+      padding-left: $commonInternalMargin;
 
       .description {
         line-height: 1.6;
@@ -210,8 +222,8 @@
   }
 
   .truckDescription {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 67px;
+    margin-bottom: 67px;
 
     .truckImage {
       width: 100vw;
@@ -220,23 +232,29 @@
   }
 
   .missionDescription {
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
     border-top: 1px solid white;
-    padding-top: 20px;
+    // padding-top: 20px;
+    padding-top: $commonMargin - 8px;
+    padding-bottom: 22px;
 
     .title {
-      font-size: x-large;
+      font-size: 36px;
+      padding-bottom: $commonMargin - 12px;
     }
 
     .description1 {
       line-height: 1.6;
       font-family: "din-medium";
       font-size: small;
+      margin: 0;
     }
 
     .description2 {
       font-family: "din-medium";
       font-size: small;
+      padding-top: $commonMargin;
+      margin: 0;
     }
   }
 
@@ -245,7 +263,7 @@
     flex-direction: row;
     border-top: 1px solid;
     border-bottom: 1px solid;
-    height: 100px;
+    height: 120px;
     justify-content: space-between;
     font-family: "din-medium";
     font-size: small;
@@ -267,13 +285,45 @@
     .imageContainer {
       border-left: 1px solid;
       display: flex;
-      width: 160px;
+      // width: 160px;
+      height: 120px;
 
       .image {
         width: 100%;
       }
     }
   }
+}
+
+@media (min-width: 768px) {
+  .root {
+    .riceBallExplanation {
+      border-bottom: 1px solid white;
+  
+      .titles {
+        font-size: 52px;
+      }
+      
+      .main {
+        display: flex;
+        flex-direction: row;
+        margin-top: 16px;
+  
+        .description {
+          font-family: "din-medium";
+          line-height: 1.6;
+          font-size: medium;
+          margin: 0;
+          padding-right: 2%;
+        }
+  
+        .musubiImage {
+          width: 320px;
+        }
+      }
+    }
+  }
+
 }
 
 @media (min-aspect-ratio: 4 / 3) {
