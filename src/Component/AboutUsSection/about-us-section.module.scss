@@ -285,7 +285,9 @@
     .imageContainer {
       border-left: 1px solid;
       display: flex;
-      // width: 160px;
+      // width nneds to be 120px to match the height
+      // otherwise the image will be stretched in mobile
+      width: 120px;
       height: 120px;
 
       .image {
