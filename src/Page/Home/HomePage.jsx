@@ -185,7 +185,7 @@ const HomePage = () => {
                 <div className={styles.verticalLine} />
                 <div className={styles.subSectionItem}>
                   <div className={styles.subSectionItemContent}>
-                    <div className={styles.itemTitle}>EADAMAME</div>
+                    <div className={styles.itemTitle}>EDAMAME</div>
                     <div className={styles.description}>{bentoInfo?.EADAMAME.description}</div>
                     <div className={styles.ingredients}>
                       {bentoInfo?.EADAMAME.ingredients.map((ingredient) =>
@@ -233,3 +233,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+

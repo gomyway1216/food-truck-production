@@ -23,10 +23,12 @@
         font-size: small;
         margin: 0;
         padding-right: 2%;
+        width: 50%;
       }
 
       .musubiImage {
         width: 50%;
+        object-fit: contain;
       }
     }
   }
@@ -121,7 +123,6 @@
     border-bottom: 1px solid white;
 
     .left {
-      border-right: 1px solid white;
       width: 50%;
       background-position: center;
       background-repeat: no-repeat;
@@ -166,9 +167,11 @@
     }
 
     .right {
+      border-left: 1px solid white;
       width: calc(50% - 15px);
       padding-left: $commonInternalMargin;
       padding-top: $commonInternalMargin;
+      padding-bottom: $commonInternalMargin;
 
       .title {
         font-size: 20px;
