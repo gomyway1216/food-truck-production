@@ -9,14 +9,20 @@
     margin-bottom: 50px;
 
     .bentoInfo {
-      .menuImage { 
-        width: calc(100vw - 103px);
-        object-fit: contain;
-        margin-top: 56px;
-        margin-bottom: 28px;
-        margin-left: calc(54px - 5vw);
-        margin-right: calc(49px - 5vw);
+      .bentoImageContainer {
+        display: flex;
+        justify-content: center;
+        
+        .menuImage { 
+          width: calc(100vw - 103px);
+          object-fit: contain;
+          margin-top: 56px;
+          margin-bottom: 28px;
+          // margin-left: calc(54px - 5vw);
+          // margin-right: calc(49px - 5vw);
+        }
       }
+
       
       .main {
         display: flex;

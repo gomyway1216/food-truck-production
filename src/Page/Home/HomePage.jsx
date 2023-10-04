@@ -133,9 +133,11 @@ const HomePage = () => {
         <div className={styles.bento} ref={bentoRef}>
           <SectionTitle title="BENTO" />
           <div className={styles.bentoInfo}>
-            <img src={bentoInfo?.BENTO.image} alt="Bento Image" className={styles.menuImage}
-              onLoad={handleLoad}
-            />
+            <div className={styles.bentoImageContainer}>
+              <img src={bentoInfo?.BENTO.image} alt="Bento Image" className={styles.menuImage}
+                onLoad={handleLoad}
+              />
+            </div>
             <div className={styles.right}>
               <div className={styles.main}>
                 <div className={styles.title}>{bentoInfo?.BENTO.name}</div>
