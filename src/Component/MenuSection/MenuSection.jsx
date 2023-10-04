@@ -12,8 +12,8 @@ const MenuSection = (props) => {
     const sectionTitleHeight = sectionTitle.getBoundingClientRect().height;
     const marginTop = title === 'MUSUBI' ? '17px' : title === 'UDON' ? '6px' : '0px';
     const marginBottom = `calc(67px - ${sectionTitleHeight / 2}px)`;
-    gridContainerRef.current.style.marginTop = marginTop;
-    gridContainerRef.current.style.marginBottom = marginBottom;
+    // gridContainerRef.current.style.marginTop = marginTop;
+    // gridContainerRef.current.style.marginBottom = marginBottom;
   }, []);
 
   return (

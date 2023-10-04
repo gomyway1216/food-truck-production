@@ -1,14 +1,16 @@
+@import "src/variables";
+
 .root {
   .gridContainer {
     // margin-top: 17px;
     display: grid;
     grid-template-columns: repeat(2, minmax(100px, 1fr));
     grid-column-gap: 5vw;
-
+    margin-bottom: $commonInternalMargin;
     .menu {
       // margin-bottom: 17px;
       // margin-bottom: 67px;
-
+      margin-top: $commonInternalMargin;
       display: flex;
       flex-direction: column;
       .menuImage {
@@ -81,6 +83,11 @@
       }
     }
   }
+
+  // .menu:first-child,
+  // .menu:nth-child(2) {
+  //   margin-top: calc($commonInternalMargin * -1);
+  // }
 }
 
 @media (min-width: 768px) {
