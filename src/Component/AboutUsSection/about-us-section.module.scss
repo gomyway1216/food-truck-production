@@ -121,8 +121,10 @@
     display: flex;
     flex-direction: row;
     border-bottom: 1px solid white;
+    align-items: center;
 
     .left {
+      height: 100%;
       width: 50%;
       background-position: center;
       background-repeat: no-repeat;
@@ -136,6 +138,7 @@
       justify-content: space-between;
       background-origin: content-box;
       background-size: contain;
+      border-right: 1px solid white;
 
       .title {
         font-size: 20px;
@@ -168,10 +171,13 @@
 
     .right {
       border-left: 1px solid white;
+      height: 100%;
       width: calc(50% - 15px);
       padding-left: $commonInternalMargin;
       padding-top: $commonInternalMargin;
       padding-bottom: $commonInternalMargin;
+      border-left: 1px solid;
+      margin-left: -1px;
 
       .title {
         font-size: 20px;
