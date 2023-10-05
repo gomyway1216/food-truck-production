@@ -1,10 +1,19 @@
+@import "src/variables";
+
 .root {
   .locations {
     max-height: 70vh;
     overflow: scroll;
-    margin: 20px 0;
+    margin-top: $commonInternalMargin;
+    margin-bottom: $commonInternalMargin * 2;
   }
-  
-  
 }
 
+@media (min-width: 768px) {
+  .root {
+    .locations {
+      margin-top: $commonMarginIpad;
+      margin-bottom: $commonMarginIpad * 2;
+    }
+  }
+}
