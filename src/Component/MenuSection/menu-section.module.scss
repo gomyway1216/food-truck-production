@@ -2,17 +2,16 @@
 
 .root {
   .gridContainer {
-    // margin-top: 17px;
     display: grid;
     grid-template-columns: repeat(2, minmax(100px, 1fr));
     grid-column-gap: 5vw;
-    margin-bottom: $commonInternalMargin;
+    margin-bottom: $commonInternalMargin * 2;
+
     .menu {
-      // margin-bottom: 17px;
-      // margin-bottom: 67px;
       margin-top: $commonInternalMargin;
       display: flex;
       flex-direction: column;
+
       .menuImage {
         width: 100%;
         object-fit: contain;
@@ -93,7 +92,11 @@
 @media (min-width: 768px) {
   .root {
     .gridContainer {
+      margin-bottom: $commonMarginIpad * 2;
+
       .menu {
+        margin-top: $commonInternalMargin;
+
         .main {
           .titles {
             height: 68px;
@@ -101,7 +104,6 @@
             .title {
               font-size: 28px;
               line-height:1.15;
-
             }
     
             .subTitle {
@@ -136,21 +138,10 @@
   .root {
     .gridContainer {
 
-      display: grid;
       grid-template-columns: repeat(3, minmax(100px, 1fr));
       grid-column-gap: 3vw;
-      margin-bottom: $commonInternalMargin;
-
-      // display: flex;
-      // flex-wrap: wrap;
-      // justify-content: flex-start;
-      // grid-column-gap: 0;
 
       .menu {
-        // width: 29%;
-        flex-basis:15%;
-        // margin: 3%;
-
         .main {
           .titles {
             height: 48px;
@@ -191,20 +182,8 @@
 @media (min-width: 1200px) {
   .root {
     .gridContainer {
-      // display: flex;
-      // flex-wrap: wrap;
-      // justify-content: flex-start;
-      // grid-column-gap: 0;
-      // display: grid;
-      // grid-template-columns: repeat(3, minmax(100px, 1fr));
-      // grid-column-gap: 5vw;
-      // margin-bottom: $commonInternalMargin;
-
 
       .menu {
-        // width:29%;
-        flex-basis:27%;
-
         .main {
           .titles {
             height: 48px;

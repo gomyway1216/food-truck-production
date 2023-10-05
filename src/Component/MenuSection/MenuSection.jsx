@@ -7,15 +7,6 @@ const MenuSection = (props) => {
   const { title, menuList, sectionRef } = props;
   const gridContainerRef = useRef(null);
 
-  useEffect(() => {
-    const sectionTitle = gridContainerRef.current.previousSibling;
-    const sectionTitleHeight = sectionTitle.getBoundingClientRect().height;
-    const marginTop = title === 'MUSUBI' ? '17px' : title === 'UDON' ? '6px' : '0px';
-    const marginBottom = `calc(67px - ${sectionTitleHeight / 2}px)`;
-    // gridContainerRef.current.style.marginTop = marginTop;
-    // gridContainerRef.current.style.marginBottom = marginBottom;
-  }, []);
-
   return (
     <div className={styles.root} ref={sectionRef}>
       <SectionTitle title={title} />

@@ -8,15 +8,6 @@ const MenuSectionWithoutImage = (props) => {
   const { title, menuList, sectionRef} = props;
   const gridContainerRef = useRef(null);
 
-  useEffect(() => {
-    const sectionTitle = gridContainerRef.current.previousSibling;
-    const sectionTitleHeight = sectionTitle.getBoundingClientRect().height;
-    const marginTop = `calc(33px - ${sectionTitleHeight / 2}px)`;
-    const marginBottom = `calc(67px - ${sectionTitleHeight / 2}px)`;
-    gridContainerRef.current.style.marginTop = marginTop;
-    gridContainerRef.current.style.marginBottom = marginBottom;
-  }, []);
-
   return (
     <div className={styles.root} ref={sectionRef}>
       <SectionTitle title={title} />

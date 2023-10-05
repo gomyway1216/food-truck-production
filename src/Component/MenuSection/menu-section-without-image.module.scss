@@ -3,19 +3,14 @@
 .root {
     .gridContainer {
       display: grid;
-      // grid-template-columns: 1fr 1fr;
       grid-template-columns: repeat(2, minmax(100px, 1fr));
       grid-column-gap: 5vw;
-      // grid-auto-rows: minmax(100px, auto);
+      margin-bottom: $commonInternalMargin * 2;
 
       .menu {
-        // margin-bottom: 2 * $commonMargin;
-        // margin-bottom: 33px;
-        &:not(:last-child) {
-          margin-bottom: 33px;
-        }
-
-        // border-bottom: 1px solid;
+        margin-top: $commonInternalMargin;
+        display: flex;
+        flex-direction: column;
 
         .main {
           display: flex;
@@ -23,11 +18,15 @@
           justify-content: space-between;
           border-bottom: 1px solid;
           
+          .titles {
 
-          .title {
-            font-size: medium;
-            margin: 0;
+            .title {
+              font-size: medium;
+              margin: 0;
+            }
           }
+
+
         }
   
         .subSection {
@@ -50,10 +49,13 @@
             .ingredient {
               font-size: x-small;
               border: 1px solid;
-              padding-left: 1%;
-              padding-right: 1%;
+              // padding-left: 1%;
+              // padding-right: 1%;
+              padding-left: 2px;
+              padding-right: 2px;
               margin-right: 4px;
               padding-bottom: 0;
+              margin-top: 4px;
             }
           }
         }
@@ -64,19 +66,18 @@
 @media (min-width: 768px) {
   .root {
     .gridContainer {
-      margin-top: 30px;
-      margin-top: $commonMarginIpad;
+      margin-bottom: $commonMarginIpad * 2;
 
       .menu {
-        margin-bottom: $commonMarginIpad;
+        margin-top: $commonMarginIpad;
 
         .main {
-          // margin-top: 24px;
 
           .titles {
 
             .title {
-              font-size: xx-large;
+              font-size: 28px;
+              line-height:1.15;
             }
           }
 
@@ -86,7 +87,7 @@
         }
   
         .subSection {
-          height: 64px;
+          height: 80px;
           
           .description {
             font-size: small;
@@ -95,6 +96,7 @@
           .ingredients {
   
             .ingredient {
+              margin-top: 8px;
               font-size: medium;
             }
           }
@@ -108,10 +110,42 @@
   .root {
     .gridContainer {
 
-      display: grid;
       grid-template-columns: repeat(3, minmax(100px, 1fr));
       grid-column-gap: 3vw;
-      margin-bottom: $commonInternalMargin;
+
+      .menu {
+        .main {
+          .titles {
+            height: 48px;
+            
+            .title {
+              font-size: 1.28em;
+            }
+    
+            .subTitle {
+              font-size: 1.28em;
+              white-space: nowrap;
+            }
+          }
+
+          .price {
+            font-size: 1.28em;
+          }
+        }
+
+        .subSection {          
+          .description {
+            font-size: small;
+          }
+    
+          .ingredients {
+            .ingredient {
+              margin-top: 8px;
+              font-size: small;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -119,21 +153,8 @@
 @media (min-width: 1200px) {
   .root {
     .gridContainer {
-      // display: flex;
-      // flex-wrap: wrap;
-      // justify-content: flex-start;
-      // grid-column-gap: 0;
-
-      display: grid;
-      grid-template-columns: repeat(3, minmax(100px, 1fr));
-      grid-column-gap: 3vw;
-      margin-bottom: $commonInternalMargin;
-
 
       .menu {
-        // width: 29%;
-        // margin: 3%;
-
         .main {
           .titles {
             .title {
