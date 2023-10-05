@@ -3,7 +3,8 @@
 .root {
     .gridContainer {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      // grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, minmax(100px, 1fr));
       grid-column-gap: 5vw;
       // grid-auto-rows: minmax(100px, auto);
 
@@ -103,20 +104,35 @@
   }
 }
 
-@media (min-aspect-ratio: 4 / 3) {
+@media (min-width: 1024px) {
   .root {
     .gridContainer {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      grid-column-gap: 0;
-      width: 60%;
-      align-items: center;
-      margin: auto;
+
+      display: grid;
+      grid-template-columns: repeat(3, minmax(100px, 1fr));
+      grid-column-gap: 3vw;
+      margin-bottom: $commonInternalMargin;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .root {
+    .gridContainer {
+      // display: flex;
+      // flex-wrap: wrap;
+      // justify-content: flex-start;
+      // grid-column-gap: 0;
+
+      display: grid;
+      grid-template-columns: repeat(3, minmax(100px, 1fr));
+      grid-column-gap: 3vw;
+      margin-bottom: $commonInternalMargin;
+
 
       .menu {
-        width: 32%;
-        margin: 3%;
+        // width: 29%;
+        // margin: 3%;
 
         .main {
           .titles {

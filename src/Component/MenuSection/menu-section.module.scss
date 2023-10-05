@@ -99,7 +99,9 @@
             height: 68px;
             
             .title {
-              font-size: xx-large;
+              font-size: 28px;
+              line-height:1.15;
+
             }
     
             .subTitle {
@@ -130,17 +132,24 @@
   }
 }
 
-@media (min-aspect-ratio: 4 / 3) and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .root {
     .gridContainer {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      grid-column-gap: 0;
+
+      display: grid;
+      grid-template-columns: repeat(3, minmax(100px, 1fr));
+      grid-column-gap: 3vw;
+      margin-bottom: $commonInternalMargin;
+
+      // display: flex;
+      // flex-wrap: wrap;
+      // justify-content: flex-start;
+      // grid-column-gap: 0;
 
       .menu {
-        width: 27%;
-        margin: 3%;
+        // width: 29%;
+        flex-basis:15%;
+        // margin: 3%;
 
         .main {
           .titles {
@@ -179,17 +188,22 @@
 }
 
 
-@media (min-aspect-ratio: 4 / 3) and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .root {
     .gridContainer {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      grid-column-gap: 0;
+      // display: flex;
+      // flex-wrap: wrap;
+      // justify-content: flex-start;
+      // grid-column-gap: 0;
+      // display: grid;
+      // grid-template-columns: repeat(3, minmax(100px, 1fr));
+      // grid-column-gap: 5vw;
+      // margin-bottom: $commonInternalMargin;
+
 
       .menu {
-        width: 21%;
-        margin: 2%;
+        // width:29%;
+        flex-basis:27%;
 
         .main {
           .titles {
