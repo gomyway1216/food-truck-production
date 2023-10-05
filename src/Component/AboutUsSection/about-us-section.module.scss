@@ -333,8 +333,19 @@
         }
       }
     }
-  }
 
+    .truckDescription {
+      margin-top: 67px;
+      margin-bottom: 67px;
+      position: relative;
+      left: -12.5%;
+  
+      .truckImage {
+        width: 100vw;
+        margin-left: 0;
+      }
+    }
+  }
 }
 
 @media (min-aspect-ratio: 4 / 3) {
