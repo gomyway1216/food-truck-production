@@ -207,12 +207,18 @@
 
       .imageContainer {
         display: flex;
+        justify-content: center; 
+        align-items: center;     
+        max-width: 84%;           // Set a maximum width to ensure the container doesn't stretch too wide
+        max-height: 84%;          // Set a maximum height to ensure the container doesn't stretch too tall
+        border-radius: 50%;       // make the container circular
+        overflow: hidden;         // hide anything that exceeds the container's dimensions
+        align-self: center;
 
         .laCocinaIcon {
-          margin-top: auto;
-          max-width: 84%;
-          max-height: 84%;
-          margin: auto; 
+          object-fit: cover;       // ensure the image covers its content box without stretching
+          width: 100%;             // fills the width of its container
+          height: 100%;            // fills the height of its container
         }
       }
     }
