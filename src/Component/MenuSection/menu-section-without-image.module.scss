@@ -32,9 +32,11 @@
         .subSection {
           display: flex;
           flex-direction: column;
-          justify-content: space-evenly;
+          justify-content: space-between;
           border-bottom: 1px solid;
-          height: 48px;
+          margin-top: 8px;
+          padding-bottom: 8px;
+          height: 100%;
           
           .description {
             font-size: xx-small;
@@ -116,7 +118,6 @@
       .menu {
         .main {
           .titles {
-            height: 48px;
             
             .title {
               font-size: 1.28em;
