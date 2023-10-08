@@ -22,7 +22,7 @@ const HomePage = () => {
   const [dessertList, setDessertList] = useState([]);
   const [bentoInfo, setBentoInfo] = useState(null);
   const [scheduleList, setScheduleList] = useState([]);
-  const { width, height } = useWindowSize();
+  const { width } = useWindowSize();
 
   const bentoRef = useRef();
   const musubiRef = useRef();
@@ -226,7 +226,7 @@ const HomePage = () => {
         <MenuSectionWithoutImage title="DESSERT" menuList={dessertList} sectionRef={dessertRef} />
         <LocationSection scheduleList={scheduleList} sectionRef={locationRef} />
         <AboutUsSection sectionRef={aboutUsRef} />
-        {width / height >= 4 / 3 &&
+        {width >= 1024 &&
           <FooterWide />
         }
       </div>

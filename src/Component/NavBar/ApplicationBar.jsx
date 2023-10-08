@@ -19,7 +19,7 @@ const ApplicationBar = () => {
   const [open, setOpen] = useState(false);
   const [menuExpanded, setMenuExpanded] = useState(false);
   const { refs } = useRefContext();
-  const { width, height } = useWindowSize();
+  const { width } = useWindowSize();
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -51,7 +51,7 @@ const ApplicationBar = () => {
   return (
     <Box sx={{ flexGrow: 1 }} className={styles.root}>
       <AppBar position="fixed" className={styles.bar}>
-        {width / height < 4/3 && 
+        {width < 1024 && 
           <Toolbar sx={{ paddingLeft: '4px'}}>
             <IconButton
               size="large"
@@ -66,7 +66,7 @@ const ApplicationBar = () => {
           </Toolbar>
         }
       </AppBar>
-      {width / height >= 4/3 &&
+      {width >= 1024 &&
         <div className={styles.fixedNavigation}>
           <div className={styles.wideToolBar}>
             <img src={TokachiLogoWide} className={styles.wideLogo}/>

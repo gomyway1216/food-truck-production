@@ -7,7 +7,7 @@ import useWindowSize from './Hook/useWindowSize';
 import Footer from './Component/Footer/Footer';
 
 const App = () => {
-  const { width, height } = useWindowSize();
+  const { width } = useWindowSize();
 
   return (
     <BrowserRouter >
@@ -15,7 +15,7 @@ const App = () => {
         {/* <ScrollToTop /> */}
         <ApplicationBar />
         <RouteList />
-        {width / height < 4/3 &&
+        {width < 1024 &&
           <Footer />
         }
       </RefProvider>
