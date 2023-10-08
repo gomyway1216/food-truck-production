@@ -20,13 +20,6 @@ export const AboutUsSection = (props) => {
   // const [sectionTitleHeight, setSectionTitleHeight] = useState(0);
   const sectionTitleHeight = 15.5;
 
-  // useEffect(() => {
-  //   const sectionTitleElement = document.getElementById('sectionTitle');
-  //   if (sectionTitleElement) {
-  //     setSectionTitleHeight(sectionTitleElement.offsetHeight);
-  //   }
-  // }, []);
-
   console.log('sectionTitleHeight', sectionTitleHeight);
 
   return (
