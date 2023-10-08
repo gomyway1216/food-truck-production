@@ -1,0 +1,313 @@
+.root {
+  margin-bottom: 50px;
+
+  .bentoInfo {
+    .bentoImageContainer {
+      display: flex;
+      justify-content: center;
+      max-width: 70%;
+      margin: 0 auto;
+      
+      .menuImage { 
+        object-fit: contain;
+        margin-top: 56px;
+        margin-bottom: 28px;
+        width: 100%;
+        // width: calc(100vw - 103px);
+        // margin-left: calc(54px - 5vw);
+        // margin-right: calc(49px - 5vw);
+      }
+    }
+
+    
+    .main {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-bottom: 1px solid;
+      margin-bottom: 16px;
+
+      .title {
+        height: 40px;
+        font-size: xx-large;
+        margin-bottom: var(--title-margin-bottom);
+      }
+
+      .price {
+        min-width: 80px;
+        font-size: xx-large;
+      }
+    }
+
+    .contents {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: x-large;
+      font-family: "DINCond-Medium-Regular";
+      
+
+      .plus {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 40px;
+        font-size: 1.25em;
+        padding: 0 8px;
+      }
+
+      .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        width: 100%;
+
+        .box {
+          border: 1px solid;
+          text-align: center;
+          padding: 4px 16px;
+          box-sizing: border-box;
+          width: 45%;
+        }
+      }
+    }
+
+    .subSection {
+      display: flex;
+      flex-direction: row;
+      margin-top: 16px;
+      width: 100%;
+
+      .verticalLine {
+        border-left: 1px solid;
+        height: auto;
+      }
+      
+
+      .subSectionItem {
+        padding: 4px;
+        margin: 0 auto;
+        /* width: 100%; */
+        position: relative;
+        /* text-align: right; */
+        padding: 0 2vw;
+
+        .subSectionItemContent {
+          margin: 0 auto;
+        }
+    
+        &:first-child {
+          margin-left: 0;
+          padding-left: 0;
+        }
+
+        &:last-child {
+          border: none;
+          // this is to remove the space on right side
+          margin-right: 0;
+          padding-right: 0;
+        }
+
+        .itemTitle {
+          font-size: medium;
+        }
+
+        .description {
+          font-size: xx-small;
+          margin-bottom: 20px;
+          font-family: "HelveticaNeue-Light";
+        }
+
+        .ingredients {
+          display: flex;
+          flex-direction: row;
+          margin-top: 16px;
+          position: absolute;
+          bottom: 0px;
+
+          .ingredient {
+            font-size: x-small;
+            border: 1px solid;
+            padding-left: 2px;
+            padding-right: 2px;
+            margin-right: 4px;
+            padding-bottom: 0;
+          }
+        }
+      }
+
+      .edamame {
+        min-width: 90px;
+      }
+
+      .soup {
+        min-width: 68px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .root {
+    .bentoInfo {  
+      .bentoImageContainer {
+        .menuImage {
+          width: 70%;
+        }
+      }
+      
+
+      .main {
+        .title {
+          height: 64px;
+          font-size: 64px;
+        }
+
+        .price {
+          font-size: 64px;
+        }
+      }
+
+      .contents {
+        font-size: 28px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .musubi {
+          border: 1px solid;
+          padding: 4px;
+          // width: 33%;
+          text-align:center;
+          height: fit-content;
+          padding: 4px 24px;
+        }
+
+        .side {
+          border: 1px solid;
+          padding: 4px;
+          // width: 57%;
+          text-align:center;
+          height: fit-content;
+          padding: 4px 24px;
+        }
+      
+        .edamame {
+          border: 1px solid;
+          padding: 4px;
+          // width: 65%;
+          text-align:center;
+          height: fit-content;
+          margin: auto;
+          padding: 4px 24px;
+        }
+
+        .soup {
+          border: 1px solid;
+          padding: 4px;
+          // width: 30%;
+          text-align:center;
+          height: fit-content;
+          margin: auto;
+          padding: 4px 24px;
+        }
+      }
+
+      .subSection {
+        margin-top: 32px;   
+
+        .subSectionItem {
+          .itemTitle {
+            font-size: large;
+          }
+
+          .edamame {
+            white-space: nowrap;
+          }
+
+          .description {
+            font-size: small;
+            margin-bottom: 24px;
+          }
+
+          .ingredients {
+            margin-top: 18px;
+            .ingredient {
+              font-size: medium;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-aspect-ratio: 4 / 3) and (min-width: 1024px) {
+  .root {
+    .bentoInfo {
+      display: flex;
+      flex-direction: row;
+
+      .menuImage {
+        width: 40%;
+        object-fit: contain;
+      }
+
+      .right {
+        margin: auto;
+
+        .main {
+          .title {
+            height: 64px;
+          }
+        }
+
+        .contents {
+          font-size: x-large;
+        }
+
+        .subSection {
+          .subSectionItem {
+            margin: 1%;
+            padding: 0 1%;
+
+            &:first-child {
+              margin-left: 0;
+              padding-left: 0;
+            }
+
+            &:last-child {
+              border: none;
+              // this is to remove the space on right side
+              margin-right: 0;
+              padding-right: 0;
+            }
+
+            .itemTitle {
+              font-size: large;
+            }
+
+            .description {
+              font-size: small;
+            }
+
+            .ingredients {
+              .ingredient {
+                font-size: small;
+              }
+            }
+          }
+
+          .edamame {
+            min-width: 148px;
+          }
+        }
+      }
+    }
+  }
+}

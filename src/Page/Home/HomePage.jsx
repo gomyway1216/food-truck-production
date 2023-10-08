@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import * as menuApi from '../../Firebase/menu';
 import * as scheduleApi from '../../Firebase/schedule';
 import { useRefContext } from '../../Provider/RefProvider';
-import SectionTitle from '../../Component/SectionTitle/SectionTitle';
 import MenuSection from '../../Component/MenuSection/MenuSection';
 import MenuSectionWithoutImage
   from '../../Component/MenuSection/MenuSectionWithoutImage';
@@ -12,6 +11,7 @@ import FooterWide from '../../Component/Footer/FooterWide';
 import useWindowSize from '../../Hook/useWindowSize';
 import { Backdrop, CircularProgress } from '@mui/material';
 import styles from './home-page.module.scss';
+import BentoSection from '../../Component/BentoSection/BentoSection';
 
 
 const HomePage = () => {
@@ -20,9 +20,9 @@ const HomePage = () => {
   const [udonList, setUdonList] = useState([]);
   const [sideMenuList, setSideMenuList] = useState([]);
   const [dessertList, setDessertList] = useState([]);
-  const [bentoInfo, setBentoInfo] = useState(null);
   const [scheduleList, setScheduleList] = useState([]);
   const { width } = useWindowSize();
+  const [allMenus, setAllMenus] = useState([]);
 
   const bentoRef = useRef();
   const musubiRef = useRef();
@@ -37,40 +37,9 @@ const HomePage = () => {
     return list.sort((a, b) => a.order - b.order);
   };
 
-  const collectDataForBento = (allMenus) => {
-    const bentoInfo = allMenus.find(menu =>
-      menu.title.includes('MUSUBI BENTO'));
-    const karaageInfo = allMenus.find(menu =>
-      menu.title.includes('CHICKEN KARAAGE'));
-    const edamameInfo = allMenus.find(menu =>
-      menu.title === 'EDAMAME');
-    const misoSoupInfo = allMenus.find(menu =>
-      menu.title.includes('MISO SOUP'));
-    const bentoData = {
-      'BENTO': {
-        'name': bentoInfo.title,
-        'image': bentoInfo.image,
-        'price': bentoInfo.price
-      },
-      'KARAAGE': {
-        'description': karaageInfo.description,
-        'ingredients': karaageInfo.ingredients
-      },
-      'EADAMAME': {
-        'description': edamameInfo.description,
-        'ingredients': edamameInfo.ingredients
-      },
-      'SOUP': {
-        'description': misoSoupInfo.description,
-        'ingredients': misoSoupInfo.ingredients
-      }
-    };
-    setBentoInfo(bentoData);
-  };
-
   const getMenu = async () => {
-    const allMenus = await menuApi.getMenuList();
-    collectDataForBento(allMenus);
+    const menusResponse = await menuApi.getMenuList();
+    setAllMenus(menusResponse);
     const menus = await menuApi.getPublicMenuList();
     const musubis = [];
     const udons = [];
@@ -130,95 +99,7 @@ const HomePage = () => {
           display: !loading
             ? 'block' : 'none'
         }}>
-        <div className={styles.bento} ref={bentoRef}>
-          <SectionTitle title="BENTO" />
-          <div className={styles.bentoInfo}>
-            <div className={styles.bentoImageContainer}>
-              <img src={bentoInfo?.BENTO.image} alt="Bento Image" className={styles.menuImage}
-                onLoad={handleLoad}
-              />
-            </div>
-            <div className={styles.right}>
-              <div className={styles.main}>
-                <div className={styles.title}>{bentoInfo?.BENTO.name}</div>
-                <div className={styles.price}>$ {bentoInfo?.BENTO.price.toFixed(2)}</div>
-              </div>
-              <div className={styles.contents}>
-                {width >= 768 ?
-                  <>
-                    <div className={styles.musubi}>CHOOSE 2&nbsp;MUSUBI</div>
-                    <div className={styles.plus}>+</div>
-                    <div className={styles.side}>CHICKEN KARAAGE</div>
-                    <div className={styles.plus}>+</div>
-                    <div className={styles.edamame}>EDAMAME</div>
-                    <div className={styles.plus}>+</div>
-                    <div className={styles.soup}>MISO SOUP</div>
-                  </>
-                  :
-                  <>
-                    <div className={styles.row}>
-                      <div className={styles.box}>CHOOSE 2&nbsp;MUSUBI</div>
-                      <div className={styles.plus}>+</div>
-                      <div className={styles.box}>CHICKEN KARAAGE</div>
-                    </div>
-                    <div className={styles.row}>
-                      <div className={styles.box}>EDAMAME</div>
-                      <div className={styles.plus}>+</div>
-                      <div className={styles.box}>MISO SOUP</div>
-                    </div>
-                  </>
-                }
-              </div>
-              <div className={styles.subSection}>
-                <div className={styles.subSectionItem}>
-                  <div className={styles.subSectionItemContent}>
-                    <div className={styles.itemTitle}>CHICKEN KARAAGE</div>
-                    <div className={styles.description}>{bentoInfo?.KARAAGE.description}</div>
-                    <div className={styles.ingredients}>
-                      {bentoInfo?.KARAAGE.ingredients.map((ingredient) =>
-                        <div key={'BENTO-KARAAGE-' + ingredient}
-                          className={styles.ingredient}>
-                          {ingredient.toUpperCase()}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-                <div className={styles.verticalLine} />
-                <div className={styles.subSectionItem}>
-                  <div className={styles.subSectionItemContent}>
-                    <div className={styles.itemTitle}>EDAMAME</div>
-                    <div className={styles.description}>{bentoInfo?.EADAMAME.description}</div>
-                    <div className={styles.ingredients}>
-                      {bentoInfo?.EADAMAME.ingredients.map((ingredient) =>
-                        <div key={'BENTO-EADAMAME-' + ingredient}
-                          className={styles.ingredient}>
-                          {ingredient.toUpperCase()}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-                <div className={styles.verticalLine} />
-                <div className={`${styles.subSectionItem} ${styles.soup}`}>
-                  <div className={styles.subSectionItemContent}>
-                    <div className={styles.itemTitle}>MISO SOUP</div>
-                    <div className={styles.description}>{bentoInfo?.SOUP.description}</div>
-                    <div className={styles.ingredients}>
-                      {bentoInfo?.SOUP.ingredients.map((ingredient) =>
-                        <div key={'BENTO-SOUP-' + ingredient}
-                          className={styles.ingredient}>
-                          {ingredient.toUpperCase()}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
+        <BentoSection menuList={allMenus} sectionRef={bentoRef} handleLoad={handleLoad} />
         <MenuSection title="MUSUBI" menuList={musubiList} sectionRef={musubiRef} />
         <MenuSection title="UDON" menuList={udonList} sectionRef={udonRef} />
         <MenuSectionWithoutImage title="SIDE MENU" menuList={sideMenuList}

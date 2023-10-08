@@ -17,10 +17,7 @@ import styles from './about-us-section.module.scss';
 export const AboutUsSection = (props) => {
   const { sectionRef } = props;
   const { width, height } = useWindowSize();
-  // const [sectionTitleHeight, setSectionTitleHeight] = useState(0);
   const sectionTitleHeight = 15.5;
-
-  console.log('sectionTitleHeight', sectionTitleHeight);
 
   return (
     <div className={styles.root} ref={sectionRef}>
