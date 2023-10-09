@@ -50,7 +50,7 @@ const BentoSection = (props) => {
     setBentoInfo(bentoData);
   };
 
-
+  console.log('rendering condition: ', (width >= 768 && width < 1024) || width >= 1440);
 
   return (
     <div className={styles.root} ref={sectionRef}>
@@ -67,7 +67,7 @@ const BentoSection = (props) => {
             <div className={styles.price}>$ {bentoInfo?.BENTO.price.toFixed(2)}</div>
           </div>
           <div className={styles.contents}>
-            {width >= 768 ?
+            {((width >= 768 && width < 1024) || width >= 1440) ?
               <>
                 <div className={styles.musubi}>CHOOSE 2&nbsp;MUSUBI</div>
                 <div className={styles.plus}>+</div>

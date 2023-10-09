@@ -1,3 +1,5 @@
+@import "src/variables";
+
 .root {
   margin-bottom: 50px;
 
@@ -247,19 +249,129 @@
   }
 }
 
-@media (min-aspect-ratio: 4 / 3) and (min-width: 1024px) {
+@media (min-width: 1024px) {
+  .root {
+    .bentoInfo {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .bentoImageContainer {
+        max-width: 40%;
+        .menuImage {
+          width: 100%;
+        }
+      }
+
+      .right {
+        margin: auto;
+        max-width: 48%;
+
+        .main {
+          .title {
+            height: 48px;
+            font-size: 48px;
+          }
+
+          .price {
+            font-size: 48px;
+          }
+        }
+
+        .contents {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-size: x-large;
+          font-family: "DINCond-Medium-Regular";
+          
+    
+          .plus {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 40px;
+            font-size: 1.25em;
+            padding: 0 8px;
+          }
+    
+          .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            width: 100%;
+    
+            .box {
+              border: 1px solid;
+              text-align: center;
+              padding: 4px 16px;
+              box-sizing: border-box;
+              width: 45%;
+            }
+          }
+        }
+
+        .subSection {
+          .subSectionItem {
+            margin: 1%;
+            padding: 0 1%;
+
+            &:first-child {
+              margin-left: 0;
+              padding-left: 0;
+            }
+
+            &:last-child {
+              border: none;
+              // this is to remove the space on right side
+              margin-right: 0;
+              padding-right: 0;
+            }
+
+            .itemTitle {
+              font-size: large;
+            }
+
+            .description {
+              font-size: small;
+            }
+
+            .ingredients {
+              .ingredient {
+                font-size: small;
+              }
+            }
+          }
+
+          .edamame {
+            min-width: 148px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
   .root {
     .bentoInfo {
       display: flex;
       flex-direction: row;
 
-      .menuImage {
-        width: 40%;
-        object-fit: contain;
+      .bentoImageContainer {
+        .menuImage {
+          width: 100%;
+        }
       }
 
       .right {
         margin: auto;
+        max-width: 50%;
 
         .main {
           .title {
@@ -269,6 +381,8 @@
 
         .contents {
           font-size: x-large;
+          display: flex;
+          flex-direction: row;
         }
 
         .subSection {
