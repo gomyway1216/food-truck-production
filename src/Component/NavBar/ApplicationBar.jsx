@@ -98,6 +98,8 @@ const ApplicationBar = () => {
                 <div className={styles.verticalLine}/>
                 <div className={styles.sections}>
                   <div className={styles.location}
+                    onClick={() => scrollToDiv('musubi', scrollOffset)}>MENU</div>
+                  <div className={styles.location}
                     onClick={() => scrollToDiv('location', scrollOffset)}>LOCATION</div>
                   <div className={styles.aboutUs} 
                     onClick={() => scrollToDiv('aboutUs', scrollOffset)}>ABOUT US</div>
