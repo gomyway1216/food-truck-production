@@ -8,7 +8,7 @@
       margin-bottom: $commonInternalMargin * 2;
 
       .menu {
-        margin-top: $commonInternalMargin;
+        margin-top: $commonInternalMargin * 2;
         display: flex;
         flex-direction: column;
 
@@ -19,14 +19,11 @@
           border-bottom: 1px solid;
           
           .titles {
-
             .title {
               font-size: medium;
               margin: 0;
             }
           }
-
-
         }
   
         .subSection {

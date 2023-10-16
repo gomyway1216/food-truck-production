@@ -4,7 +4,7 @@
   .locations {
     max-height: 70vh;
     overflow: scroll;
-    margin-top: $commonInternalMargin;
+    margin-top: $commonInternalMargin * 2;
     margin-bottom: $commonInternalMargin * 2;
   }
 }
