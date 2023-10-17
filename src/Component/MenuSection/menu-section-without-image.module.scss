@@ -86,17 +86,19 @@
         }
   
         .subSection {
-          height: 80px;
+          margin-top: 8px;  
+          padding-bottom: 12px;
+          // height: 80px;
           
           .description {
-            font-size: small;
+            font-size: 14px;
+            margin-top: 4px;
           }
   
           .ingredients {
-  
             .ingredient {
-              margin-top: 8px;
               font-size: medium;
+              margin-top: 12px;
             }
           }
         }
@@ -117,7 +119,8 @@
           .titles {
             
             .title {
-              font-size: 1.28em;
+              // font-size: 1.28em;
+              font-size: 24px;
             }
     
             .subTitle {

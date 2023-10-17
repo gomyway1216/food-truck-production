@@ -125,18 +125,23 @@
             min-width: 80px;
           }
         }
-    
-        .subSection {          
+        
+        .subSection {     
+          margin-top: 8px;     
+          padding-bottom: 12px;
+          
           .description {
-            font-size: small;
+            font-size: 14px;
+            
           }
     
           .ingredients {
             .ingredient {
-              margin-top: 8px;
               font-size: medium;
+              margin-top: 12px;
             }
           }
+
         }
       }
     }
@@ -153,20 +158,23 @@
       .menu {
         .main {
           .titles {
-            // height: 48px;
+            height: 48px;
             
             .title {
-              font-size: 1.28em;
+              font-size: 24px;
             }
     
             .subTitle {
-              font-size: 1.28em;
+              // font-size: 1.28em;
+              font-size: 20px;
               white-space: nowrap;
             }
           }
 
           .price {
-            font-size: 1.28em;
+            // font-size: 1.28em;
+            font-size: 24px;
+            min-width: 60px;
           }
         }
 

@@ -22,8 +22,7 @@ export const AboutUsSection = (props) => {
   return (
     <div className={styles.root} ref={sectionRef}>
       <SectionTitle title="ABOUT US" />
-      <div className={styles.riceBallExplanation} 
-        style={{ marginTop: `calc(33px - ${sectionTitleHeight / 2}px)` }}>
+      <div className={styles.riceBallExplanation}>
         { width / height < 4/3 &&
         <>
           <div className={styles.titles}>
@@ -205,7 +204,7 @@ export const AboutUsSection = (props) => {
         </div>
       }
       <div className={styles.truckDescription}>
-        <img src={width < 768? TruckAboutUsMobileImage : TruckAboutUsImage} alt="Truck Image"
+        <img src={width < 1024? TruckAboutUsMobileImage : TruckAboutUsImage} alt="Truck Image"
           className={styles.truckImage}/>
       </div>
       { width / height < 4/3 &&

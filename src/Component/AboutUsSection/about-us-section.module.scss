@@ -4,6 +4,7 @@
   margin-bottom: 64px;
 
   .riceBallExplanation {
+    margin-top: $commonMargin;
     border-bottom: 1px solid white;
     padding-bottom: 13px;
 
@@ -315,10 +316,11 @@
 @media (min-width: 768px) {
   .root {
     .riceBallExplanation {
+      margin-top: $commonMarginIpad;
       border-bottom: 1px solid white;
   
       .titles {
-        font-size: 52px;
+        font-size: 68px;
       }
       
       .main {
@@ -329,13 +331,105 @@
         .description {
           font-family: "din-medium";
           line-height: 1.6;
-          font-size: medium;
+          font-size: large;
           margin: 0;
           padding-right: 2%;
         }
   
         .musubiImage {
-          width: 320px;
+          // width: 320px;
+          min-width: 56%;
+        }
+      }
+    }
+
+    .musubiDescription {
+
+      .title {
+        font-size: 68px;
+        padding-top: calc($commonAboutUsSectionVerticalMargin - 4px);
+        padding-bottom: calc($commonAboutUsSectionVerticalMargin - 4px);
+      }
+
+      .description {
+        font-size: large;
+        padding-top: $commonAboutUsSectionVerticalMargin;
+        padding-bottom: $commonAboutUsSectionVerticalMargin;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    .connector {
+      margin-top: 0;
+      
+      .left {
+        width: calc(100% - 132px);
+        padding-top: $commonAboutUsSectionVerticalMargin;
+        padding-bottom: $commonAboutUsSectionVerticalMargin;
+        .title {
+          font-size: 36px;
+          margin-bottom: 0;
+          padding-bottom:  calc($commonAboutUsSectionVerticalMargin - 10px);
+        }
+  
+        .description {
+          font-size: large;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+
+      .right {
+        width: 132px;
+      }
+    }
+
+    .tokachiDescription {
+      .left {
+        padding-top: $commonAboutUsSectionVerticalMargin;
+        padding-bottom: $commonAboutUsSectionVerticalMargin;
+        height: 280px;
+        width: 72%;
+        .title {
+          font-size: 36px;
+          padding-top: 0;
+          // margin-top: $commonAboutUsSectionVerticalMargin;
+        }
+      }
+
+      .right {
+        height: 280px;
+        padding-top: $commonAboutUsSectionVerticalMargin;
+        padding-bottom: $commonAboutUsSectionVerticalMargin;
+        padding-left: $commonAboutUsSectionVerticalMargin;
+        width: calc(50% - 12px);
+
+        .title {
+          font-size: 36px;
+          padding-bottom:  calc($commonAboutUsSectionVerticalMargin - 10px);
+        }
+
+        .description {
+          font-size: large;
+        }
+      }
+    }
+
+    .laCocinaDescription {
+      .left {
+        height: 200px;
+        width: 200px;
+        
+        .imageContainer {
+          width: 60%;
+        }
+      }
+
+      .right {
+        padding-left: $commonAboutUsSectionVerticalMargin;
+        .description {
+          font-size: large;
         }
       }
     }
@@ -349,6 +443,40 @@
       .truckImage {
         width: 100vw;
         margin-left: 0;
+      }
+    }
+
+    .missionDescription {
+      padding-top: calc($commonAboutUsSectionVerticalMargin - 4px);
+      padding-bottom: $commonAboutUsSectionVerticalMargin;
+
+      .title {
+        font-size: 68px;
+        
+      }
+
+      .description1 {
+        font-size: large;
+        padding-top: calc($commonAboutUsSectionVerticalMargin - 16px);
+      } 
+      
+      
+      .description2 {
+        font-size: large;
+        padding-top: $commonAboutUsSectionVerticalMargin;
+      }
+    }
+
+    .founderIntroduction {
+      height: 200px;
+
+      .description {
+        font-size: large;
+      }
+
+      .imageContainer {
+        height: 200px;
+        width: 200px;
       }
     }
   }

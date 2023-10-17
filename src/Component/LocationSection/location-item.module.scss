@@ -76,3 +76,22 @@
     }
   }
 }
+
+@media (min-width: 1024px) {
+  .root {
+
+    .title {
+      font-size: xx-large;
+    }
+
+    .details {
+      .time {
+        font-size: x-large;
+      }
+
+      .location {
+        font-size: medium;
+      }
+    }
+  }
+}
