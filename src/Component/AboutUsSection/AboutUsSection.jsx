@@ -24,7 +24,7 @@ export const AboutUsSection = (props) => {
     <div className={styles.root} ref={sectionRef}>
       <SectionTitle title="ABOUT US" />
       <div className={styles.riceBallExplanation}>
-        { width / height < 4/3 &&
+        { width < 1024 &&
         <>
           <div className={styles.titles}>
             <div>JAPANESE RICE BALL</div>
@@ -42,7 +42,7 @@ export const AboutUsSection = (props) => {
           </div>
         </>
         }
-        { width / height >= 4/3 &&
+        { width >= 1024 &&
           <>
             <div className={styles.left}>
               <div className={styles.titles}>
@@ -59,7 +59,7 @@ export const AboutUsSection = (props) => {
           </>
         }
       </div>
-      { width / height < 4/3 &&
+      { width < 1024 &&
         <>
           <div className={styles.musubiDescription}>
             <div className={styles.title}>WHAT IS “MUSUBI” ?</div>
@@ -110,7 +110,7 @@ export const AboutUsSection = (props) => {
           </div>
         </>
       }
-      { width / height >= 4/3 &&
+      { width >= 1024 &&
         <div className={styles.descriptionsContainer}>
           <div className={styles.title}>WHAT IS “MUSUBI” ?</div>
           <div className={styles.explanations}>
@@ -184,7 +184,7 @@ export const AboutUsSection = (props) => {
         </div>
       }
       {
-        width / height < 4/3 &&
+        width < 1024 &&
         <div className={styles.laCocinaDescription}>
           <div className={styles.left}>
             <div className={styles.imageContainer}>
@@ -208,7 +208,7 @@ export const AboutUsSection = (props) => {
         <img src={width < 1024? TruckAboutUsMobileImage : TruckAboutUsImage} alt="Truck Image"
           className={styles.truckImage}/>
       </div>
-      { width / height < 4/3 &&
+      { width < 1024 &&
         <>
           <div className={styles.missionDescription}>
             <div className={styles.title}>OUR STORY</div>
@@ -237,7 +237,7 @@ export const AboutUsSection = (props) => {
 
       } 
 
-      { width / height >= 4/3 &&
+      { width >= 1024 &&
         <div className={styles.missionDescription}>
           <div className={styles.left}>
             <div className={styles.title}>OUR STORY</div>
