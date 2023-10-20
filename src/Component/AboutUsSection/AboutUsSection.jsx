@@ -9,6 +9,7 @@ import TruckAboutUsImage from '../../asset/image/Truck_AboutUs.jpg';
 import TruckAboutUsMobileImage from '../../asset/image/Truck_iPhone.jpg';
 import ErikaImage from '../../asset/image/Erika_Web_Hori.jpg';
 import ErikaMobileImage from '../../asset/image/Erika_Web_Square_iPhone.jpg';
+import ErikaIpageImage from '../../asset/image/Erika_Web_Ver_iPad_Vert.jpg';
 import MusubiIcon from '../../asset/icon/Musubi_icon_Small.png';
 import FlagIcons from '../../asset/icon/flags.png';
 import TokachiKanjiIcon from '../../asset/icon/Tokachi_Kanji.png';
@@ -257,7 +258,7 @@ export const AboutUsSection = (props) => {
             </div>
           </div>
           <div className={styles.imageContainer}>
-            <img src={ErikaImage} alt="Erika Image"
+            <img src={width < 1024 ? ErikaImage : ErikaIpageImage} alt="Erika Image"
               className={styles.image}/>
           </div>
         </div>
