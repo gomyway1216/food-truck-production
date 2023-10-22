@@ -1,4 +1,4 @@
-@import "src/variables";
+@import "src/Styling/variables";
 
 .root {
   margin-bottom: 50px;
@@ -154,7 +154,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $SM) {
   .root {
     .bentoInfo {  
       .bentoImageContainer {
@@ -249,7 +249,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: $MD) {
   .root {
     .bentoInfo {
       display: flex;
@@ -358,7 +358,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $LG) {
   .root {
     .bentoInfo {
       display: flex;

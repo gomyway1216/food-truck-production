@@ -1,4 +1,4 @@
-@import "src/variables";
+@import "src/Styling/variables";
 
 .root {
     .gridContainer {
@@ -62,7 +62,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $SM) {
   .root {
     .gridContainer {
       margin-bottom: $commonMarginIpad * 2;
@@ -107,7 +107,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: $MD) {
   .root {
     .gridContainer {
 
@@ -151,41 +151,51 @@
   }
 }
 
-@media (min-width: 1200px) {
+// @media (min-width: 1200px) {
+//   .root {
+//     .gridContainer {
+
+//       .menu {
+//         .main {
+//           .titles {
+//             .title {
+//               font-size: 1.28em;
+//             }
+    
+//             .subTitle {
+//               font-size: 1.28em;
+//               white-space: nowrap;
+//             }
+
+//             .price {
+//               font-size: 1.28em;
+//             }
+//           }
+//         }
+
+//         .subSection {          
+//           .description {
+//             font-size: small;
+//           }
+    
+//           .ingredients {
+//             .ingredient {
+//               margin-top: 8px;
+//               font-size: small;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+
+@media (min-width: $LG) {
   .root {
     .gridContainer {
-
-      .menu {
-        .main {
-          .titles {
-            .title {
-              font-size: 1.28em;
-            }
-    
-            .subTitle {
-              font-size: 1.28em;
-              white-space: nowrap;
-            }
-
-            .price {
-              font-size: 1.28em;
-            }
-          }
-        }
-
-        .subSection {          
-          .description {
-            font-size: small;
-          }
-    
-          .ingredients {
-            .ingredient {
-              margin-top: 8px;
-              font-size: small;
-            }
-          }
-        }
-      }
+      grid-template-columns: repeat(4, minmax(100px, 1fr));
+      grid-column-gap: 2vw;
     }
   }
 }

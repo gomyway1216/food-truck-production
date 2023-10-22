@@ -12,6 +12,7 @@ import useWindowSize from '../../Hook/useWindowSize';
 import { Backdrop, CircularProgress } from '@mui/material';
 import styles from './home-page.module.scss';
 import BentoSection from '../../Component/BentoSection/BentoSection';
+import BREAKPOINTS from '../../Styling/breakpoints';
 
 
 const HomePage = () => {
@@ -107,7 +108,7 @@ const HomePage = () => {
         <MenuSectionWithoutImage title="DESSERT" menuList={dessertList} sectionRef={dessertRef} />
         <LocationSection scheduleList={scheduleList} sectionRef={locationRef} />
         <AboutUsSection sectionRef={aboutUsRef} />
-        {width >= 1024 &&
+        {width >= BREAKPOINTS.MD &&
           <FooterWide />
         }
       </div>

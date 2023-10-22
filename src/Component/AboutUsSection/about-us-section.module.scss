@@ -1,4 +1,4 @@
-@import "src/variables";
+@import "src/Styling/variables";
 
 .root {
   margin-bottom: 64px;
@@ -313,7 +313,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $SM) {
   .root {
     .riceBallExplanation {
       margin-top: $commonMarginIpad;
@@ -482,7 +482,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: $MD) {
   .root {
     .riceBallExplanation {
       display: flex;

@@ -1,9 +1,11 @@
+@import 'src/Styling/variables.scss';
+
 .subTitle {
   font-size: 24px;
   font-family: "DINCond-Medium-Regular";
 }
 
-@media (min-width: 768px) {
+@media (min-width: $SM) {
   .subTitle {
     font-size: 44px;
   }
@@ -15,7 +17,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: $MD) {
   .subTitle {
     font-size: 32px;
   }

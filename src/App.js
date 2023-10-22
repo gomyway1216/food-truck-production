@@ -5,6 +5,7 @@ import { RefProvider } from './Provider/RefProvider';
 import ApplicationBar from './Component/NavBar/ApplicationBar';
 import useWindowSize from './Hook/useWindowSize';
 import Footer from './Component/Footer/Footer';
+import BREAKPOINTS from './Styling/breakpoints';
 
 const App = () => {
   const { width } = useWindowSize();
@@ -15,7 +16,7 @@ const App = () => {
         {/* <ScrollToTop /> */}
         <ApplicationBar />
         <RouteList />
-        {width < 1024 &&
+        {width < BREAKPOINTS.MD &&
           <Footer />
         }
       </RefProvider>

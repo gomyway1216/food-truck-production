@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import styles from './bento-section.module.scss';
 import useWindowSize from '../../Hook/useWindowSize';
+import BREAKPOINTS from '../../Styling/breakpoints';
 
 
 const BentoSection = (props) => {
@@ -50,7 +51,7 @@ const BentoSection = (props) => {
     setBentoInfo(bentoData);
   };
 
-  console.log('rendering condition: ', (width >= 768 && width < 1024) || width >= 1440);
+  console.log('rendering condition: ', width );
 
   return (
     <div className={styles.root} ref={sectionRef}>
@@ -67,7 +68,7 @@ const BentoSection = (props) => {
             <div className={styles.price}>$ {bentoInfo?.BENTO.price.toFixed(2)}</div>
           </div>
           <div className={styles.contents}>
-            {((width >= 768 && width < 1024) || width >= 1440) ?
+            {((width >= BREAKPOINTS.SM && width < BREAKPOINTS.MD ) || width >= BREAKPOINTS.LG) ?
               <>
                 <div className={styles.musubi}>CHOOSE 2&nbsp;MUSUBI</div>
                 <div className={styles.plus}>+</div>

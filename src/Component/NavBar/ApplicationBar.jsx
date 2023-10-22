@@ -12,6 +12,7 @@ import twitterIcon from '../../asset/icon/twitter.png';
 import facebookIcon from '../../asset/icon/facebook.png';
 import instagramIcon from '../../asset/icon/instagram.png';
 import styles from './application-bar.module.scss';
+import BREAKPOINTS from '../../Styling/breakpoints';
 
 const scrollOffset = 80;
 
@@ -51,7 +52,7 @@ const ApplicationBar = () => {
   return (
     <Box sx={{ flexGrow: 1 }} className={styles.root}>
       <AppBar position="fixed" className={styles.bar}>
-        {width < 1024 && 
+        {width < BREAKPOINTS.MD && 
           <Toolbar sx={{ paddingLeft: '4px'}}>
             <IconButton
               size="large"
@@ -66,7 +67,7 @@ const ApplicationBar = () => {
           </Toolbar>
         }
       </AppBar>
-      {width >= 1024 &&
+      {width >= BREAKPOINTS.MD &&
         <div className={styles.fixedNavigation}>
           <div className={styles.wideToolBar}>
             <img src={TokachiLogoWide} className={styles.wideLogo}/>
@@ -97,11 +98,11 @@ const ApplicationBar = () => {
                 <div className={styles.description}>FOOD TRUCK FOR SAN FRANCISCO / BAY AREA</div>
                 <div className={styles.verticalLine}/>
                 <div className={styles.sections}>
-                  <div className={styles.location}
+                  <div className={styles.sectionItem}
                     onClick={() => scrollToDiv('musubi', scrollOffset)}>MENU</div>
-                  <div className={styles.location}
+                  <div className={styles.sectionItem}
                     onClick={() => scrollToDiv('location', scrollOffset)}>LOCATION</div>
-                  <div className={styles.aboutUs} 
+                  <div className={styles.sectionItem} 
                     onClick={() => scrollToDiv('aboutUs', scrollOffset)}>ABOUT US</div>
                 </div>
               </div>

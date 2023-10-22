@@ -14,17 +14,17 @@ import MusubiIcon from '../../asset/icon/Musubi_icon_Small.png';
 import FlagIcons from '../../asset/icon/flags.png';
 import TokachiKanjiIcon from '../../asset/icon/Tokachi_Kanji.png';
 import styles from './about-us-section.module.scss';
+import BREAKPOINTS from '../../Styling/breakpoints';
 
 export const AboutUsSection = (props) => {
   const { sectionRef } = props;
   const { width, height } = useWindowSize();
-  const sectionTitleHeight = 15.5;
 
   return (
     <div className={styles.root} ref={sectionRef}>
       <SectionTitle title="ABOUT US" />
       <div className={styles.riceBallExplanation}>
-        { width < 1024 &&
+        { width < BREAKPOINTS.MD &&
         <>
           <div className={styles.titles}>
             <div>JAPANESE RICE BALL</div>
@@ -42,7 +42,7 @@ export const AboutUsSection = (props) => {
           </div>
         </>
         }
-        { width >= 1024 &&
+        { width >= BREAKPOINTS.MD &&
           <>
             <div className={styles.left}>
               <div className={styles.titles}>
@@ -59,7 +59,7 @@ export const AboutUsSection = (props) => {
           </>
         }
       </div>
-      { width < 1024 &&
+      { width < BREAKPOINTS.MD &&
         <>
           <div className={styles.musubiDescription}>
             <div className={styles.title}>WHAT IS “MUSUBI” ?</div>
@@ -110,7 +110,7 @@ export const AboutUsSection = (props) => {
           </div>
         </>
       }
-      { width >= 1024 &&
+      { width >= BREAKPOINTS.MD &&
         <div className={styles.descriptionsContainer}>
           <div className={styles.title}>WHAT IS “MUSUBI” ?</div>
           <div className={styles.explanations}>
@@ -184,7 +184,7 @@ export const AboutUsSection = (props) => {
         </div>
       }
       {
-        width < 1024 &&
+        width < BREAKPOINTS.MD &&
         <div className={styles.laCocinaDescription}>
           <div className={styles.left}>
             <div className={styles.imageContainer}>
@@ -205,10 +205,11 @@ export const AboutUsSection = (props) => {
         </div>
       }
       <div className={styles.truckDescription}>
-        <img src={width < 1024? TruckAboutUsMobileImage : TruckAboutUsImage} alt="Truck Image"
-          className={styles.truckImage}/>
+        <img src={width < BREAKPOINTS.MD ? TruckAboutUsMobileImage 
+          : TruckAboutUsImage} alt="Truck Image"
+        className={styles.truckImage}/>
       </div>
-      { width < 1024 &&
+      { width < BREAKPOINTS.MD &&
         <>
           <div className={styles.missionDescription}>
             <div className={styles.title}>OUR STORY</div>
@@ -237,7 +238,7 @@ export const AboutUsSection = (props) => {
 
       } 
 
-      { width >= 1024 &&
+      { width >= BREAKPOINTS.MD &&
         <div className={styles.missionDescription}>
           <div className={styles.left}>
             <div className={styles.title}>OUR STORY</div>
@@ -258,7 +259,7 @@ export const AboutUsSection = (props) => {
             </div>
           </div>
           <div className={styles.imageContainer}>
-            <img src={width < 1024 ? ErikaImage : ErikaIpageImage} alt="Erika Image"
+            <img src={width < BREAKPOINTS.MD ? ErikaImage : ErikaIpageImage} alt="Erika Image"
               className={styles.image}/>
           </div>
         </div>

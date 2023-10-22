@@ -1,4 +1,4 @@
-@import "src/variables";
+@import "src/Styling/variables";
 
 .root {
   .locations {
@@ -9,7 +9,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $SM) {
   .root {
     .locations {
       margin-top: $commonMarginIpad;
