@@ -680,6 +680,7 @@
       
             .imageContainer {
               display: flex;
+              align-items: center;
               border-bottom: 1px solid;
       
               .laCocinaIcon {
@@ -751,6 +752,128 @@
           max-height: 100%;
           margin: auto;
         }
+      }
+    }
+  }
+}
+
+@media (min-width: $LG) {
+  .root {
+    .riceBallExplanation {
+      .left {
+
+        .titles {
+          font-size: 78px;
+          line-height: 1.0;
+        }
+        .description {
+          font-size: large;
+          line-height: 1.6;
+          width: 60%;
+        }
+      }
+    }
+
+    .descriptionsContainer {
+      .title {
+          font-size: 78px;
+      }
+
+      .explanations {
+        .left {
+          width: 25%;
+          padding-right: $commonAboutUsSectionVerticalMarginMacbook;
+
+          .title {
+            font-size: 36px;
+            margin-top: $commonAboutUsSectionVerticalMarginMacbook;
+          }
+        }
+
+        .center {
+          width: 50%;
+
+          .imagesContainer {
+            height: 320px;
+
+            .icons { 
+              .wrapper {
+                width: 160px;
+        
+                .imageContainer {
+          
+                  .musubiIcon {
+                    max-width: 72%;
+                    max-height: 72%;
+                  }
+        
+                  .flagIcons {
+                    width: 48%;
+                  }
+                }
+              }
+            }
+
+            .tokachiImage {
+              background-position: 50%;
+        
+              .title {
+                font-size: 36px;
+                margin-top: 12px;
+              }
+              
+              .imageContainer {
+                height: 24%;
+                margin-bottom: 12px;
+              }
+            }
+          }
+
+          .tokachiDescription {
+            padding-left: $commonAboutUsSectionVerticalMarginMacbook;
+            padding-right: $commonAboutUsSectionVerticalMarginMacbook;
+
+            .title {
+              font-size: 36px;
+              margin-top: $commonAboutUsSectionVerticalMarginMacbook;
+            }
+          }
+        }
+
+        .right {
+          // border-left: 1px solid;
+          width: 25%;
+
+          .laCocinaDescription {
+            .imageContainer {
+              height: 160px;
+            }
+
+            .descriptionWrapper {
+              padding-left: $commonAboutUsSectionVerticalMarginMacbook;
+              padding-top: $commonAboutUsSectionVerticalMarginMacbook;
+            }
+          }
+        }
+      }
+    }
+
+    .missionDescription {
+      .left {
+        margin-right: 60px;
+        width: 64%;
+        
+        .title {
+          font-size: 78px;
+        }
+
+        .description {
+          font-size: medium;
+        }
+      }
+
+      .imageContainer {
+        // width: 60%;
       }
     }
   }

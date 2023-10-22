@@ -1,49 +1,51 @@
 @import "src/Styling/variables";
 
 .root {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
-
-  .date {
-    width: 40px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid;
-    padding-bottom: 4px;
-
-    .dayOfWeek {
-      font-size: small;
-      font-family: "DINCond-Medium-Regular";
+  .item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  
+    .date {
+      width: 40px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid;
+      padding-bottom: 4px;
+  
+      .dayOfWeek {
+        font-size: small;
+        font-family: "DINCond-Medium-Regular";
+      }
     }
-  }
-
-  .title {
-    width: 40%;
-    margin-bottom: 30px;
-    border-bottom: 1px solid;
-    padding-bottom: 4px;
-    font-size: large;
-  }
-
-  .details {
-    width: 42%;
-    margin-bottom: 30px;
-    border-bottom: 1px solid;
-    padding-bottom: 4px;
-
-    .time {
-      font-size: small;
-      font-family: "DINCond-Medium-Regular";
+  
+    .title {
+      width: 40%;
+      margin-bottom: 30px;
+      border-bottom: 1px solid;
+      padding-bottom: 4px;
+      font-size: large;
     }
-    
-    .location {
-      font-size: x-small;
-      display: flex;
-      flex-direction: row;
-
-      .locationIcon {
-        padding-top: 1px;
+  
+    .details {
+      width: 42%;
+      margin-bottom: 30px;
+      border-bottom: 1px solid;
+      padding-bottom: 4px;
+  
+      .time {
+        font-size: small;
+        font-family: "DINCond-Medium-Regular";
+      }
+      
+      .location {
+        font-size: x-small;
+        display: flex;
+        flex-direction: row;
+  
+        .locationIcon {
+          padding-top: 1px;
+        }
       }
     }
   }
@@ -51,29 +53,31 @@
 
 @media (min-width: $SM) {
   .root {
-    .date {
-      width: 92px;
-
-      .dayOfWeek {
+    .item {
+      .date {
+        width: 92px;
+  
+        .dayOfWeek {
+          font-size: x-large;
+        }
+  
+        .monthAndDate {
+          font-size: xx-large;
+        }
+      }
+  
+      .title {
         font-size: x-large;
       }
-
-      .monthAndDate {
-        font-size: xx-large;
-      }
-    }
-
-    .title {
-      font-size: x-large;
-    }
-
-    .details {
-      .time {
-        font-size: large;
-      }
-
-      .location {
-        font-size: medium;
+  
+      .details {
+        .time {
+          font-size: large;
+        }
+  
+        .location {
+          font-size: medium;
+        }
       }
     }
   }
@@ -81,19 +85,72 @@
 
 @media (min-width: $MD) {
   .root {
-
-    .title {
-      font-size: xx-large;
+    .item {
+      .title {
+        font-size: xx-large;
+      }
+  
+      .details {
+        .time {
+          font-size: x-large;
+        }
+  
+        .location {
+          font-size: medium;
+        }
+      }
     }
+  }
+}
 
-    .details {
-      .time {
-        font-size: x-large;
-      }
+@media (min-width: $LG) {
+  .root {
+    .item {
+        margin-bottom: $commonAboutUsSectionVerticalMargin;
+  
+        display: flex;
+        flex-direction: row;
+    
+        .dayOfWeek {
+          font-size: x-large;
+          font-family: "DINCond-Medium-Regular";
+          border-bottom: 1px solid;
+          padding-bottom: 4px;
+        }
+  
+        .monthAndDate {
+          font-size: x-large;
+          border-bottom: 1px solid;
+          padding-bottom: 4px;
+        }
+    
+        .title {
+          margin-bottom: 0;
+          font-size: x-large;
+          width: 38%;
+        }
 
-      .location {
-        font-size: medium;
-      }
+        .time {
+          border-bottom: 1px solid;
+          padding-bottom: 4px;
+          width: 11%;
+          font-size: large;
+          text-align: center;
+        }
+
+        .location {
+          border-bottom: 1px solid;
+          padding-bottom: 4px;
+          width: 36%;
+          font-size: large;
+          display: flex;
+          flex-direction: row;
+
+          .locationIcon {
+            // margin-bottom: -100px;
+            padding-top: 2px;
+          }
+        }
     }
   }
 }

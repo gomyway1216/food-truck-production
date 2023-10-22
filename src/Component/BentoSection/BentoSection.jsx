@@ -83,7 +83,7 @@ const BentoSection = (props) => {
                 <div className={styles.row}>
                   <div className={styles.box}>CHOOSE<br/>2&nbsp;MUSUBI</div>
                   <div className={styles.plus}>+</div>
-                  <div className={styles.box}>CHICKEN KARAAGE</div>
+                  <div className={styles.box}>CHICKEN<br/>KARAAGE</div>
                 </div>
                 <div className={styles.row}>
                   <div className={styles.box}>EDAMAME</div>

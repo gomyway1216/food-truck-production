@@ -256,8 +256,10 @@
       flex-direction: row;
       justify-content: space-between;
 
+
       .bentoImageContainer {
-        max-width: 40%;
+        max-width: 44%;
+        margin-left: 0;
         .menuImage {
           width: 100%;
         }
@@ -265,7 +267,8 @@
 
       .right {
         margin: auto;
-        max-width: 48%;
+        max-width: 50%;
+        margin-right: 0;
 
         .main {
           .title {
@@ -319,7 +322,8 @@
         .subSection {
           margin-top: 0;
           .subSectionItem {
-            margin: 1%;
+            margin-left: 2%;
+            margin-right: 2%;
             padding: 0 1%;
 
             &:first-child {
@@ -365,6 +369,9 @@
       flex-direction: row;
 
       .bentoImageContainer {
+        max-width: 36%;
+        margin-left: 0;
+
         .menuImage {
           width: 100%;
         }
@@ -372,11 +379,17 @@
 
       .right {
         margin: auto;
-        max-width: 50%;
+        max-width: 58%;
+        margin-right: 0;
 
         .main {
           .title {
-            height: 64px;
+            height: 68px;
+            font-size: 56px;
+          }
+
+          .price {
+            font-size: 56px;
           }
         }
 
@@ -387,9 +400,11 @@
         }
 
         .subSection {
+          margin-top: $commonAboutUsSectionVerticalMarginMacbook;
+          
           .subSectionItem {
-            margin: 1%;
-            padding: 0 1%;
+            margin-left: 3%;
+            margin-right: 3%;
 
             &:first-child {
               margin-left: 0;
@@ -404,11 +419,13 @@
             }
 
             .itemTitle {
-              font-size: large;
+              font-size: x-large;
+              margin-bottom: 4px;
             }
 
             .description {
               font-size: small;
+              margin-bottom: 28px;
             }
 
             .ingredients {

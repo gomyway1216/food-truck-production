@@ -259,8 +259,10 @@ export const AboutUsSection = (props) => {
             </div>
           </div>
           <div className={styles.imageContainer}>
-            <img src={width < BREAKPOINTS.MD ? ErikaImage : ErikaIpageImage} alt="Erika Image"
-              className={styles.image}/>
+            <img src={width < BREAKPOINTS.MD ? ErikaImage : 
+              (width >= BREAKPOINTS.LG ? ErikaMobileImage
+                : ErikaIpageImage)} alt="Erika Image"
+            className={styles.image}/>
           </div>
         </div>
       }

@@ -21,3 +21,9 @@
     margin-bottom: 40px;
   }
 }
+
+@media (min-width: $MD) {
+  .root {
+    margin-top: $commonInternalMargin;
+  }
+}
