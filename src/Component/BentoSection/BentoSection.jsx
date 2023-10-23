@@ -68,7 +68,7 @@ const BentoSection = (props) => {
             <div className={styles.price}>$ {bentoInfo?.BENTO.price.toFixed(2)}</div>
           </div>
           <div className={styles.contents}>
-            {((width >= BREAKPOINTS.SM && width < BREAKPOINTS.MD ) || width >= BREAKPOINTS.LG) ?
+            {((width >= BREAKPOINTS.SM && width < BREAKPOINTS.MD ) ?
               <>
                 <div className={styles.musubi}>CHOOSE 2&nbsp;MUSUBI</div>
                 <div className={styles.plus}>+</div>
@@ -78,19 +78,42 @@ const BentoSection = (props) => {
                 <div className={styles.plus}>+</div>
                 <div className={styles.soup}>MISO SOUP</div>
               </>
-              :
-              <>
-                <div className={styles.row}>
-                  <div className={styles.box}>CHOOSE<br/>2&nbsp;MUSUBI</div>
-                  <div className={styles.plus}>+</div>
-                  <div className={styles.box}>CHICKEN<br/>KARAAGE</div>
-                </div>
-                <div className={styles.row}>
-                  <div className={styles.box}>EDAMAME</div>
-                  <div className={styles.plus}>+</div>
-                  <div className={styles.box}>MISO SOUP</div>
-                </div>
-              </>
+              : (
+                (width >= BREAKPOINTS.LG) ?
+                  <>
+                    <div className={styles.textContainer}>
+                      <span className={styles.firstRow}>CHOOSE</span>
+                      <span className={styles.secondRow}>2 MUSUBI</span>
+                    </div>
+                    <div className={styles.plus}>+</div>
+                    <div className={styles.textContainer}>
+                      <span className={styles.firstRow}>CHICKEN</span>
+                      <span className={styles.secondRow}>KARAAGE</span>
+                    </div>
+                    <div className={styles.plus}>+</div>
+                    <div className={styles.textContainer}>
+                      <span className={styles.firstRow}>EDAMAME</span>
+                    </div>
+                    <div className={styles.plus}>+</div>
+                    <div className={styles.textContainer}>
+                      <span className={styles.firstRow}>MISO</span>
+                      <span className={styles.secondRow}>SOUP</span>
+                    </div>
+                  </>
+                  :
+                  <>
+                    <div className={styles.row}>
+                      <div className={styles.box}>CHOOSE<br/>2&nbsp;MUSUBI</div>
+                      <div className={styles.plus}>+</div>
+                      <div className={styles.box}>CHICKEN<br/>KARAAGE</div>
+                    </div>
+                    <div className={styles.row}>
+                      <div className={styles.box}>EDAMAME</div>
+                      <div className={styles.plus}>+</div>
+                      <div className={styles.box}>MISO SOUP</div>
+                    </div>
+                  </>
+              ))
             }
           </div>
           <div className={styles.subSection}>

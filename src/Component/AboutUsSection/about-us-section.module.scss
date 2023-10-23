@@ -487,35 +487,49 @@
     .riceBallExplanation {
       display: flex;
       flex-direction: row;
+      justify-content: flex-start;
       margin-top: 60px;
       padding-bottom: 0;
+      width: 100%; // stretch the container to the full width
 
       .left {
         margin-bottom: $commonAboutUsSectionVerticalMargin;
+        margin-left: 0;
+        width: 540px;
 
         .titles {
-          font-size: 64px;
+          font-size: 60px;
           line-height: 1.0;
         }
         .description {
-          font-size: medium;
+          font-size: 14px;
           width: 88%;
-          margin-top: 40px;
+          margin-top: $commonAboutUsSectionVerticalMargin;
+          line-height: 1.6;
           font-family: "din-medium";
+          width: 360px;
         }
       }
-      .musubiImage {
-        width: 44%;
-        height: 100%;
-        margin-top: $commonAboutUsSectionVerticalMargin;
+
+      .right {
+        display: flex;
+        justify-content: center;
+        min-width: 380px;
+        flex: 1; // take up the remaining space
+
+        .musubiImage {
+          width: 100%;
+          height: 100%;
+          max-width: 380px;
+        }
       }
     }
 
     .descriptionsContainer {
       .title {
           font-size: 60px;
-          margin-top: 40px;
-          margin-bottom: 40px;
+          margin-top: calc($commonAboutUsSectionVerticalMargin - 8px);
+          margin-bottom: calc($commonAboutUsSectionVerticalMargin - 8px);
       }
 
       .explanations {
@@ -526,35 +540,41 @@
         
         .left {
           border-right: 1px solid white;
-          width: 30%;
+          width: 26%;
           display: flex;
           flex-direction: column;
-          justify-content: center;
-          padding-right: $commonAboutUsSectionVerticalMargin;
+          justify-content: space-between;
+          padding-top: $commonAboutUsSectionVerticalMargin;
+          padding-right: calc($commonAboutUsSectionVerticalMargin + 12px);
+          padding-bottom: $commonAboutUsSectionVerticalMargin;
 
           .description {
             font-family: "din-medium";
-            font-size: medium;
+            font-size: 14px;
             padding-right: 0;
             line-height: 1.6;
             margin-bottom: 0;
+            margin-top: 0;
           }
 
-          .title {
-            font-size: 28px;
-            padding-right: 0;
-            margin-bottom: 0;
-            margin-top: $commonAboutUsSectionVerticalMargin;
+          .connectorWrapper {
+            .title {
+              font-size: 26px;
+              padding-right: 0;
+              // margin-bottom: calc($commonAboutUsSectionVerticalMargin - 8px);
+              // margin-top: $commonAboutUsSectionVerticalMargin;
+            }
           }
         }
 
         .center {
-          width: 44%;
+          width: 48%;
 
           .imagesContainer {
             display: flex;
             flex-direction: row;
             border-bottom: 1px solid;
+            height: 280px;
             
 
             .icons {
@@ -584,8 +604,8 @@
           
                   .musubiIcon {
                     margin-top: auto;
-                    max-width: 40%;
-                    max-height: 40%;
+                    max-width: 48%;
+                    max-height: 48%;
                     margin: auto;
                   }
         
@@ -613,9 +633,9 @@
               background-position: 76%;
         
               .title {
-                font-size: 28px;
+                font-size: 26px;
                 margin-top: 0;
-                margin-left: 8%;
+                margin-left: $commonAboutUsSectionVerticalMargin;
         
                 .line1 {
                   margin: 0;
@@ -627,7 +647,7 @@
               }
               
               .imageContainer {
-                height: 24%;
+                height: 20%;
                 position: relative;
         
                 .kanjiIcon {
@@ -650,17 +670,17 @@
             padding-right: $commonAboutUsSectionVerticalMargin;
 
             .title {
-              font-size: 28px;
+              font-size: 26px;
               margin-bottom: 0;
               margin-left: 0;
               display: flex;
               align-self: flex-start;
-              margin-top: $commonAboutUsSectionVerticalMargin;
+              margin-top: calc($commonAboutUsSectionVerticalMargin - 4px);
             }
 
             .description {
               font-family: "din-medium";
-              font-size: medium;
+              font-size: 14px;
               line-height: 1.6;
             }
           }
@@ -668,7 +688,7 @@
 
         .right {
           border-left: 1px solid;
-          width: 28%;
+          width: 26%;
 
           .laCocinaDescription {
             display: flex;
@@ -682,20 +702,19 @@
               display: flex;
               align-items: center;
               border-bottom: 1px solid;
+              height: 140px;
+              
       
               .laCocinaIcon {
-                width: 100px;
+                margin-top: auto;
                 max-width: 56%;
                 max-height: 56%;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: 20px;
-                margin-bottom: 20px;
+                margin: auto;
               }
             }
 
             .descriptionWrapper {
-              padding-left: $commonAboutUsSectionVerticalMargin;
+              padding-left: calc($commonAboutUsSectionVerticalMargin + 4px);
               padding-top: $commonAboutUsSectionVerticalMargin;
               margin-top: 0;
               font-family: "din-medium";
@@ -703,6 +722,7 @@
 
               .description {
                 margin-top: 0;
+                font-size: 14px;
               }
             }
           }
@@ -717,19 +737,20 @@
       padding-bottom: 0;
       font-family: "din-medium";
       border-bottom: 1px solid white;
+      height: 400px;
 
       .left {
-        margin-right: 40px;
-        width: 80%;
+        padding-right: calc($commonAboutUsSectionVerticalMargin + 4px);
+        // border-right: 1px solid;
 
         .title {
           font-size: 64px;
           font-family: "DINCond-BoldRegular";
-          margin-top: $commonAboutUsSectionVerticalMargin;
+          margin-top: calc($commonAboutUsSectionVerticalMargin - 8px);
         }
 
         .description {
-          font-size: large;
+          font-size: 14px;
           line-height: 1.6;
         }
 
@@ -745,12 +766,12 @@
 
       .imageContainer {
         display: flex;
+        border-left: 1px solid;
 
         .image {
-          margin-top: auto;
-          max-width: 100%;
-          max-height: 100%;
-          margin: auto;
+          height: 100%;
+          width: auto;
+          object-fit: cover;
         }
       }
     }
@@ -759,17 +780,25 @@
 
 @media (min-width: $LG) {
   .root {
+
     .riceBallExplanation {
       .left {
+        width: 600px;
 
         .titles {
           font-size: 78px;
-          line-height: 1.0;
         }
+
         .description {
-          font-size: large;
-          line-height: 1.6;
-          width: 60%;
+          font-size: 16px;
+          width: 400px;
+        }
+      }
+
+      .right {
+
+        .musubiImage {
+          max-width: 480px;
         }
       }
     }
@@ -781,17 +810,25 @@
 
       .explanations {
         .left {
-          width: 25%;
-          padding-right: $commonAboutUsSectionVerticalMarginMacbook;
+          width: 23%;
+          padding-right: calc($commonAboutUsSectionVerticalMarginMacbook + 12px);
+          padding-top: $commonAboutUsSectionVerticalMarginMacbook;
+          padding-bottom: $commonAboutUsSectionVerticalMarginMacbook;
 
-          .title {
-            font-size: 36px;
-            margin-top: $commonAboutUsSectionVerticalMarginMacbook;
+          .description {
+            font-size: 16px;
+          }
+
+          .connectorWrapper {
+            .title {
+              font-size: 36px;
+              // margin-top: $commonAboutUsSectionVerticalMarginMacbook;
+            }
           }
         }
 
         .center {
-          width: 50%;
+          width: 54%;
 
           .imagesContainer {
             height: 320px;
@@ -803,8 +840,8 @@
                 .imageContainer {
           
                   .musubiIcon {
-                    max-width: 72%;
-                    max-height: 72%;
+                    max-width: 64%;
+                    max-height: 64%;
                   }
         
                   .flagIcons {
@@ -837,16 +874,25 @@
               font-size: 36px;
               margin-top: $commonAboutUsSectionVerticalMarginMacbook;
             }
+
+            .description {
+              font-size: 16px;
+            }
           }
         }
 
         .right {
           // border-left: 1px solid;
-          width: 25%;
+          width: 23%;
 
           .laCocinaDescription {
             .imageContainer {
               height: 160px;
+
+              .laCocinaIcon {
+                max-width: 48%;
+                max-height: 48%;
+              }
             }
 
             .descriptionWrapper {
@@ -859,21 +905,242 @@
     }
 
     .missionDescription {
+      // display: flex;
+      // flex-direction: row;
+      // padding-top: 0;
+      // padding-bottom: 0;
+      // font-family: "din-medium";
+      // border-bottom: 1px solid white;
+      // height: 400px;
+      
+
       .left {
+        // padding-right: calc($commonAboutUsSectionVerticalMargin + 4px);
+        border-right: 0;
+
         margin-right: 60px;
         width: 64%;
-        
+
         .title {
-          font-size: 78px;
+          // font-size: 64px;
+          // font-family: "DINCond-BoldRegular";
+          // margin-top: calc($commonAboutUsSectionVerticalMargin - 8px);
+          font-size: 68px;
         }
 
         .description {
+          // font-size: 14px;
+          // line-height: 1.6;
           font-size: medium;
+        }
+
+        .introduction {
+          // margin-top: $commonAboutUsSectionVerticalMargin;
+
+          .description {
+            // margin-top: 0;
+            // margin-bottom: 0;
+          }
         }
       }
 
       .imageContainer {
-        // width: 60%;
+        // display: flex;
+
+        .image {
+          // height: 100%;
+          // width: auto;
+          // object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $XLG) {
+  .root {
+
+    .riceBallExplanation {
+      .left {
+        width: 800px;
+
+        .titles {
+          // font-size: 78px;
+          font-size: 88px;
+        }
+
+        .description {
+          // font-size: 16px;
+          // width: 400px;
+          font-size: large;
+          // line-height: 1.6;
+          width: 440px;
+        }
+      }
+
+      .right {
+
+        .musubiImage {
+          // max-width: 480px;
+        }
+      }
+    }
+
+    .descriptionsContainer {
+      .title {
+          // font-size: 78px;
+          font-size: 84px;
+      }
+
+      .explanations {
+        .left {
+          // width: 23%;
+          padding-right: $commonAboutUsSectionVerticalMarginIMac;
+          padding-top: $commonAboutUsSectionVerticalMarginIMac;
+          padding-bottom: $commonAboutUsSectionVerticalMarginIMac;
+
+          .description {
+            // font-size: 16px;
+            font-size: 20px;
+          }
+
+          .connectorWrapper {
+            .title {
+              font-size: 36px;
+              // margin-top: $commonAboutUsSectionVerticalMarginMacbook;
+            }
+          }
+        }
+
+        .center {
+          // width: 54%;
+
+          .imagesContainer {
+            height: 400px;
+
+            .icons { 
+              .wrapper {
+                width: 200px;
+        
+                .imageContainer {
+          
+                  .musubiIcon {
+                    // max-width: 64%;
+                    // max-height: 64%;
+                  }
+        
+                  .flagIcons {
+                    // width: 48%;
+                  }
+                }
+              }
+            }
+
+            .tokachiImage {
+              // background-position: 50%;
+        
+              .title {
+                // font-size: 36px;
+                margin-top: 20px;
+                margin-left: $commonAboutUsSectionVerticalMarginIMac;
+              }
+              
+              .imageContainer {
+                // height: 24%;
+                // margin-bottom: 12px;
+              }
+            }
+          }
+
+          .tokachiDescription {
+            padding-left: $commonAboutUsSectionVerticalMarginIMac;
+            padding-right: $commonAboutUsSectionVerticalMarginIMac;
+
+            .title {
+              font-size: 36px;
+              margin-top: $commonAboutUsSectionVerticalMarginIMac;
+            }
+
+            .description {
+              // font-size: 16px;
+              font-size: 20px;
+            }
+          }
+        }
+
+        .right {
+          // border-left: 1px solid;
+          // width: 23%;
+
+          .laCocinaDescription {
+            .imageContainer {
+              height: 200px;
+
+              .laCocinaIcon {
+                max-width: 40%;
+                max-height: 40%;
+              }
+            }
+
+            .descriptionWrapper {
+              .description {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .missionDescription {
+      // display: flex;
+      // flex-direction: row;
+      justify-content: space-between;
+      // padding-top: 0;
+      // padding-bottom: 0;
+      // font-family: "din-medium";
+      // border-bottom: 1px solid white;
+      // height: 400px;
+      height: 480px;
+
+      .left {
+        padding-right: calc($commonAboutUsSectionVerticalMarginIMac + 16px);
+        // border-right: 0;
+
+        // margin-right: 60px;
+        // width: 64%;
+
+        .title {
+          // font-size: 64px;
+          // font-family: "DINCond-BoldRegular";
+          margin-top: calc($commonAboutUsSectionVerticalMarginIMac - 8px);
+          // font-size: 68px;
+        }
+
+        .description {
+          // font-size: 14px;
+          // line-height: 1.6;
+          font-size: large;
+        }
+
+        .introduction {
+          margin-top: $commonAboutUsSectionVerticalMarginIMac;
+
+          .description {
+            // margin-top: 0;
+            // margin-bottom: 0;
+          }
+        }
+      }
+
+      .imageContainer {
+        // display: flex;
+
+        .image {
+          // height: 100%;
+          // width: auto;
+          // object-fit: cover;
+        }
       }
     }
   }

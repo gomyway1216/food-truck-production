@@ -369,7 +369,7 @@
       flex-direction: row;
 
       .bentoImageContainer {
-        max-width: 36%;
+        max-width: 40%;
         margin-left: 0;
 
         .menuImage {
@@ -379,7 +379,7 @@
 
       .right {
         margin: auto;
-        max-width: 58%;
+        max-width: 52%;
         margin-right: 0;
 
         .main {
@@ -397,6 +397,31 @@
           font-size: x-large;
           display: flex;
           flex-direction: row;
+          justify-content: space-between;
+
+          .plus {
+            font-size: 1.5em;
+          }
+
+          .textContainer {
+            display: inline-block; // This ensures the text doesn't take the full width
+            text-align: center;
+            // Adjust the line-height if you want the lines closer or further apart
+            line-height: 1.2; // Adjust as necessary
+            border: 1px solid;
+            text-align: center;
+            height: fit-content;
+            padding: 4px 24px;
+          }
+          
+          .firstRow, .secondRow {
+            display: block; // This makes each span behave like a div
+          }
+          
+          // If you need additional space adjustments, you can target each span separately
+          .firstRow {
+            // margin-bottom: -5px; // Adjust as necessary to decrease space between lines
+          }
         }
 
         .subSection {
@@ -440,6 +465,114 @@
           }
         }
       }
+    }
+  }
+}
+
+@media (min-width: $XLG) {
+  .root {
+    .bentoInfo {
+
+      .bentoImageContainer {
+        // max-width: 40%;
+        // margin-left: 0;
+
+        .menuImage {
+          // width: 100%;
+          margin-top: 80px;
+        }
+      }
+
+      .right {
+        width: 84%;
+        max-width: 56%;
+
+        .main {
+          .title {
+            height: 92px;
+            font-size: 76px;
+          }
+
+          .price {
+            font-size: 76px;
+          }
+        }
+
+        .contents {
+          font-size: xx-large;
+          // display: flex;
+          // flex-direction: row;
+          // justify-content: space-between;
+
+          .textContainer {
+            // display: inline-block; // This ensures the text doesn't take the full width
+            // text-align: center;
+            // // Adjust the line-height if you want the lines closer or further apart
+            // line-height: 1.2; // Adjust as necessary
+            // border: 1px solid;
+            // // padding: 4px;
+            // text-align: center;
+            // height: fit-content;
+            padding: 8px 40px;
+          }
+          
+          .firstRow, .secondRow {
+            display: block; // This makes each span behave like a div
+          }
+          
+          // If you need additional space adjustments, you can target each span separately
+          .firstRow {
+            // margin-bottom: -5px; // Adjust as necessary to decrease space between lines
+          }
+        }
+
+        .subSection {
+          margin-top: $commonAboutUsSectionVerticalMarginIMac;
+          
+          .subSectionItem {
+            margin-left: 4%;
+            margin-right: 4%;
+
+            &:first-child {
+              // margin-left: 0;
+              // padding-left: 0;
+            }
+
+            &:last-child {
+              // border: none;
+              // // this is to remove the space on right side
+              // margin-right: 0;
+              // padding-right: 0;
+            }
+
+            .itemTitle {
+              // font-size: x-large;
+              margin-bottom: 8px;
+              font-size: xx-large;
+            }
+
+            .description {
+              // font-size: small;
+              // margin-bottom: 28px;
+              font-size: medium;
+              margin-bottom: 36px;
+            }
+
+            .ingredients {
+              .ingredient {
+                // font-size: small;
+                font-size: medium;
+              }
+            }
+          }
+
+          .edamame {
+            // min-width: 148px;
+          }
+        }
+
+      }
+
     }
   }
 }

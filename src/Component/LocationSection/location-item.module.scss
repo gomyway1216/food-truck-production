@@ -36,12 +36,14 @@
       .time {
         font-size: small;
         font-family: "DINCond-Medium-Regular";
+        margin-left: 2px;
       }
       
       .location {
         font-size: x-small;
         display: flex;
         flex-direction: row;
+        font-family: "DINCond-Medium-Regular";
   
         .locationIcon {
           padding-top: 1px;
@@ -55,22 +57,24 @@
   .root {
     .item {
       .date {
-        width: 92px;
+        width: 56px;
   
         .dayOfWeek {
-          font-size: x-large;
+          font-size: 20px;
         }
   
         .monthAndDate {
-          font-size: xx-large;
+          font-size: x-large;
         }
       }
   
       .title {
         font-size: x-large;
+        width: 40%;
       }
   
       .details {
+        width: 44%;
         .time {
           font-size: large;
         }
@@ -86,17 +90,29 @@
 @media (min-width: $MD) {
   .root {
     .item {
+      .date {
+        width: 64px;
+  
+        .dayOfWeek {
+          font-size: 22px;
+        }
+  
+        .monthAndDate {
+          font-size: 28px;
+        }
+      }
+
       .title {
         font-size: xx-large;
       }
   
       .details {
         .time {
-          font-size: x-large;
+          font-size: 22px;
         }
   
         .location {
-          font-size: medium;
+          font-size: large;
         }
       }
     }
@@ -107,50 +123,68 @@
   .root {
     .item {
         margin-bottom: $commonAboutUsSectionVerticalMargin;
-  
         display: flex;
         flex-direction: row;
     
         .dayOfWeek {
-          font-size: x-large;
+          font-size: 28px;
           font-family: "DINCond-Medium-Regular";
           border-bottom: 1px solid;
-          padding-bottom: 4px;
+          padding-bottom: 6px;
         }
   
         .monthAndDate {
-          font-size: x-large;
+          font-size: 28px;
           border-bottom: 1px solid;
-          padding-bottom: 4px;
+          padding-bottom: 6px;
         }
     
         .title {
           margin-bottom: 0;
-          font-size: x-large;
+          font-size: xx-large;
           width: 38%;
         }
 
         .time {
           border-bottom: 1px solid;
           padding-bottom: 4px;
-          width: 11%;
-          font-size: large;
+          width: 160px;
+          font-size: 24px;
           text-align: center;
+          font-family: "DINCond-Medium-Regular";
         }
 
         .location {
           border-bottom: 1px solid;
           padding-bottom: 4px;
           width: 36%;
-          font-size: large;
+          font-size: 24px;
           display: flex;
           flex-direction: row;
+          font-family: "DINCond-Medium-Regular";
 
           .locationIcon {
-            // margin-bottom: -100px;
             padding-top: 2px;
           }
         }
+    }
+  }
+}
+
+@media (min-width: $XLG) {
+  .root {
+    .item {
+      .dayOfWeek {
+        font-size: 32px;
+      }
+
+      .monthAndDate {
+        font-size: 32px;
+      }
+  
+      .title {
+        font-size: 38px;
+      }
     }
   }
 }

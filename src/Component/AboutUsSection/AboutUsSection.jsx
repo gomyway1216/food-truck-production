@@ -54,8 +54,10 @@ export const AboutUsSection = (props) => {
               inspired by Hokkaido style cuisine. We hope you enjoy our musubi that will 
               satisfy both your stomach and your soul!</p>
             </div>
-            <img src={ButaAboutUsImage} alt="Musubi Image"
-              className={styles.musubiImage}/>
+            <div className={styles.right}>
+              <img src={ButaAboutUsImage} alt="Musubi Image"
+                className={styles.musubiImage}/>
+            </div>
           </>
         }
       </div>
@@ -172,7 +174,7 @@ export const AboutUsSection = (props) => {
                 <div className={styles.descriptionWrapper}>
                   <p className={styles.description}>
                     In 2022, we joined the La Cocina incubator program to start 
-                    a food truck business. We share their spirit of helping minorities 
+                    a food truck business.<br/>We share their spirit of helping minorities 
                     start businesses and are proud of being a La Cocina member. 
                     Please visit for more details of La Cocina,  
                     &nbsp;<a href="https://lacocinasf.org/">https://lacocinasf.org/</a>
@@ -194,7 +196,7 @@ export const AboutUsSection = (props) => {
           </div>
           <div className={styles.right}>
             <p className={styles.description}>
-            In 2022, we joined the La Cocina incubator program to start a food truck business. 
+            In 2022, we joined the La Cocina incubator program to start a food truck business.<br/> 
             We share their spirit of helping minorities start businesses 
             and are proud of being a La Cocina member. 
             Please visit for more details of La Cocina,  

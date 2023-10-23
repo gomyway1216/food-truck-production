@@ -71,17 +71,18 @@
         margin-top: $commonMarginIpad;
 
         .main {
+          padding-bottom: 8px;
 
           .titles {
-
             .title {
               font-size: 28px;
-              line-height:1.15;
+              line-height: 1;
             }
           }
 
           .price {
-            font-size: xx-large;
+            font-size: 28px;
+            line-height: 1;
           }
         }
   
@@ -116,21 +117,16 @@
 
       .menu {
         .main {
+          padding-bottom: 4px;
+          
           .titles {
-            
             .title {
-              // font-size: 1.28em;
               font-size: 24px;
-            }
-    
-            .subTitle {
-              font-size: 1.28em;
-              white-space: nowrap;
             }
           }
 
           .price {
-            font-size: 1.28em;
+            font-size: 24px;
           }
         }
 
@@ -196,6 +192,41 @@
     .gridContainer {
       grid-template-columns: repeat(4, minmax(100px, 1fr));
       grid-column-gap: 2vw;
+    }
+  }
+}
+
+@media (min-width: $XLG) {
+  .root {
+    .gridContainer {
+      .menu {
+        .main {
+          padding-bottom: 8px;
+          .titles {
+            .title {
+              font-size: 32px;
+            }
+          }
+
+          .price {
+            font-size: 32px;
+          }
+        }
+
+        .subSection {          
+          .description {
+            font-size: medium;
+          }
+    
+          .ingredients {
+            .ingredient {
+              margin-top: 16px;
+              margin-bottom: 8px;
+              font-size: medium;
+            }
+          }
+        }
+      }
     }
   }
 }

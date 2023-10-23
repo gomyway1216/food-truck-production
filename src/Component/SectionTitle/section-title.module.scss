@@ -86,3 +86,11 @@
     }
   }
 }
+
+@media (min-width: $LG) {
+  .root {
+    .sectionTitle {
+      font-size: medium;
+    }
+  }
+}

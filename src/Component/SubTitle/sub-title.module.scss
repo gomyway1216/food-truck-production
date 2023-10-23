@@ -22,3 +22,12 @@
     font-size: 32px;
   }
 }
+
+@media (min-width: $XLG) {
+  .subTitle {
+    font-size: 48px;
+    // margin-top: -8px;
+    margin-bottom: 4px;
+    line-height: 0.9;
+  }
+}
