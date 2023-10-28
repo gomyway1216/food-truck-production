@@ -30,7 +30,7 @@ const LocationItem = (props) => {
           <div className={styles.details}>
             <div className={styles.time}>{startTime} - {endTime}</div>
             <div className={styles.location}>
-              <LocationOnIcon fontSize="x-small" className={styles.locationIcon}/>
+              <LocationOnIcon fontSize="10px" className={styles.locationIcon}/>
               <Link
                 underline="none" 
                 color="inherit"
@@ -48,7 +48,7 @@ const LocationItem = (props) => {
           </div>
           <div className={styles.time}>{startTime} - {endTime}</div>
           <div className={styles.location}>
-            <LocationOnIcon fontSize="x-small" className={styles.locationIcon}/>
+            <LocationOnIcon fontSize="10px" className={styles.locationIcon}/>
             <Link
               underline="none" 
               color="inherit"

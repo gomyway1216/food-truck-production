@@ -15,13 +15,12 @@
     .main {
       display: flex;
       flex-direction: row;
-      // margin-top: 16px;
       margin-top: 22px;
 
       .description {
         font-family: "din-medium";
         line-height: 1.6;
-        font-size: small;
+        font-size: 13px;
         margin: 0;
         padding-right: 2%;
         width: 50%;
@@ -46,7 +45,7 @@
     .description {
       font-family: "din-medium";
       line-height: 1.6;
-      font-size: small;
+      font-size: 13px;
     }
   }
 
@@ -69,7 +68,7 @@
         margin-right: 10%;
         line-height: 1.6;
         font-family: "din-medium";
-        font-size: small;
+        font-size: 13px;
       }
     }
 
@@ -129,7 +128,6 @@
       width: 50%;
       background-position: center;
       background-repeat: no-repeat;
-      // padding-top: 20px;
       padding-top: $commonInternalMargin;
       padding-bottom: $commonInternalMargin;
       padding-right: $commonInternalMargin - 12px;
@@ -188,7 +186,7 @@
       .description {
         line-height: 1.6;
         font-family: "din-medium";
-        font-size: small;
+        font-size: 13px;
         margin: 0;
       }
     }
@@ -232,7 +230,7 @@
       .description {
         line-height: 1.6;
         font-family: "din-medium";
-        font-size: small;
+        font-size: 13px;
       }
     }
   }
@@ -248,9 +246,7 @@
   }
 
   .missionDescription {
-    // margin-bottom: 30px;
     border-top: 1px solid white;
-    // padding-top: 20px;
     padding-top: $commonMargin - 8px;
     padding-bottom: 22px;
 
@@ -262,13 +258,13 @@
     .description1 {
       line-height: 1.6;
       font-family: "din-medium";
-      font-size: small;
+      font-size: 13px;
       margin: 0;
     }
 
     .description2 {
       font-family: "din-medium";
-      font-size: small;
+      font-size: 13px;
       padding-top: $commonMargin;
       margin: 0;
     }
@@ -282,7 +278,7 @@
     height: 120px;
     justify-content: space-between;
     font-family: "din-medium";
-    font-size: small;
+    font-size: 13px;
 
     .description {
       display: flex;
@@ -337,7 +333,6 @@
         }
   
         .musubiImage {
-          // width: 320px;
           min-width: 56%;
         }
       }
@@ -394,7 +389,6 @@
         .title {
           font-size: 36px;
           padding-top: 0;
-          // margin-top: $commonAboutUsSectionVerticalMargin;
         }
       }
 
@@ -561,8 +555,6 @@
             .title {
               font-size: 26px;
               padding-right: 0;
-              // margin-bottom: calc($commonAboutUsSectionVerticalMargin - 8px);
-              // margin-top: $commonAboutUsSectionVerticalMargin;
             }
           }
         }
@@ -733,6 +725,7 @@
     .missionDescription {
       display: flex;
       flex-direction: row;
+      justify-content: space-between;
       padding-top: 0;
       padding-bottom: 0;
       font-family: "din-medium";
@@ -741,7 +734,6 @@
 
       .left {
         padding-right: calc($commonAboutUsSectionVerticalMargin + 4px);
-        // border-right: 1px solid;
 
         .title {
           font-size: 64px;
@@ -765,12 +757,14 @@
       }
 
       .imageContainer {
-        display: flex;
+        height: 100%;
         border-left: 1px solid;
 
         .image {
+          // fix for image exceeding width of the parent div
           height: 100%;
-          width: auto;
+          // width: auto;
+          max-width: 100%;
           object-fit: cover;
         }
       }
@@ -796,7 +790,6 @@
       }
 
       .right {
-
         .musubiImage {
           max-width: 480px;
         }
@@ -822,7 +815,6 @@
           .connectorWrapper {
             .title {
               font-size: 36px;
-              // margin-top: $commonAboutUsSectionVerticalMarginMacbook;
             }
           }
         }
@@ -882,7 +874,6 @@
         }
 
         .right {
-          // border-left: 1px solid;
           width: 23%;
 
           .laCocinaDescription {
@@ -904,53 +895,19 @@
       }
     }
 
-    .missionDescription {
-      // display: flex;
-      // flex-direction: row;
-      // padding-top: 0;
-      // padding-bottom: 0;
-      // font-family: "din-medium";
-      // border-bottom: 1px solid white;
-      // height: 400px;
-      
-
+    .missionDescription {  
       .left {
-        // padding-right: calc($commonAboutUsSectionVerticalMargin + 4px);
         border-right: 0;
 
         margin-right: 60px;
         width: 64%;
 
         .title {
-          // font-size: 64px;
-          // font-family: "DINCond-BoldRegular";
-          // margin-top: calc($commonAboutUsSectionVerticalMargin - 8px);
           font-size: 68px;
         }
 
         .description {
-          // font-size: 14px;
-          // line-height: 1.6;
-          font-size: medium;
-        }
-
-        .introduction {
-          // margin-top: $commonAboutUsSectionVerticalMargin;
-
-          .description {
-            // margin-top: 0;
-            // margin-bottom: 0;
-          }
-        }
-      }
-
-      .imageContainer {
-        // display: flex;
-
-        .image {
-          // height: 100%;
-          // width: auto;
-          // object-fit: cover;
+          font-size: 16px;
         }
       }
     }
@@ -965,89 +922,59 @@
         width: 800px;
 
         .titles {
-          // font-size: 78px;
           font-size: 88px;
         }
 
         .description {
-          // font-size: 16px;
-          // width: 400px;
           font-size: large;
-          // line-height: 1.6;
           width: 440px;
         }
       }
+    }
 
-      .right {
-
-        .musubiImage {
-          // max-width: 480px;
-        }
+    .truckDescription {
+      left: unset;
+      .truckImage {
+        width: 100%;
       }
     }
 
     .descriptionsContainer {
       .title {
-          // font-size: 78px;
           font-size: 84px;
       }
 
       .explanations {
         .left {
-          // width: 23%;
           padding-right: $commonAboutUsSectionVerticalMarginIMac;
           padding-top: $commonAboutUsSectionVerticalMarginIMac;
           padding-bottom: $commonAboutUsSectionVerticalMarginIMac;
 
           .description {
-            // font-size: 16px;
             font-size: 20px;
           }
 
           .connectorWrapper {
             .title {
               font-size: 36px;
-              // margin-top: $commonAboutUsSectionVerticalMarginMacbook;
             }
           }
         }
 
         .center {
-          // width: 54%;
-
           .imagesContainer {
             height: 400px;
 
             .icons { 
               .wrapper {
                 width: 200px;
-        
-                .imageContainer {
-          
-                  .musubiIcon {
-                    // max-width: 64%;
-                    // max-height: 64%;
-                  }
-        
-                  .flagIcons {
-                    // width: 48%;
-                  }
-                }
               }
             }
 
             .tokachiImage {
-              // background-position: 50%;
-        
               .title {
-                // font-size: 36px;
                 margin-top: 20px;
                 margin-left: $commonAboutUsSectionVerticalMarginIMac;
-              }
-              
-              .imageContainer {
-                // height: 24%;
-                // margin-bottom: 12px;
               }
             }
           }
@@ -1062,16 +989,12 @@
             }
 
             .description {
-              // font-size: 16px;
               font-size: 20px;
             }
           }
         }
 
         .right {
-          // border-left: 1px solid;
-          // width: 23%;
-
           .laCocinaDescription {
             .imageContainer {
               height: 200px;
@@ -1093,53 +1016,22 @@
     }
 
     .missionDescription {
-      // display: flex;
-      // flex-direction: row;
       justify-content: space-between;
-      // padding-top: 0;
-      // padding-bottom: 0;
-      // font-family: "din-medium";
-      // border-bottom: 1px solid white;
-      // height: 400px;
       height: 480px;
 
       .left {
         padding-right: calc($commonAboutUsSectionVerticalMarginIMac + 16px);
-        // border-right: 0;
-
-        // margin-right: 60px;
-        // width: 64%;
 
         .title {
-          // font-size: 64px;
-          // font-family: "DINCond-BoldRegular";
           margin-top: calc($commonAboutUsSectionVerticalMarginIMac - 8px);
-          // font-size: 68px;
         }
 
         .description {
-          // font-size: 14px;
-          // line-height: 1.6;
           font-size: large;
         }
 
         .introduction {
           margin-top: $commonAboutUsSectionVerticalMarginIMac;
-
-          .description {
-            // margin-top: 0;
-            // margin-bottom: 0;
-          }
-        }
-      }
-
-      .imageContainer {
-        // display: flex;
-
-        .image {
-          // height: 100%;
-          // width: auto;
-          // object-fit: cover;
         }
       }
     }

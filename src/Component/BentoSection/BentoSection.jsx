@@ -51,8 +51,6 @@ const BentoSection = (props) => {
     setBentoInfo(bentoData);
   };
 
-  console.log('rendering condition: ', width );
-
   return (
     <div className={styles.root} ref={sectionRef}>
       <SectionTitle title="BENTO" />

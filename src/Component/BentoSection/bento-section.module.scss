@@ -15,9 +15,6 @@
         margin-top: 56px;
         margin-bottom: 28px;
         width: 100%;
-        // width: calc(100vw - 103px);
-        // margin-left: calc(54px - 5vw);
-        // margin-right: calc(49px - 5vw);
       }
     }
 
@@ -116,11 +113,11 @@
         }
 
         .itemTitle {
-          font-size: medium;
+          font-size: 16px;
         }
 
         .description {
-          font-size: xx-small;
+          font-size: 9px;
           margin-bottom: 20px;
           font-family: "HelveticaNeue-Light";
         }
@@ -133,7 +130,7 @@
           bottom: 0px;
 
           .ingredient {
-            font-size: x-small;
+            font-size: 10px;
             border: 1px solid;
             padding-left: 2px;
             padding-right: 2px;
@@ -184,7 +181,6 @@
         .musubi {
           border: 1px solid;
           padding: 4px;
-          // width: 33%;
           text-align:center;
           height: fit-content;
           padding: 4px 24px;
@@ -193,7 +189,6 @@
         .side {
           border: 1px solid;
           padding: 4px;
-          // width: 57%;
           text-align:center;
           height: fit-content;
           padding: 4px 24px;
@@ -202,7 +197,6 @@
         .edamame {
           border: 1px solid;
           padding: 4px;
-          // width: 65%;
           text-align:center;
           height: fit-content;
           margin: auto;
@@ -212,7 +206,6 @@
         .soup {
           border: 1px solid;
           padding: 4px;
-          // width: 30%;
           text-align:center;
           height: fit-content;
           margin: auto;
@@ -233,14 +226,14 @@
           }
 
           .description {
-            font-size: small;
+            font-size: 13px;
             margin-bottom: 24px;
           }
 
           .ingredients {
             margin-top: 18px;
             .ingredient {
-              font-size: medium;
+              font-size: 16px;
             }
           }
         }
@@ -343,12 +336,12 @@
             }
 
             .description {
-              font-size: small;
+              font-size: 13px;
             }
 
             .ingredients {
               .ingredient {
-                font-size: small;
+                font-size: 13px;
               }
             }
           }
@@ -404,10 +397,9 @@
           }
 
           .textContainer {
-            display: inline-block; // This ensures the text doesn't take the full width
+            display: inline-block;
             text-align: center;
-            // Adjust the line-height if you want the lines closer or further apart
-            line-height: 1.2; // Adjust as necessary
+            line-height: 1.2;
             border: 1px solid;
             text-align: center;
             height: fit-content;
@@ -416,11 +408,6 @@
           
           .firstRow, .secondRow {
             display: block; // This makes each span behave like a div
-          }
-          
-          // If you need additional space adjustments, you can target each span separately
-          .firstRow {
-            // margin-bottom: -5px; // Adjust as necessary to decrease space between lines
           }
         }
 
@@ -449,13 +436,13 @@
             }
 
             .description {
-              font-size: small;
+              font-size: 13px;
               margin-bottom: 28px;
             }
 
             .ingredients {
               .ingredient {
-                font-size: small;
+                font-size: 13px;
               }
             }
           }
@@ -474,11 +461,7 @@
     .bentoInfo {
 
       .bentoImageContainer {
-        // max-width: 40%;
-        // margin-left: 0;
-
         .menuImage {
-          // width: 100%;
           margin-top: 80px;
         }
       }
@@ -500,29 +483,13 @@
 
         .contents {
           font-size: xx-large;
-          // display: flex;
-          // flex-direction: row;
-          // justify-content: space-between;
 
           .textContainer {
-            // display: inline-block; // This ensures the text doesn't take the full width
-            // text-align: center;
-            // // Adjust the line-height if you want the lines closer or further apart
-            // line-height: 1.2; // Adjust as necessary
-            // border: 1px solid;
-            // // padding: 4px;
-            // text-align: center;
-            // height: fit-content;
             padding: 8px 40px;
           }
           
           .firstRow, .secondRow {
             display: block; // This makes each span behave like a div
-          }
-          
-          // If you need additional space adjustments, you can target each span separately
-          .firstRow {
-            // margin-bottom: -5px; // Adjust as necessary to decrease space between lines
           }
         }
 
@@ -533,46 +500,24 @@
             margin-left: 4%;
             margin-right: 4%;
 
-            &:first-child {
-              // margin-left: 0;
-              // padding-left: 0;
-            }
-
-            &:last-child {
-              // border: none;
-              // // this is to remove the space on right side
-              // margin-right: 0;
-              // padding-right: 0;
-            }
-
             .itemTitle {
-              // font-size: x-large;
               margin-bottom: 8px;
               font-size: xx-large;
             }
 
             .description {
-              // font-size: small;
-              // margin-bottom: 28px;
-              font-size: medium;
+              font-size: 16px;
               margin-bottom: 36px;
             }
 
             .ingredients {
               .ingredient {
-                // font-size: small;
-                font-size: medium;
+                font-size: 16px;
               }
             }
           }
-
-          .edamame {
-            // min-width: 148px;
-          }
         }
-
       }
-
     }
   }
 }

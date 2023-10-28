@@ -229,94 +229,24 @@
   .root {
     .fixedNavigation {
       .wideToolBar {
-        // display: flex;
-        // flex-direction: row;
-        // height: 100px;
-        // border-bottom: 1px solid;
-        // margin-bottom: 8px;
         height: 120px;
   
-        .wideLogo {
-          // height: 68%;
-          // margin: auto;
-          // margin-left: 0;
-        }
-  
         .right {
-          // display: flex;
-          // flex-direction: column;
-          // justify-content: flex-end;
-          // width: 72%;
-  
           .topRow {
-            // display: flex;
-            // flex-direction: row;
-            // justify-content: space-between;
-            // width: 100%;
-            // margin: auto;
-  
             .title {
-              // display: flex;
-              // flex-direction: row;
-              // align-items: center;
               font-size: xx-large;
-            }
-  
-            .icons {
-              // display: flex;
-              // flex-direction: row;
-              // width: 16%;
-              // justify-content: space-between;
-      
-              .imageContainer {
-                // display: flex;
-                // height: 24px;
-                // width: 24px;
-                // margin-top: 20px;
-                // margin-bottom: 10px;
-        
-                .image {
-                  // margin-top: auto;
-                  // max-width: 100%;
-                  // max-height: 100%;
-                  // margin: auto;
-                }
-              }
             }
           }
   
           .bottomRow {
-            // border-top: 1px solid;
-            // display: flex;
-            // flex-direction: row;
-            // justify-content: space-between;
-            // height: 50%;
-            // font-family: "din-medium";
-            // font-size: 12px;
-  
-            .description {
-              // display: flex;
-              // flex-direction: row;
-              // align-items: center;
-              font-size: medium;
-            }
-  
-            .verticalLine {
-              // border-left: 1px solid;
-              // height: auto;
-            }
-  
-            .sections {
-              // display: flex;
-              // flex-direction: row;
-              // align-items: center;
-              // justify-content: space-between;
-              // width: 40%;
 
+            .description {
+              font-size: 16px;
+            }
+
+            .sections {
               .sectionItem {
-                // cursor: pointer;
-                // margin-left: -12%;
-                font-size: medium;
+                font-size: 16px;
               }
             }
           }
@@ -324,17 +254,8 @@
       }
 
       .menus {
-        // display: flex;
-        // flex-direction: row;
-        // justify-content: flex-end;
-        // margin-top: $commonInternalMargin;
-        // font-family: "din-medium";
-        // font-size: 12px;
-
         .menuItem {
-          // margin-left: 4%;
-          // cursor: pointer;
-          font-size: medium;
+          font-size: 16px;
         }
       }
     }

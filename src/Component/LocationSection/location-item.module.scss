@@ -14,7 +14,7 @@
       padding-bottom: 4px;
   
       .dayOfWeek {
-        font-size: small;
+        font-size: 13px;
         font-family: "DINCond-Medium-Regular";
       }
     }
@@ -34,13 +34,13 @@
       padding-bottom: 4px;
   
       .time {
-        font-size: small;
+        font-size: 13px;
         font-family: "DINCond-Medium-Regular";
         margin-left: 2px;
       }
       
       .location {
-        font-size: x-small;
+        font-size: 10px;
         display: flex;
         flex-direction: row;
         font-family: "DINCond-Medium-Regular";
@@ -80,7 +80,7 @@
         }
   
         .location {
-          font-size: medium;
+          font-size: 16px;
         }
       }
     }

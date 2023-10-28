@@ -26,24 +26,19 @@
         
 
         .titles {
-          // either way works, but having margin is clearer and easier to control for larger screens
-          // height: 36px;
           height: 32px;
           margin-bottom: 4px;
 
           .title {
-            font-size: medium;
+            font-size: 16px;
             margin: 0;
             line-height: 1.05;
-            // word-wrap: break-word;
-            // overflow-wrap: break-word;
-            // word-break: break-all 4;
             max-width: 100%;
             display: inline-block;
           }
   
           .subTitle {
-            font-size: small;
+            font-size: 13px;
             margin: 0;
             line-height: 1; // this is required to avoid any spacing issue
             font-family: "DINCond-Medium-Regular";
@@ -62,13 +57,11 @@
         flex-direction: column;
         justify-content: space-between;
         margin-top: 4px;
-        // padding-top: 8px;
         padding-bottom: 8px;
-        // border-top: 1px solid;
         border-bottom: 1px solid;
         
         .description {
-          font-size: xx-small;
+          font-size: 9px;
           font-family: "HelveticaNeue-Light";
         }
   
@@ -78,7 +71,7 @@
           flex-wrap: wrap;
   
           .ingredient {
-            font-size: x-small;
+            font-size: 10px;
             border: 1px solid;
             padding-left: 2px;
             padding-right: 2px;
@@ -90,11 +83,6 @@
       }
     }
   }
-
-  // .menu:first-child,
-  // .menu:nth-child(2) {
-  //   margin-top: calc($commonInternalMargin * -1);
-  // }
 }
 
 @media (min-width: $SM) {
@@ -138,7 +126,7 @@
     
           .ingredients {
             .ingredient {
-              font-size: medium;
+              font-size: 16px;
               margin-top: 12px;
             }
           }
@@ -165,14 +153,12 @@
             }
     
             .subTitle {
-              // font-size: 1.28em;
               font-size: 20px;
               white-space: nowrap;
             }
           }
 
           .price {
-            // font-size: 1.28em;
             font-size: 24px;
             min-width: 60px;
           }
@@ -180,13 +166,13 @@
 
         .subSection {          
           .description {
-            font-size: small;
+            font-size: 13px;
           }
     
           .ingredients {
             .ingredient {
               margin-top: 8px;
-              font-size: small;
+              font-size: 13px;
             }
           }
         }
@@ -194,47 +180,6 @@
     }
   }
 }
-
-// @media (min-width: 1200px) {
-//   .root {
-//     .gridContainer {
-
-//       .menu {
-//         .main {
-//           .titles {
-//             height: 48px;
-            
-//             .title {
-//               font-size: 1.28em;
-//             }
-    
-//             .subTitle {
-//               font-size: 1.28em;
-//               white-space: nowrap;
-//             }
-//           }
-
-//           .price {
-//             font-size: 1.28em;
-//           }
-//         }
-
-//         .subSection {          
-//           .description {
-//             font-size: small;
-//           }
-    
-//           .ingredients {
-//             .ingredient {
-//               margin-top: 8px;
-//               font-size: small;
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
 
 @media (min-width: $LG) {
   .root {
@@ -271,14 +216,14 @@
 
         .subSection {          
           .description {
-            font-size: medium;
+            font-size: 16px;
           }
     
           .ingredients {
             .ingredient {
               margin-top: 16px;
               margin-bottom: 8px;
-              font-size: medium;
+              font-size: 16px;
             }
           }
         }

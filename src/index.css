@@ -8,6 +8,13 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
+@media (min-width: 1920px) {
+  #root {
+    max-width: 1900px;
+    margin: 0 auto;
+  }
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
