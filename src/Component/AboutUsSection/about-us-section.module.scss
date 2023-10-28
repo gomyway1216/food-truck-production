@@ -763,8 +763,8 @@
         .image {
           // fix for image exceeding width of the parent div
           height: 100%;
-          // width: auto;
-          max-width: 100%;
+          width: auto;
+          // max-width: 100%;
           object-fit: cover;
         }
       }
@@ -1032,6 +1032,14 @@
 
         .introduction {
           margin-top: $commonAboutUsSectionVerticalMarginIMac;
+        }
+      }
+
+      .imageContainer {
+
+        .image {
+          // fix for image exceeding width of the parent div
+          max-width: 100%;
         }
       }
     }
