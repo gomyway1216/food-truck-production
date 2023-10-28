@@ -5,6 +5,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #222021;
   color: white;
+  -webkit-text-size-adjust: 100%;
 }
 
 code {
