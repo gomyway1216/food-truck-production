@@ -101,11 +101,20 @@ const HomePage = () => {
             ? 'block' : 'none'
         }}>
         <BentoSection menuList={allMenus} sectionRef={bentoRef} handleLoad={handleLoad} />
-        <MenuSection title="MUSUBI" menuList={musubiList} sectionRef={musubiRef} />
-        <MenuSection title="UDON" menuList={udonList} sectionRef={udonRef} />
-        <MenuSectionWithoutImage title="SIDE MENU" menuList={sideMenuList}
-          sectionRef={sideMenuRef} />
-        <MenuSectionWithoutImage title="DESSERT" menuList={dessertList} sectionRef={dessertRef} />
+        {musubiList.length > 0 &&
+          <MenuSection title="MUSUBI" menuList={musubiList} sectionRef={musubiRef} />
+        }
+        {udonList.length > 0 &&
+          <MenuSection title="UDON" menuList={udonList} sectionRef={udonRef} />
+        }
+        {sideMenuList.length > 0 &&
+          <MenuSectionWithoutImage title="SIDE MENU" menuList={sideMenuList} 
+            sectionRef={sideMenuRef} />
+        }
+        {dessertList.length > 0 &&
+          <MenuSectionWithoutImage title="DESSERT" menuList={dessertList} 
+            sectionRef={dessertRef} />
+        }
         <LocationSection scheduleList={scheduleList} sectionRef={locationRef} />
         <AboutUsSection sectionRef={aboutUsRef} />
         {width >= BREAKPOINTS.MD &&
