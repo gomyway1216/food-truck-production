@@ -117,8 +117,8 @@ const ApplicationBar = () => {
               onClick={() => scrollToDiv('udon', scrollOffset)}>UDON</div>
             <div className={styles.menuItem}
               onClick={() => scrollToDiv('sideMenu', scrollOffset)}>SIDE MENU</div>
-            <div className={styles.menuItem}
-              onClick={() => scrollToDiv('dessert', scrollOffset)}>DESSERT</div>
+            {/* <div className={styles.menuItem}
+              onClick={() => scrollToDiv('dessert', scrollOffset)}>DESSERT</div> */}
           </div>
         </div>
       }
@@ -169,8 +169,8 @@ const ApplicationBar = () => {
                   onClick={() => scrollToDiv('udon', scrollOffset)}>UDON</div>
                 <div className={styles.menuItem}
                   onClick={() => scrollToDiv('sideMenu', scrollOffset)}>SIDE MENU</div>
-                <div className={styles.menuItem}
-                  onClick={() => scrollToDiv('dessert', scrollOffset)}>DESSERT</div>
+                {/* <div className={styles.menuItem}
+                  onClick={() => scrollToDiv('dessert', scrollOffset)}>DESSERT</div> */}
               </div>
               }
               <div className={styles.item}

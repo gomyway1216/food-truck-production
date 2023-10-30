@@ -25,7 +25,7 @@ const MenuSection = (props) => {
             <div className={styles.subSection}>
               <div className={styles.description}>{menu.description}</div>
               <div className={styles.ingredients}>
-                {menu.ingredients.map((ingredient) => 
+                {menu.ingredients.sort().map((ingredient) => 
                   <div key={menu.title + '-' + ingredient}
                     className={styles.ingredient}> 
                     {ingredient.toUpperCase()}
