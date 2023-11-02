@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import * as menuApi from '../../Firebase/menu';
 import * as scheduleApi from '../../Firebase/schedule';
-import { useRefContext } from '../../Provider/RefProvider';
+import { useRefContext } from '../../Context/RefContext';
 import MenuSection from '../../Component/MenuSection/MenuSection';
 import MenuSectionWithoutImage
   from '../../Component/MenuSection/MenuSectionWithoutImage';
@@ -13,17 +12,14 @@ import { Backdrop, CircularProgress } from '@mui/material';
 import styles from './home-page.module.scss';
 import BentoSection from '../../Component/BentoSection/BentoSection';
 import BREAKPOINTS from '../../Styling/breakpoints';
+import { useMenu } from '../../Context/MenuContext';
 
 
 const HomePage = () => {
   const [loading, setLoading] = useState(true);
-  const [musubiList, setMusubiList] = useState([]);
-  const [udonList, setUdonList] = useState([]);
-  const [sideMenuList, setSideMenuList] = useState([]);
-  const [dessertList, setDessertList] = useState([]);
   const [scheduleList, setScheduleList] = useState([]);
   const { width } = useWindowSize();
-  const [allMenus, setAllMenus] = useState([]);
+  const { menus, musubiList, udonList, sideMenuList, dessertList, menuTypeExists } = useMenu();
 
   const bentoRef = useRef();
   const musubiRef = useRef();
@@ -33,35 +29,6 @@ const HomePage = () => {
   const locationRef = useRef();
   const aboutUsRef = useRef();
   const { addRefs } = useRefContext();
-
-  const sortList = (list) => {
-    return list.sort((a, b) => a.order - b.order);
-  };
-
-  const getMenu = async () => {
-    const menusResponse = await menuApi.getMenuList();
-    setAllMenus(menusResponse);
-    const menus = await menuApi.getPublicMenuList();
-    const musubis = [];
-    const udons = [];
-    const sideMenus = [];
-    const desserts = [];
-    menus.forEach(menu => {
-      if (menu.type === 'musubi') {
-        musubis.push(menu);
-      } else if (menu.type === 'udon') {
-        udons.push(menu);
-      } else if (menu.type === 'side menu') {
-        sideMenus.push(menu);
-      } else if (menu.type === 'dessert') {
-        desserts.push(menu);
-      }
-    });
-    setMusubiList(sortList(musubis));
-    setUdonList(sortList(udons));
-    setSideMenuList(sortList(sideMenus));
-    setDessertList(sortList(desserts));
-  };
 
   const getScheduleList = async () => {
     const schedules = await scheduleApi.getScheduleForMonth();
@@ -82,7 +49,6 @@ const HomePage = () => {
   };
 
   useEffect(() => {
-    getMenu();
     getScheduleList();
     registerRefs();
   }, []);
@@ -100,18 +66,18 @@ const HomePage = () => {
           display: !loading
             ? 'block' : 'none'
         }}>
-        <BentoSection menuList={allMenus} sectionRef={bentoRef} handleLoad={handleLoad} />
-        {musubiList.length > 0 &&
+        <BentoSection menuList={menus} sectionRef={bentoRef} handleLoad={handleLoad} />
+        {menuTypeExists.musubi &&
           <MenuSection title="MUSUBI" menuList={musubiList} sectionRef={musubiRef} />
         }
-        {udonList.length > 0 &&
+        {menuTypeExists.udon &&
           <MenuSection title="UDON" menuList={udonList} sectionRef={udonRef} />
         }
-        {sideMenuList.length > 0 &&
+        {menuTypeExists.sideMenu &&
           <MenuSectionWithoutImage title="SIDE MENU" menuList={sideMenuList} 
             sectionRef={sideMenuRef} />
         }
-        {dessertList.length > 0 &&
+        {menuTypeExists.dessert &&
           <MenuSectionWithoutImage title="DESSERT" menuList={dessertList} 
             sectionRef={dessertRef} />
         }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useRefContext } from '../../Provider/RefProvider';
+import { useRefContext } from '../../Context/RefContext';
 import {AppBar, Box, Drawer, Toolbar, IconButton } from '@mui/material';
 import ClearIcon from '@mui/icons-material/Clear';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
@@ -13,6 +13,7 @@ import facebookIcon from '../../asset/icon/facebook.png';
 import instagramIcon from '../../asset/icon/instagram.png';
 import styles from './application-bar.module.scss';
 import BREAKPOINTS from '../../Styling/breakpoints';
+import { useMenu } from '../../Context/MenuContext';
 
 const scrollOffset = 80;
 
@@ -21,6 +22,7 @@ const ApplicationBar = () => {
   const [menuExpanded, setMenuExpanded] = useState(false);
   const { refs } = useRefContext();
   const { width } = useWindowSize();
+  const { menuTypeExists } = useMenu();
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -111,14 +113,22 @@ const ApplicationBar = () => {
           <div className={styles.menus}>
             <div className={styles.menuItem} 
               onClick={() => scrollToDiv('bento', scrollOffset)}>BENTO</div>
-            <div className={styles.menuItem}
-              onClick={() => scrollToDiv('musubi', scrollOffset)}>MUSUBI</div>
-            <div className={styles.menuItem}
-              onClick={() => scrollToDiv('udon', scrollOffset)}>UDON</div>
-            <div className={styles.menuItem}
-              onClick={() => scrollToDiv('sideMenu', scrollOffset)}>SIDE MENU</div>
-            {/* <div className={styles.menuItem}
-              onClick={() => scrollToDiv('dessert', scrollOffset)}>DESSERT</div> */}
+            {menuTypeExists.musubi &&
+              <div className={styles.menuItem}
+                onClick={() => scrollToDiv('musubi', scrollOffset)}>MUSUBI</div>
+            }
+            {menuTypeExists.udon &&
+              <div className={styles.menuItem}
+                onClick={() => scrollToDiv('udon', scrollOffset)}>UDON</div>
+            }
+            {menuTypeExists.sideMenu &&
+              <div className={styles.menuItem}
+                onClick={() => scrollToDiv('sideMenu', scrollOffset)}>SIDE MENU</div>
+            }
+            {menuTypeExists.dessert &&
+              <div className={styles.menuItem}
+                onClick={() => scrollToDiv('dessert', scrollOffset)}>DESSERT</div>
+            }
           </div>
         </div>
       }
@@ -160,18 +170,26 @@ const ApplicationBar = () => {
                 </IconButton>
               </div>
               {menuExpanded && 
-              <div>
-                <div className={styles.menuItem} 
-                  onClick={() => scrollToDiv('bento', scrollOffset)}>BENTO</div>
-                <div className={styles.menuItem}
-                  onClick={() => scrollToDiv('musubi', scrollOffset)}>MUSUBI</div>
-                <div className={styles.menuItem}
-                  onClick={() => scrollToDiv('udon', scrollOffset)}>UDON</div>
-                <div className={styles.menuItem}
-                  onClick={() => scrollToDiv('sideMenu', scrollOffset)}>SIDE MENU</div>
-                {/* <div className={styles.menuItem}
-                  onClick={() => scrollToDiv('dessert', scrollOffset)}>DESSERT</div> */}
-              </div>
+                <div>
+                  <div className={styles.menuItem} 
+                    onClick={() => scrollToDiv('bento', scrollOffset)}>BENTO</div>
+                  {menuTypeExists.musubi &&
+                    <div className={styles.menuItem}
+                      onClick={() => scrollToDiv('musubi', scrollOffset)}>MUSUBI</div>
+                  }
+                  {menuTypeExists.udon &&
+                    <div className={styles.menuItem}
+                      onClick={() => scrollToDiv('udon', scrollOffset)}>UDON</div>
+                  }
+                  {menuTypeExists.sideMenu &&
+                    <div className={styles.menuItem}
+                      onClick={() => scrollToDiv('sideMenu', scrollOffset)}>SIDE MENU</div>
+                  }
+                  {menuTypeExists.dessert &&
+                    <div className={styles.menuItem}
+                      onClick={() => scrollToDiv('dessert', scrollOffset)}>DESSERT</div>
+                  }
+                </div>
               }
               <div className={styles.item}
                 onClick={() => scrollToDiv('location', scrollOffset)}>LOCATION</div>
