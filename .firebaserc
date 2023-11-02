@@ -1,5 +1,18 @@
 {
   "projects": {
     "default": "food-track-db"
-  }
+  },
+  "targets": {
+    "food-track-db": {
+      "hosting": {
+        "testing": [
+          "tokachi-testing"
+        ],
+        "production": [
+          "food-track-db"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
