@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import * as menuApi from '../Firebase/menu';
+import { useLoading } from './LoadingContext';
 
 const MenuContext = createContext();
 
@@ -21,12 +22,14 @@ export const MenuProvider = ({ children }) => {
     sideMenu: false,
     dessert: false
   });
+  const { startLoading, endLoading } = useLoading();
   
   const sortList = (list) => {
     return list.sort((a, b) => a.order - b.order);
   };
 
   const getMenu = async () => {
+    startLoading();
     const menuResponse = await menuApi.getPublicMenuList();
     setMenus(menuResponse);
     const musubis = [];
@@ -56,6 +59,7 @@ export const MenuProvider = ({ children }) => {
     setUdonList(sortList(udons));
     setSideMenuList(sortList(sideMenus));
     setDessertList(sortList(desserts));
+    endLoading();
   };
 
   useEffect(() => {

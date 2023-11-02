@@ -4,12 +4,14 @@ import SectionTitle from '../SectionTitle/SectionTitle';
 import styles from './bento-section.module.scss';
 import useWindowSize from '../../Hook/useWindowSize';
 import BREAKPOINTS from '../../Styling/breakpoints';
+import { useLoading } from '../../Context/LoadingContext';
 
 
 const BentoSection = (props) => {
-  const { menuList, sectionRef, handleLoad } = props;
+  const { menuList, sectionRef } = props;
   const [bentoInfo, setBentoInfo] = useState(null);
   const { width } = useWindowSize();
+  const { startLoading, endLoading } = useLoading();
 
   useEffect(() => {
     collectDataForBento(menuList);
@@ -20,6 +22,7 @@ const BentoSection = (props) => {
     if(!allMenus || allMenus.length == 0) {
       return;
     }
+    startLoading();
     
     const bentoInfo = allMenus.find(menu =>
       menu.title.includes('MUSUBI BENTO'));
@@ -49,6 +52,8 @@ const BentoSection = (props) => {
       }
     };
     setBentoInfo(bentoData);
+    // as loading count is initialized as 1, we need to end it here
+    endLoading();
   };
 
   return (
@@ -57,7 +62,7 @@ const BentoSection = (props) => {
       <div className={styles.bentoInfo}>
         <div className={styles.bentoImageContainer}>
           <img src={bentoInfo?.BENTO.image} alt="Bento Image" className={styles.menuImage}
-            onLoad={handleLoad}
+            onLoad={endLoading}
           />
         </div>
         <div className={styles.right}>
@@ -168,8 +173,7 @@ const BentoSection = (props) => {
 
 BentoSection.propTypes = {
   menuList: PropTypes.array.isRequired,
-  sectionRef: PropTypes.object,
-  handleLoad: PropTypes.func.isRequired
+  sectionRef: PropTypes.object
 };
 
 export default BentoSection;
