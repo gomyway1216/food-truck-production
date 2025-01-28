@@ -4,7 +4,7 @@ import styles from './footer.module.scss';
 const Footer = () => {
   return (
     <div className={styles.root}>
-      <div>© TOKACHI MUSUBI 2023</div>
+      <div>© TOKACHI MUSUBI 2025</div>
     </div>
   );
 };

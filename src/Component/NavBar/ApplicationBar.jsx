@@ -6,9 +6,9 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MenuIcon from '@mui/icons-material/Menu';
 import useWindowSize from '../../Hook/useWindowSize';
-import TokachiLogo from '../../asset/logo/Tokachi-Musubi-Logo.png';
-import TokachiLogoWide from '../../asset/logo/Tokachi-Musubi-Logo-wide.png';
-import twitterIcon from '../../asset/icon/twitter.png';
+import TokachiLogo2 from '../../asset/logo/Tokachi_Musubi_Hokkaido_Logo_iPhone.png';
+import TokachiLogoWide2 from '../../asset/logo/Tokachi_Musubi_Hokkaido_Logo_PC.png';
+import xIcon from '../../asset/icon/x.png';
 import facebookIcon from '../../asset/icon/facebook.png';
 import instagramIcon from '../../asset/icon/instagram.png';
 import styles from './application-bar.module.scss';
@@ -65,21 +65,21 @@ const ApplicationBar = () => {
             >
               <MenuIcon />
             </IconButton>
-            <img src={TokachiLogo} className={styles.logo}/>
+            <img src={TokachiLogo2} className={styles.logo}/>
           </Toolbar>
         }
       </AppBar>
       {width >= BREAKPOINTS.MD &&
         <div className={styles.fixedNavigation}>
           <div className={styles.wideToolBar}>
-            <img src={TokachiLogoWide} className={styles.wideLogo}/>
+            <img src={TokachiLogoWide2} className={styles.wideLogo}/>
             <div className={styles.right}>
               <div className={styles.topRow}>
                 <div className={styles.title}>JAPANESE RICE BALL — STICKY, CRUNCHY, AND NICE!</div>
                 <div className={styles.icons}>
-                  <a href="https://twitter.com/erikatokachi" >
+                  <a href="https://x.com/erikatokachi" >
                     <div className={styles.imageContainer}>
-                      <img className={styles.image} src={twitterIcon} alt="Twitter" />
+                      <img className={styles.image} src={xIcon} alt="X" />
                     </div>
                   </a>
                   <a href="https://www.facebook.com/profile.php?id=100087156172865" >
@@ -155,7 +155,7 @@ const ApplicationBar = () => {
           {/* <div className={styles.logoWrapper}>
             <img src={TokachiLogo} className={styles.logo}/>
           </div> */}
-          <img src={TokachiLogo} className={styles.logo}/>
+          <img src={TokachiLogo2} className={styles.logo}/>
         </div>
         <div className={styles.drawerBody}>
           <div className={styles.main}>
@@ -203,9 +203,9 @@ const ApplicationBar = () => {
                     alt="Instagram"/>
                 </div>
               </a>
-              <a href="https://twitter.com/erikatokachi" >
+              <a href="https://x.com/erikatokachi" >
                 <div className={styles.imageContainer}>
-                  <img className={styles.image} src={twitterIcon} alt="Twitter" />
+                  <img className={styles.image} src={xIcon} alt="X" />
                 </div>
               </a>
               <a href="https://www.facebook.com/profile.php?id=100087156172865" >
