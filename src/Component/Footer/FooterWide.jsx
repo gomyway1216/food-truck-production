@@ -1,5 +1,5 @@
 import React from 'react';
-import twitterIcon from '../../asset/icon/twitter.png';
+import xIcon from '../../asset/icon/x.png';
 import facebookIcon from '../../asset/icon/facebook.png';
 import instagramIcon from '../../asset/icon/instagram.png';
 import styles from './footer-wide.module.scss';
@@ -10,9 +10,9 @@ const FooterWide = () => {
       <div>© TOKACHI MUSUBI 2023</div>
       <div>FOOD TRUCK FOR SAN FRANCISCO / BAY AREA</div>
       <div className={styles.icons}>
-        <a href="https://twitter.com/erikatokachi" >
+        <a href="https://x.com/erikatokachi" >
           <div className={styles.imageContainer}>
-            <img className={styles.image} src={twitterIcon} alt="Twitter" />
+            <img className={styles.image} src={xIcon} alt="X" />
           </div>
         </a>
         <a href="https://www.facebook.com/profile.php?id=100087156172865" >

@@ -8,7 +8,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import useWindowSize from '../../Hook/useWindowSize';
 import TokachiLogo from '../../asset/logo/Tokachi-Musubi-Logo.png';
 import TokachiLogoWide from '../../asset/logo/Tokachi-Musubi-Logo-wide.png';
-import twitterIcon from '../../asset/icon/twitter.png';
+import xIcon from '../../asset/icon/x.png';
 import facebookIcon from '../../asset/icon/facebook.png';
 import instagramIcon from '../../asset/icon/instagram.png';
 import styles from './application-bar.module.scss';
@@ -77,9 +77,9 @@ const ApplicationBar = () => {
               <div className={styles.topRow}>
                 <div className={styles.title}>JAPANESE RICE BALL — STICKY, CRUNCHY, AND NICE!</div>
                 <div className={styles.icons}>
-                  <a href="https://twitter.com/erikatokachi" >
+                  <a href="https://x.com/erikatokachi" >
                     <div className={styles.imageContainer}>
-                      <img className={styles.image} src={twitterIcon} alt="Twitter" />
+                      <img className={styles.image} src={xIcon} alt="X" />
                     </div>
                   </a>
                   <a href="https://www.facebook.com/profile.php?id=100087156172865" >
@@ -203,9 +203,9 @@ const ApplicationBar = () => {
                     alt="Instagram"/>
                 </div>
               </a>
-              <a href="https://twitter.com/erikatokachi" >
+              <a href="https://x.com/erikatokachi" >
                 <div className={styles.imageContainer}>
-                  <img className={styles.image} src={twitterIcon} alt="Twitter" />
+                  <img className={styles.image} src={xIcon} alt="X" />
                 </div>
               </a>
               <a href="https://www.facebook.com/profile.php?id=100087156172865" >
