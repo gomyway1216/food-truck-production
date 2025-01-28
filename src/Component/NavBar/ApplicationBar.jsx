@@ -6,8 +6,8 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MenuIcon from '@mui/icons-material/Menu';
 import useWindowSize from '../../Hook/useWindowSize';
-import TokachiLogo from '../../asset/logo/Tokachi-Musubi-Logo.png';
-import TokachiLogoWide from '../../asset/logo/Tokachi-Musubi-Logo-wide.png';
+import TokachiLogo2 from '../../asset/logo/Tokachi_Musubi_Hokkaido_Logo_iPhone.png';
+import TokachiLogoWide2 from '../../asset/logo/Tokachi_Musubi_Hokkaido_Logo_PC.png';
 import xIcon from '../../asset/icon/x.png';
 import facebookIcon from '../../asset/icon/facebook.png';
 import instagramIcon from '../../asset/icon/instagram.png';
@@ -65,14 +65,14 @@ const ApplicationBar = () => {
             >
               <MenuIcon />
             </IconButton>
-            <img src={TokachiLogo} className={styles.logo}/>
+            <img src={TokachiLogo2} className={styles.logo}/>
           </Toolbar>
         }
       </AppBar>
       {width >= BREAKPOINTS.MD &&
         <div className={styles.fixedNavigation}>
           <div className={styles.wideToolBar}>
-            <img src={TokachiLogoWide} className={styles.wideLogo}/>
+            <img src={TokachiLogoWide2} className={styles.wideLogo}/>
             <div className={styles.right}>
               <div className={styles.topRow}>
                 <div className={styles.title}>JAPANESE RICE BALL — STICKY, CRUNCHY, AND NICE!</div>
@@ -155,7 +155,7 @@ const ApplicationBar = () => {
           {/* <div className={styles.logoWrapper}>
             <img src={TokachiLogo} className={styles.logo}/>
           </div> */}
-          <img src={TokachiLogo} className={styles.logo}/>
+          <img src={TokachiLogo2} className={styles.logo}/>
         </div>
         <div className={styles.drawerBody}>
           <div className={styles.main}>

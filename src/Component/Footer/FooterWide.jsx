@@ -7,7 +7,7 @@ import styles from './footer-wide.module.scss';
 const FooterWide = () => {
   return (
     <div className={styles.root}>
-      <div>© TOKACHI MUSUBI 2023</div>
+      <div>© TOKACHI MUSUBI 2025</div>
       <div>FOOD TRUCK FOR SAN FRANCISCO / BAY AREA</div>
       <div className={styles.icons}>
         <a href="https://x.com/erikatokachi" >
