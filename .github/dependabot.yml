@@ -33,6 +33,26 @@ updates:
           - "@testing-library/*"
       dev-dependencies:
         dependency-type: "development"
+    ignore:
+      # Major bumps for these require coordinated migration work — handle manually.
+      - dependency-name: "react"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "react-dom"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "react-router"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "react-router-dom"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@mui/*"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@emotion/*"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@testing-library/*"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "web-vitals"
+        update-types: ["version-update:semver-major"]
+      # react-scripts (CRA) is unmaintained — pin until we migrate to Vite.
+      - dependency-name: "react-scripts"
 
   - package-ecosystem: "github-actions"
     directory: "/"
