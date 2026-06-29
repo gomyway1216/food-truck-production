@@ -23,6 +23,8 @@ export const getPublicMenuList = async () => {
       description: menuDoc.data().description,
       ingredients: menuDoc.data().ingredients,
       image: menuDoc.data().image,
+      isPriceVisibleToCustomer:
+        menuDoc.data().isPriceVisibleToCustomer !== false,
       isAvailable: menuDoc.data().isAvailable,
       order: menuDoc.data().order, // order of the food displayed
       originalStockCount: menuDoc.data().originalStockCount,
@@ -50,6 +52,8 @@ export const getMenuList = async () => {
       ingredients: menuDoc.data().ingredients,
       image: menuDoc.data().image,
       isVisibleToCustomer: menuDoc.data().isVisibleToCustomer,
+      isPriceVisibleToCustomer:
+        menuDoc.data().isPriceVisibleToCustomer !== false,
       isAvailable: menuDoc.data().isAvailable,
       order: menuDoc.data().order, // order of the food displayed
       originalStockCount: menuDoc.data().originalStockCount,

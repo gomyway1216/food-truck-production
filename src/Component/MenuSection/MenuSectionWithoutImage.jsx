@@ -19,7 +19,10 @@ const MenuSectionWithoutImage = (props) => {
                 <p className={styles.title}>{menu.title}</p>
                 <SubTitle subTitle={menu.subTitle} />
               </div>
-              <div className={styles.price}>$ {menu.price.toFixed(2)}</div>
+              <div className={styles.price}>
+                {menu.isPriceVisibleToCustomer !== false &&
+                  `$ ${menu.price.toFixed(2)}`}
+              </div>
             </div>
             {/* <hr className="solid" /> */}
             <div className={styles.subSection}>

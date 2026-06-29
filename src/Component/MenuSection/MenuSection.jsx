@@ -20,7 +20,10 @@ const MenuSection = (props) => {
                 <p className={styles.title}>{menu.title}</p>
                 <p className={styles.subTitle}>{menu.subTitle}</p>
               </div>
-              <div className={styles.price}>$ {menu.price.toFixed(2)}</div>
+              <div className={styles.price}>
+                {menu.isPriceVisibleToCustomer !== false &&
+                  `$ ${menu.price.toFixed(2)}`}
+              </div>
             </div>
             <div className={styles.subSection}>
               <div className={styles.description}>{menu.description}</div>
