@@ -36,7 +36,9 @@ const BentoSection = (props) => {
       'BENTO': {
         'name': bentoInfo.title,
         'image': bentoInfo.image,
-        'price': bentoInfo.price
+        'price': bentoInfo.price,
+        'isPriceVisibleToCustomer':
+          bentoInfo.isPriceVisibleToCustomer ?? true
       },
       'KARAAGE': {
         'description': karaageInfo.description,
@@ -61,14 +63,18 @@ const BentoSection = (props) => {
       <SectionTitle title="BENTO" />
       <div className={styles.bentoInfo}>
         <div className={styles.bentoImageContainer}>
-          <img src={bentoInfo?.BENTO.image} alt="Bento Image" className={styles.menuImage}
+          <img src={bentoInfo?.BENTO?.image} alt="Bento Image" className={styles.menuImage}
             onLoad={endLoading}
           />
         </div>
         <div className={styles.right}>
           <div className={styles.main}>
-            <div className={styles.title}>{bentoInfo?.BENTO.name}</div>
-            <div className={styles.price}>$ {bentoInfo?.BENTO.price.toFixed(2)}</div>
+            <div className={styles.title}>{bentoInfo?.BENTO?.name}</div>
+            <div className={styles.price}>
+              {bentoInfo?.BENTO?.isPriceVisibleToCustomer !== false &&
+                bentoInfo?.BENTO?.price != null &&
+                `$ ${bentoInfo.BENTO.price.toFixed(2)}`}
+            </div>
           </div>
           <div className={styles.contents}>
             {((width >= BREAKPOINTS.SM && width < BREAKPOINTS.MD ) ?

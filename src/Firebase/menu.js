@@ -13,16 +13,18 @@ export const getPublicMenuList = async () => {
   const querySnapshot = await getDocs(q);
   for (let i = 0; i < querySnapshot.docs.length; i++) {
     const menuDoc = querySnapshot.docs[i];
+    const isPriceVisibleToCustomer =
+      menuDoc.data().isPriceVisibleToCustomer ?? true;
     const menu = {
       id: menuDoc.id,
       title: menuDoc.data().title,
       subTitle: menuDoc.data().subTitle,
       type: menuDoc.data().type,
-      price: menuDoc.data().price,
-      cost: menuDoc.data().cost,
+      price: isPriceVisibleToCustomer ? menuDoc.data().price : null,
       description: menuDoc.data().description,
       ingredients: menuDoc.data().ingredients,
       image: menuDoc.data().image,
+      isPriceVisibleToCustomer,
       isAvailable: menuDoc.data().isAvailable,
       order: menuDoc.data().order, // order of the food displayed
       originalStockCount: menuDoc.data().originalStockCount,
@@ -50,6 +52,8 @@ export const getMenuList = async () => {
       ingredients: menuDoc.data().ingredients,
       image: menuDoc.data().image,
       isVisibleToCustomer: menuDoc.data().isVisibleToCustomer,
+      isPriceVisibleToCustomer:
+        menuDoc.data().isPriceVisibleToCustomer ?? true,
       isAvailable: menuDoc.data().isAvailable,
       order: menuDoc.data().order, // order of the food displayed
       originalStockCount: menuDoc.data().originalStockCount,
