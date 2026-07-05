@@ -21,6 +21,7 @@ const MenuSectionWithoutImage = (props) => {
               </div>
               <div className={styles.price}>
                 {menu.isPriceVisibleToCustomer !== false &&
+                  menu.price != null &&
                   `$ ${menu.price.toFixed(2)}`}
               </div>
             </div>
